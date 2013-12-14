@@ -20,4 +20,5 @@
     st = status
     di = diff
     ci = commit
+    co = checkout
     snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
