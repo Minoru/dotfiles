@@ -3,6 +3,9 @@
 # start redshift
 .scripts/start-redshift &
 
+# this beast needs dbus for some reason...
+! pgrep -u $USER parcimonie && ionice -c 2 -n 7 nice -n 20 parcimonie >$HOME/.parcimonie.log 2>&1 &
+
 # setting default cursor to left pointer
 xsetroot -cursor_name left_ptr
 
