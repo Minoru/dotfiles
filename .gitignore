@@ -9,6 +9,7 @@
 /.xmonad/lib/*.hi
 /.xmonad/history
 /.xmonad/xmonad-x86_64-linux
+/.xmonad/xmonad-i386-linux
 /.xmonad/xmonad.errors
 
 /.zhistory
