@@ -14,7 +14,7 @@ xbindkeys &
 xset s off
 
 # setting up the background
-feh --bg-scale '/home/minoru/pictures/wallpapers/debian-logo_1366x768.png' &
+feh --bg-scale '/home/minoru/pictures/wallpapers/current.png' &
 
 # disabling touchpad on typing
 syndaemon -i 1 -K -d -p $HOME/.syndaemon.pid
