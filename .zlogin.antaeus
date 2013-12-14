@@ -10,8 +10,6 @@ export GTK_IM_MODULE="xim"
 export MPD_HOST='::1'
 export XDG_DATA_HOME="$HOME/.config"
 
-! pgrep -u $USER parcimonie && ionice -c 2 -n 7 nice -n 20 parcimonie >$HOME/.parcimonie.log 2>&1 &
-
 # Start MPD if it's not running yet
 # We can't simply check for .mpd/pid because it would still be present after
 # reboot (it is not being deleted for some reason). What we do instead is
