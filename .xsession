@@ -1,5 +1,6 @@
 #!/bin/sh
 
-if [ -n "$HOST" -a -f "$HOME/.xsesion.$HOST" ]; then
-    source "$HOME/.xsession.$HOST"
+if [ -n "$HOST" -a -f "$HOME/.xsession.$HOST" ]; then
+    echo "Starting $HOME/.xsession.$HOST"
+    exec sh "$HOME/.xsession.$HOST"
 fi
