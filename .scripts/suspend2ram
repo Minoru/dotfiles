@@ -3,5 +3,8 @@
 # Put machine into suspend
 
 i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/current.png"
-sudo s2ram
-
+if [ "$HOST" = "antaeus" ]; then
+    sudo s2ram
+elif [ "$HOST" = "speedy" ]; then
+    sudo pm-suspend
+fi

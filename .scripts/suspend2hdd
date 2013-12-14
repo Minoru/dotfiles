@@ -3,5 +3,8 @@
 # Put machine into hibernate
 
 i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/current.png"
-sudo s2disk
-
+if [ "$HOST" = "antaeus" ]; then
+    sudo s2disk
+elif [ "$HOST" = "speedy" ]; then
+    sudo pm-hibernate
+fi

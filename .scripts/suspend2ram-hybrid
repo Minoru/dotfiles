@@ -4,5 +4,8 @@
 # power runs out
 
 i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/current.png"
-sudo pm-suspend-hybrid
-
+if [ "$HOST" = "antaeus" ]; then
+    sudo s2both
+elif [ "$HOST" = "speedy" ]; then
+    sudo pm-suspend-hybrid
+fi
