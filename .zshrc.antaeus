@@ -1,0 +1,4 @@
+# on my Asus P52F, image from the webcam is upside down. That fixes it.
+alias mplayer2='LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libv4l/v4l1compat.so mplayer2'
+alias gtd='tmux a -t gtd || tmux new -s gtd "emacs $HOME/gtd.org" \; set status off'
+alias arm='sudo -u debian-tor arm'

@@ -1,0 +1,40 @@
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+! urxvt*color0:    #6c6c6c
+! urxvt*color1:    #e9897c
+urxvt*color2:    #00bb00
+! urxvt*color3:    #ecebbe
+urxvt*color4:    #0078eb
+! urxvt*color5:    #ea96eb
+! urxvt*color6:    #c9caec
+! urxvt*color7:    #f2f2f2
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+! urxvt*color8:    #747474
+! urxvt*color9:    #f99286
+urxvt*color10:    #00dd27
+! urxvt*color11:    #fcfbcc
+urxvt*color12:    #007eee
+! urxvt*color13:    #fba1fb
+! urxvt*color14:    #d7d9fc
+! urxvt*color15:    #e2e2e2
+
+! Make URxvt throw WM_URGENT on a bell
+URxvt.urgentOnBell: true

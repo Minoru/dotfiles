@@ -1,0 +1,25 @@
+include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
+
+# Compose ~=
+<Multi_key> <asciitilde> <equal> : "≈"   U2248 # ALMOST EQUAL TO
+# Compose !=
+<Multi_key> <exclam> <equal>     : "≠"   U2260 # NOT EQUAL TO
+
+<Multi_key> <apostrophe> <apostrophe> : "́" U0301 # COMBINING ACUTE ACCENT
+
+<Multi_key> <minus> <greater> : "→" U2192 # RIGHTWARDS ARROW
+<Multi_key> <less> <minus> : "←" U2190 # LEFTWARDS ARROW
+<Multi_key> <equal> <greater> : "⇒" U21D2 # RIGHTWARDS DOUBLE ARROW
+
+<Multi_key> <Cyrillic_BE> : "«" # открывающая кавычка-ёлочка (RUS)
+<Multi_key> <Cyrillic_YU> : "»" # закрывающая кавычка-ёлочка (RUS)
+
+<Multi_key> <colon> <parenright> : "☺"   U263A # WHITE SMILING FACE
+<Multi_key> <colon> <parenleft>  : "☹"   U2639 # WHITE FROWNING FACE
+
+<Multi_key> <asterisk> <e> : "ε"  U03B5       # GREEK SMALL LETTER EPSILON
+
+<Multi_key> <minus> <8> : "∞" U221E # INFINITY SYMBOL
+<Multi_key> <8> <minus> : "∞" U221E # INFINITY SYMBOL
+
+<Multi_key> <l> <h> : "λ" U03BB

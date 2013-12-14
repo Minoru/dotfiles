@@ -1,0 +1,75 @@
+################################################################################
+# Sample taskwarrior 1.9 (or later) dark 16-color theme
+#
+# taskwarrior - a command line task list manager.
+#
+# Copyright 2006 - 2011, Paul Beckingham, Federico Hernandez.
+# All rights reserved.
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 2 of the License, or (at your option) any later
+# version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the
+#
+#     Free Software Foundation, Inc.,
+#     51 Franklin Street, Fifth Floor,
+#     Boston, MA
+#     02110-1301
+#     USA
+#
+################################################################################
+
+color=on
+color.header=yellow
+color.footnote=yellow
+color.debug=yellow
+
+color.summary.bar=black on green
+color.summary.background=white on black
+
+color.history.add=black on red
+color.history.done=black on green
+color.history.delete=black on yellow
+
+color.burndown.pending=on red
+color.burndown.started=on yellow
+color.burndown.done=on green
+
+color.sync.added=green
+color.sync.changed=yellow
+color.sync.rejected=red
+
+color.undo.before=red
+color.undo.after=green
+
+color.calendar.today=bold white on bright blue
+color.calendar.due=white on red
+color.calendar.due.today=bold white on red
+color.calendar.overdue=black on bright red
+color.calendar.weekend=white on bright black
+color.calendar.holiday=black on bright yellow
+color.calendar.weeknumber=bold blue
+
+color.recurring=magenta
+color.overdue=bold red
+color.due.today=red
+color.due=red
+color.active=black on bright green
+color.pri.none=
+color.pri.H=bold white
+color.pri.M=white
+color.pri.L=
+color.tagged=green
+color.blocked=yellow
+color.project.none=
+color.tag.none=
+color.alternate=
+

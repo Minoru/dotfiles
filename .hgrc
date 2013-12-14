@@ -1,0 +1,11 @@
+[ui]
+username = Alexander Batischev <eual.jp@gmail.com>
+
+[extensions]
+hgext.ftp = /home/minoru/.hg/bin/ftp.py
+record =
+pager =
+
+[pager]
+pager = less -FRSX
+

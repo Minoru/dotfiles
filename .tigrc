@@ -1,0 +1,18 @@
+set author-width = 24
+
+color main-date      red      default 
+color graph-commit   cyan     default
+color pp-merge       red      default
+color diff-index     white    default
+
+# Avoid blue as much as possible - it's indistinguishable on the black
+# background
+color palette-0      white    default
+color palette-1      yellow   default
+color palette-2      magenta  default
+color palette-3      green    default
+color palette-3      red      default
+color palette-4      cyan     default
+color palette-5      blue     default
+
+# You can almost use vim: ft=muttrc

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# We really need su because sudo doesn't have -c option
+
+sudo su -c "aptitude update ; aptitude -y safe-upgrade && aptitude clean ; apt-file update" && cabal update
+

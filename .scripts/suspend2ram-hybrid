@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Put machine into hyrbid suspend, the one that turns into hibernate when the
+# power runs out
+
+i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/debian-logo_1366x768.png"
+sudo pm-suspend-hybrid
+

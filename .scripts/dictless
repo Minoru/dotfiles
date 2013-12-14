@@ -1,0 +1,41 @@
+#!/bin/sh
+
+#
+# dictless Written by Minoru <eual.jp@gmail.com>
+#
+# Queries dict server for the definitions of words given on command line and
+# interactively. Adds readline capabilities using rlwrap. If results span more
+# than one screen, less is used to page the output. Log of all the queries is
+# stored in ~/.sdcv_history
+
+if [ ! `which rlwrap` ]; then
+    echo 'rlwrap not found!'
+    exit 1
+fi
+if [ ! `which dict` ]; then
+    echo 'dict not found!'
+    exit 1
+fi
+if [ ! `which less` ]; then
+    echo 'less not found!'
+    exit 1
+fi
+
+lessopts="--RAW-CONTROL-CHARS --quit-if-one-screen --quit-on-intr --no-init"
+sedopts="--unbuffered --regexp-extended"
+
+for query in "$@"
+do
+    echo "$query" >> ~/.sdcv_history
+    dict -- "$query"| less $lessopts
+done
+
+# Read words and phrases interactively and show translations
+while true
+do
+    query="`rlwrap -pBlue -S '>>> ' --one-shot cat`"
+
+    # Process words and show translations
+    dict -- "$query" | less $lessopts
+done
+

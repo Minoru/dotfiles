@@ -1,0 +1,26 @@
+#
+#  ~/.mplayer/config
+#
+#  Written by Minoru <eual.jp@gmail.com>
+#
+
+# I like DejaVu and I want to use it for subtitles rendering by default
+font="DejaVu Serif"
+# ASS is pretty subtitles format that can contain color and position parameters
+#  for each phrase - let's enable this feature!
+ass=1
+embeddedfonts=1
+correct-pts=1
+subcp=enca:ru:cp1251
+# Make subtitles font be 5% of screen height 
+subfont-text-scale=3
+# Normalization is useful feature - always use it!
+#af = volnorm
+# Use ALSA as default audio output 
+ao = alsa:noblock
+softvol=1
+# Default video output
+vo = xv
+framedrop=1
+
+cache=32768

@@ -1,0 +1,32 @@
+# [Created by task 1.9.4 2/12/2012 16:17:26]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
+# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=/home/minoru/.task
+
+dateformat = d.m.Y
+dateformat.annotation = d.m.Y
+dateformat.report = d.m.Y
+
+report.list.columns = id,project,priority,due,due.countdown,depends,description
+report.list.labels = ID,Project,Pri,Due,Time Past,Depends,Description
+report.list.sort = due-,project-,depends+,priority+,description-
+
+report.next.labels = Project,Pri,Due,Time Past,ID,Description
+report.next.sort = due-,priority+,project-,id+
+report.next.columns = project,priority,due,due.countdown,id,description
+report.next.filter = status:pending +UNBLOCKED
+
+color.blocking = 
+
+include /home/minoru/.task/minoru.theme
+

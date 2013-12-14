@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# This script checks if the last backup went well. If not, it mails the log to
+# me
+
+if [ ! -f /home/minoru/.backup.log ]; then
+    echo 'No backup log found. Does backup script run at all?'
+    exit 1
+fi
+
+modified_time=`stat -t .backup.log | cut -f13 -d' '`
+current_time=`date +%s`
+time_passed=`echo $current_time - $modified_time | bc`
+if [ $time_passed -gt 3600 ]; then
+    echo 'More than an hour passed since .backup.log seen any updates.'
+    echo 'Does backup script run at all?'
+    exit 1
+fi
+
+cat /home/minoru/.backup.log | grep '^BACKUP DONE$' >/dev/null
+if [ $? -ne 0 ]; then
+    # line not found
+    echo 'BACKUP NOT DONE! Log follows.'
+    echo
+    cat /home/minoru/.backup.log
+fi
+

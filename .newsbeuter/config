@@ -1,0 +1,12 @@
+auto-reload yes
+reload-time 30
+download-retries 5
+goto-first-unread no
+text-width 72
+
+# make deletion of the articles completely Mutt-like
+unbind-key D
+bind-key d delete-article
+
+user-agent "Mozilla/5.0 (X11; Linux i686; rv:16.0) Gecko/20121011 Thunderbird/16.0.1"
+

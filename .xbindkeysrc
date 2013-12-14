@@ -1,0 +1,8 @@
+("setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'")
+    control + 1
+
+("setxkbmap -layout 'ru,us' -variant 'winkeys,' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'")
+    control + 2
+
+("setxkbmap -layout 'ua,us' -variant 'winkeys,' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'")
+    control + 3

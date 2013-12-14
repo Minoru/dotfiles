@@ -1,0 +1,31 @@
+# store downloaded files in...
+directory = ~/torrents/downloads
+
+# use port 6998, constantly
+port_range = 6997-6997
+port_random = no
+
+# minimal and maximal number of peers per torrent (for downloads)
+min_peers = 1
+max_peers = 20
+
+# same, but for seeding
+min_peers_seed = 1
+max_peers_seed = 64
+
+use_udp_trackers = yes
+peer_exchange = yes
+
+# limit upload so there are some bandwidth for Tor relay
+upload_rate = 300
+
+# enable DHT only when needed (i.e. some torrent uses it)
+dht = auto
+
+session_save = yes
+session = ~/torrents/session
+
+# watchdog: every five minutes, check for new torrents
+schedule = watch_directory,5,5,load_start=~/torrents/torrent-files/*.torrent
+
+# vim: ft=rtorrent :

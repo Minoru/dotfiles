@@ -1,0 +1,106 @@
+set sort = threads
+set edit_headers # edit headers when replying
+set include # always insert quote of original message in reply
+set status_on_top # status line should be on top
+set pager_stop = yes # do NOT move to next message when you're at the end of message and press Space
+set signature = "~/.mutt/signature"
+set editor = "vim -c 'set spell spelllang=en,ru_yo,uk'"
+set delete = yes # purge deleted without prompting
+set ssl_starttls=yes # activate TLS if available
+set ssl_force_tls=yes # forse SSL
+set beep=yes # beep on errors
+set beep_new=yes # beep when notifying me of new message
+unset mark_old # "read" and "new" is enough
+
+# headers
+ignore *
+unignore  Date From To CC List-ID Subject Reply-to
+hdr_order Date From To CC List-ID Subject Reply-to
+
+set from = "eual.jp@gmail.com"
+set realname = "Alexander Batischev"
+
+set imap_check_subscribed
+
+set imap_user = "eual.jp@gmail.com"
+#set imap_pass = ""
+set imap_keepalive = 90
+
+set smtp_url  = "smtp://eual.jp@smtp.gmail.com:587/"
+#set smtp_pass = ""
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set record=""
+set postponed="+[Gmail]/Drafts"
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+
+mailboxes "=INBOX"
+mailboxes "=[Gmail]/All Mail"
+mailboxes "=[Gmail]/Sent Mail"
+mailboxes "=[Gmail]/Drafts"
+mailboxes "=[Gmail]/Bin"
+mailboxes "=[Gmail]/Spam"
+
+mailboxes "=debian-announce"
+mailboxes "=debian-devel-announce"
+mailboxes "=debian-security-announce"
+mailboxes "=debian-news"
+mailboxes "=haskell"
+mailboxes "=haskell-beginners"
+mailboxes "=haskell-cafe"
+mailboxes "=haskell-russian"
+mailboxes "=ltu-kiev"
+mailboxes "=loker-sh"
+mailboxes "=IC-92"
+mailboxes "=rockbox"
+mailboxes "=rockbox-cvs"
+mailboxes "=rockbox-dev"
+mailboxes "=xmonad"
+mailboxes "=okasaki-russian-study-group"
+
+# delete message to Bin by presing B
+macro index B "<save-message>=[Gmail]/Bin<enter>y"
+macro pager B "i<save-message>=[Gmail]/Bin<enter>y"
+# report message as spam by presing S
+macro index S "<save-message>=[Gmail]/Spam<enter>y"
+macro pager S "i<save-message>=[Gmail]/Spam<enter>y"
+
+# macro pager <esc>L "<bounce-message>report-listspam@lists.debian.org<enter>B" "report as spam to Debian lists"
+
+# Use abook with Mutt
+# Q to search
+# a to add sender to abook
+set query_command="abook --mutt-query '%s'"
+macro index,pager a "|abook --add-email\n" 'add sender to abook'
+
+bind editor <Tab> complete-query
+bind editor ^T complete
+
+# Dealing with GnuPG
+# http://codesorcery.net/old/mutt/mutt-gnupg-howto
+set pgp_decode_command="env LC_ALL=C gpg %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
+set pgp_verify_command="env LC_ALL=C gpg --no-verbose --batch --output - --verify %s %f"
+set pgp_decrypt_command="env LC_ALL=C gpg --passphrase-fd 0 --no-verbose --batch --output - %f"
+set pgp_sign_command="env LC_ALL=C gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command="env LC_ALL=C gpg --no-verbose --batch --output - --passphrase-fd 0 --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command="env LC_ALL=C pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0x0C8BFD03 -- -r %r -- %f"
+set pgp_encrypt_sign_command="env LC_ALL=C pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0x0C8BFD03 -- -r %r -- %f"
+set pgp_import_command="env LC_ALL=C gpg --no-verbose --import -v %f"
+set pgp_export_command="env LC_ALL=C gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command="env LC_ALL=C gpg --no-verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command="env LC_ALL=C gpg --no-verbose --batch --with-colons --list-keys %r" 
+set pgp_list_secring_command="env LC_ALL=C gpg --no-verbose --batch --with-colons --list-secret-keys %r" 
+set pgp_autosign=yes
+set pgp_sign_as=0x0C8BFD03
+set pgp_replyencrypt=yes
+set pgp_timeout=1800
+set pgp_good_sign="^gpg: Good signature from"
+set crypt_verify_sig=yes
+
+set mail_check = 300 # check for email every 5 minutes (300 seconds)
+set timeout = 300 # how often to stop waiting for user input and perform operations like mail checking (300 sec, 5 minutes)
+set rfc2047_parameters # Fix stupid MUAs behaviour (e.g. filenames like =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=)
+

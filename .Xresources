@@ -1,0 +1,4 @@
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      /usr/bin/iceweasel
+URxvt.matcher.button:   1
+

@@ -1,0 +1,23 @@
+[user]
+	name = Alexander Batischev
+	email = eual.jp@gmail.com
+[merge]
+	tool = vimdiff
+[diff]
+	renames = copy
+	algorithm = patience
+[push]
+	default = upstream
+[core]
+	quotepath = false
+[branch]
+	autosetuprebase = always
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[alias]
+    st = status
+    di = diff
+    ci = commit
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"

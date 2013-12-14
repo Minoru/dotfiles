@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Runs nethack logged using ttyrec
+
+set -e
+
+test_for() {
+    if [ ! -x "$(which "$1" 2>/dev/null)" ]; then
+        echo "$1 not found!"
+        exit 1
+    fi
+}
+
+test_for "ttyrec"
+test_for "xz"
+
+# maybe user just wants to see statistics? No need to record that
+if [ "$1" = "-s" ]; then
+    /usr/games/nethack -s
+else
+    ttyfile=$HOME/misc/nethack_games/$(date +%F-%T).ttyrec
+    echo "Starting nethack, logging to $ttyfile ..."
+    ttyrec -e "/usr/games/nethack $@" $ttyfile
+    echo "Compressing $ttyfile ..."
+    xz -6 $ttyfile
+fi
+

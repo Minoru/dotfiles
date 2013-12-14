@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Put machine into suspend
+
+i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/debian-logo_1366x768.png"
+sudo s2ram
+
