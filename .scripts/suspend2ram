@@ -2,6 +2,8 @@
 
 # Put machine into suspend
 
+HOST="`hostname --short`"
+
 i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/current.png"
 if [ "$HOST" = "antaeus" ]; then
     sudo s2ram
