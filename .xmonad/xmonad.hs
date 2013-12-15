@@ -4,7 +4,7 @@ import XMonad.Actions.UpdatePointer (updatePointer, PointerPosition(Relative))
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, ppUrgent, ppCurrent, xmobarColor, ppOutput, shorten)
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
 import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
-import XMonad.Hooks.UrgencyHook
+import XMonad.Hooks.UrgencyHook (focusUrgent, clearUrgents, withUrgencyHook, NoUrgencyHook(NoUrgencyHook))
 import XMonad.Layout.IM (withIM, Property(Role))
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.LayoutCombinators (JumpToLayout(JumpToLayout))
