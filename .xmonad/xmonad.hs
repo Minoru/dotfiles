@@ -133,15 +133,23 @@ main = do
         { manageHook = manageDocks <+> myManageHook
                                    <+> manageHook defaultConfig
         , layoutHook = smartBorders $ avoidStruts $ myLayout
-        , logHook = updatePointer (Relative 0.5 0.5)
-                 >> dynamicLogWithPP (xmobarPP
-                        { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "#00cc00" "" . shorten 92
-                        , ppUrgent = xmobarColor "#ff1111" ""
-                        , ppCurrent = xmobarColor "#ffcc00" ""
-                        -- do not display the current layout, as it's useless
-                        , ppOrder = \(workspaces:layout:title:_) -> [workspaces,title]
-                        })
+        , logHook =
+            -- move mouse pointer to the center of the focused window
+            updatePointer (Relative 0.5 0.5)
+            >> dynamicLogWithPP (xmobarPP
+                 { ppOutput  = hPutStrLn xmproc
+                 -- show current window's title in nice darkish green, limited
+                 -- to 92 symbols in length
+                 , ppTitle   = xmobarColor "#00cc00" "" . shorten 92
+                 -- show urgent window in pretty red
+                 , ppUrgent  = xmobarColor "#ff1111" ""
+                 -- current workspace is highlighted by orange-yellow
+                 , ppCurrent = xmobarColor "#ffcc00" ""
+                 -- I can *see* what layout is in effect, no need to put its
+                 -- name into the XMobar
+                 , ppOrder   =
+                     \(workspaces:layout:title:_) -> [workspaces,title]
+                 })
         -- custom event hook to refresh layout if new dock does appear
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
         , handleEventHook = docksEventHook <+> resetLayoutHook
