@@ -17,17 +17,9 @@ let g:colors_name="minoru"
 " Supporting code -------------------------------------------------------------
 " Preamble {{{
 
-if !has("gui_running") && &t_Co != 88 && &t_Co != 256
+if has("gui_running") && &t_Co != 88 && &t_Co != 256
     finish
 endif
-
-set background=dark
-
-if exists("syntax_on")
-    syntax reset
-endif
-
-let colors_name = "badwolf"
 
 if !exists("g:badwolf_html_link_underline") " {{{
     let g:badwolf_html_link_underline = 1
