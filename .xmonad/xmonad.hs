@@ -135,8 +135,7 @@ main = do
         , layoutHook = smartBorders $ avoidStruts $ myLayout
         , logHook =
             -- move mouse pointer to the center of the focused window
-            updatePointer (Relative 0.5 0.5)
-            >> dynamicLogWithPP (xmobarPP
+               dynamicLogWithPP (xmobarPP
                  { ppOutput  = hPutStrLn xmproc
                  -- show current window's title in nice darkish green, limited
                  -- to 92 symbols in length
@@ -150,6 +149,7 @@ main = do
                  , ppOrder   =
                      \(workspaces:layout:title:_) -> [workspaces,title]
                  })
+            >> updatePointer (Relative 0.5 0.5)
         -- custom event hook to refresh layout if new dock does appear
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
         , handleEventHook = docksEventHook <+> resetLayoutHook
