@@ -161,7 +161,9 @@ set modeline " read configuration parameters from current file
 set gdefault " replace globally by default
 " Search
 set incsearch " Increment search: update found items while typing pattern
+
 set smartcase " ignore case only if all letters are in lower case
+set ignorecase " need to be set in order for 'smartcase' to work
 
 " use sane regexes
 nnoremap / /\v
