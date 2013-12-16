@@ -123,6 +123,7 @@ resetLayoutHook (DestroyWindowEvent {}) = do
   empty <- withWindowSet $ (return . null . W.index)
   when empty $ sendMessage $ JumpToLayout "Full"
   return (All True)
+resetLayoutHook _ = return (All True)
 
 main = do
     -- spawning different XMoBar configurations depending on the host
