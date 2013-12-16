@@ -77,7 +77,9 @@
 /.scripts/set-logitech-m570-sensitivity
 /.scripts/start-redshift
 
+/.config/Scan Tailor/
 /.config/Trash/
+/.config/Trolltech.conf
 /.config/chromium/
 /.config/comix/
 /.config/desktop-directories/
@@ -85,7 +87,6 @@
 /.config/geeqie/
 /.config/gtk-2.0/
 /.config/gvfs-metadata/
-/.config/Trolltech.conf
 /.config/htop/
 /.config/icons/
 /.config/inkscape/
