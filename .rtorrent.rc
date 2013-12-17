@@ -2,7 +2,7 @@
 directory = ~/torrents/downloads
 
 # use port 6998, constantly
-port_range = 6997-6997
+port_range = 6998-6998
 port_random = no
 
 # minimal and maximal number of peers per torrent (for downloads)
