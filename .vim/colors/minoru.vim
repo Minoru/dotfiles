@@ -70,7 +70,7 @@ let s:bwc.saltwatertaffy = ['8cffba', 121]
 let s:bwc.tardis = ['0a9dff', 39]
 
 " This one's from Mustang, not Florida!
-let s:bwc.orange = ['ffa724', 214]
+let s:bwc.orange = ['ffcc00', 214]
 
 " A limier green from Getafe.
 let s:bwc.lime = ['aeee00', 154]
