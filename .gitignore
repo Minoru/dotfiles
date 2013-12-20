@@ -158,3 +158,5 @@
 /.wireshark/
 /.xchm
 /.xdvirc
+/.~lock.*#
+/**/.~lock.*#
