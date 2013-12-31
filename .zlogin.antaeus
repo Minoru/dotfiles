@@ -26,8 +26,7 @@ export XDG_DATA_HOME="$HOME/.config"
 ~/.ssh/w3crapcli \
 ~/.ssh/speedy \
 ~/.ssh/ldap-user-manager-testserver \
-~/.ssh/bitbucket \
-~/.ssh/i-next
+~/.ssh/bitbucket
 source ~/.keychain/antaeus-sh > /dev/null
 
 # just in case it's connected on login time, let's try to mount StoreJet
