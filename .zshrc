@@ -99,6 +99,7 @@ alias mcabber='tmux a -t mcabber || tmux new -s mcabber mcabber \; set status of
 alias irssi='tmux a -t irssi || tmux new -s irssi irssi \; set status off'
 alias ocaml='rlwrap ocaml'
 alias arm='sudo -u debian-tor arm'
+alias find_original='git annex find | xargs -I "{}" -- find -L ~/torrents/downloads -samefile {}'
 
 if [ "$TERM" = "linux" ]; then
     alias mplayer='mplayer -vo fbdev2'
