@@ -136,18 +136,28 @@ alias -g G="| grep"
 # NOTE: if we're in the tty, $TERM will be "linux"
 [[ -n "${SSH_CONNECTION}" ]] && titleHost="[$HOST] "
 case $TERM in
-    xterm* | rxvt*)
+    xterm* | rxvt* | screen*)
         
         # Precmd is called just before the prompt is printed
         precmd() {
-            print -Pn "\e]0;${titleHost}zsh\a"
+            title="${titleHost}"
+            if [ -n "$TMUX" ]; then
+                title="${title}(`tmux display-message -p '#S'`) "
+            fi
+            title="${title}zsh"
+            print -Pn "\033]0;${title}\a"
         }
         
         # Preexec is called just before any command line is executed
-        # $1 is command name
+        # $3 is the command being executad, with aliases expanded
         # sed used to cut off parameters of command
         preexec() {
-            print -Pn "\e]0;${titleHost}`echo $1 | head -n1 | sed -r 's/^((sudo|torify)* [^[:space:]]+).*/\1/'`\a"
+            title="${titleHost}"
+            if [ -n "$TMUX" ]; then
+                title="${title}(`tmux display-message -p '#S'`) "
+            fi
+            title="${title}`echo $3 | head -n1 | sed -r 's/^((sudo |torify )?[^[:space:]]+).*/\1/'`"
+            print -Pn "\033]0;${title}\a"
         }
 
         # There are postexec too, but I don't need it as far as I configured precmd
