@@ -29,5 +29,7 @@ export XDG_DATA_HOME="$HOME/.config"
 ~/.ssh/bitbucket
 source ~/.keychain/antaeus-sh > /dev/null
 
+~/misc/netassist.sh
+
 # just in case it's connected on login time, let's try to mount StoreJet
 storejet-mount
