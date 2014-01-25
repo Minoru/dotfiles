@@ -115,7 +115,7 @@ bind_to_address		"ip6-localhost"
 # If this setting is set to "yes", MPD will discover audio files by following
 # symbolic links inside of the configured music_directory.
 #
-#follow_inside_symlinks		"yes"
+follow_inside_symlinks		"yes"
 #
 ###############################################################################
 
