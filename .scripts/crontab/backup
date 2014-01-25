@@ -83,22 +83,22 @@ echo
 # !
 
 run obnam backup --verify-randomly=512 --deduplicate=verify --repository=anki --exclude='^/home/minoru/.anki/backup --verify-randomly=512' ~/.anki
-run obnam forget --keep=12h,7d,5w,12m --repository=anki
+run obnam forget --keep=12h,14d,5w,12m --repository=anki
 
 run obnam backup --verify-randomly=513 --deduplicate=verify --repository=job_docs ~/docs/job
-run obnam forget --keep=12h,7d,5w,12m --repository=job_docs
+run obnam forget --keep=12h,14d,5w,12m --repository=job_docs
 
 run obnam backup --verify-randomly=512 --deduplicate=verify --repository=KPI_docs ~/docs/KPI
-run obnam forget --keep=12h,7d,5w,12m --repository=KPI_docs
+run obnam forget --keep=12h,14d,5w,12m --repository=KPI_docs
 
 run obnam backup --verify-randomly=512 --deduplicate=verify --repository=misc_docs ~/docs/misc
-run obnam forget --keep=12h,7d,5w,12m --repository=misc_docs
+run obnam forget --keep=12h,14d,5w,12m --repository=misc_docs
 
 run obnam backup --verify-randomly=512 --deduplicate=verify --repository=library ~/library
-run obnam forget --keep=12h,7d,5w,12m --repository=library
+run obnam forget --keep=12h,14d,5w,12m --repository=library
 
 run obnam backup --verify-randomly=512 --deduplicate=verify --repository=torrents --exclude='^/home/minoru/torrents/downloads' ~/torrents
-run obnam forget --keep=12h,7d,5w,12m --repository=torrents
+run obnam forget --keep=12h,14d,5w,12m --repository=torrents
 
 # !
 # ! If you add a repo, update ~/.scripts/storejet-mount to force locks on it
