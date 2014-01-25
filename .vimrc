@@ -450,6 +450,17 @@ augroup ft_tex
 augroup END
 
 " }}}
+" Awk {{{{
+
+augroup ft_awk
+    autocmd!
+
+    " do not remove indent for lines starting with #
+    autocmd FileType awkj inoremap # X#
+
+augroup END
+
+" }}}}
 
 " }}}
 " Local config with machine-specific settings {{{{
