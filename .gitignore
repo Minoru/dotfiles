@@ -101,6 +101,9 @@
 /.config/webkit/
 /.config/zathura/
 
+/.arbtt/capture.log
+/.arbtt/capture.log.lck
+
 /.*_history
 /.Xauthority
 /.abook/

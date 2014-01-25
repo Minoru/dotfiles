@@ -5,6 +5,7 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, pp
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
 import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
 import XMonad.Hooks.UrgencyHook (focusUrgent, clearUrgents, withUrgencyHook, NoUrgencyHook(NoUrgencyHook))
+import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Layout.IM (withIM, Property(Role))
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.LayoutCombinators (JumpToLayout(JumpToLayout))
@@ -128,7 +129,7 @@ resetLayoutHook _ = return (All True)
 main = do
     -- spawning different XMoBar configurations depending on the host
     xmproc  <- spawnPipe "xmobar $HOME/.xmobarrc.`hostname --short`"
-    xmonad $
+    xmonad $ ewmh $
       withUrgencyHook NoUrgencyHook
       defaultConfig
         { manageHook = manageDocks <+> myManageHook
