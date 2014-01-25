@@ -93,8 +93,8 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
           , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; i3lock --dpms --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
 
             -- handle volume
-          , ((0, xF86XK_AudioLowerVolume), spawn "amixer sset 'Master' 2-")
-          , ((0, xF86XK_AudioRaiseVolume), spawn "amixer sset 'Master' 2+")
+          , ((0, xF86XK_AudioLowerVolume), spawn "amixer sset Master 1dB-")
+          , ((0, xF86XK_AudioRaiseVolume), spawn "amixer sset Master 1dB+")
           , ((0, xF86XK_AudioMute), spawn "amixer sset 'Master' toggle")
           , ((0, xF86XK_AudioPrev), spawn "mpc prev")
           , ((0, xF86XK_AudioPlay), spawn "mpc toggle")
