@@ -163,3 +163,6 @@
 /.xdvirc
 /.~lock.*#
 /**/.~lock.*#
+/.config/gegl-0.2/plug-ins/Makefile
+/.dia/
+/.subversion/
