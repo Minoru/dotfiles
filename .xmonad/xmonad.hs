@@ -57,6 +57,9 @@ myManageHook = composeAll
     , className =? "Anki" --> doShift "1:gtd"
 
     , className =? "Iceweasel" --> doShift "2:web"
+    , className =? "Iceweasel"
+      <&&> stringProperty "WM_WINDOW_ROLE" =? "GtkFileChooserDialog"
+      --> unfloat
     , className =? "Chromium"  --> doShift "2:web"
 
     , className =? "Gimp" --> doShift "9:gimp"
