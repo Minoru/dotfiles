@@ -94,9 +94,9 @@ alias mkdir='nocorrect mkdir -p'
 alias help="run-help"
 
 # Some more complicated but still useful aliases
-alias rtorrent='tmux a -t rtorrent || tmux new -s rtorrent rtorrent \; set status off'
-alias mcabber='tmux a -t mcabber || tmux new -s mcabber mcabber \; set status off'
-alias irssi='tmux a -t irssi || tmux new -s irssi irssi \; set status off'
+alias rtorrent='tmux a -t rtorrent || tmux new -s rtorrent "echo \"\033]0;rtorrent\a\" && rtorrent" \; set status off'
+alias mcabber='tmux a -t mcabber || tmux new -s mcabber "echo \"\033]0;mcabber\a\" && mcabber" \; set status off'
+alias irssi='tmux a -t irssi || tmux new -s irssi "echo \"\033]0;irssi\a\" && irssi" \; set status off'
 alias ocaml='rlwrap ocaml'
 alias arm='sudo -u debian-tor arm'
 alias find_original='git annex find | xargs -I "{}" -- find -L ~/torrents/downloads -samefile {}'
