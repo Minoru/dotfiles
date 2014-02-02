@@ -150,14 +150,14 @@ case $TERM in
         }
         
         # Preexec is called just before any command line is executed
-        # $3 is the command being executad, with aliases expanded
+        # $1 is the command being executad
         # sed used to cut off parameters of command
         preexec() {
             title="${titleHost}"
             if [ -n "$TMUX" ]; then
                 title="${title}(`tmux display-message -p '#S'`) "
             fi
-            title="${title}`echo $3 | head -n1 | sed -r 's/^((sudo |torify )?[^[:space:]]+).*/\1/'`"
+            title="${title}`echo $1 | head -n1 | sed -r 's/^((sudo |torify )?[^[:space:]]+).*/\1/'`"
             print -Pn "\033]0;${title}\a"
         }
 
