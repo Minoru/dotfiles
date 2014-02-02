@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/sh
 
 .scripts/set-logitech-m570-sensitivity
-.bin/arbtt-capture &!
+.bin/arbtt-capture &
 
 exec /home/minoru/.xmonad/xmonad-x86_64-linux
