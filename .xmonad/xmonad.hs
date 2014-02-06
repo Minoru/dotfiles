@@ -57,15 +57,15 @@ myManageHook = composeAll
     , className =? "Anki" --> doShift "1:gtd"
 
     , className =? "Iceweasel" --> doShift "2:web"
-    , className =? "Iceweasel"
-      <&&> stringProperty "WM_WINDOW_ROLE" =? "GtkFileChooserDialog"
-      --> unfloat
 
     , className =? "Chromium"  --> doShift "2:web"
 
     , className =? "Gimp" --> doShift "9:gimp"
     , className =? "Gimp"
       <&&> stringProperty "WM_WINDOW_ROLE" =? "gimp-file-export"
+      --> unfloat
+
+    , stringProperty "WM_WINDOW_ROLE" =? "GtkFileChooserDialog"
       --> unfloat
     ]
     where unfloat = ask >>= doF . W.sink
