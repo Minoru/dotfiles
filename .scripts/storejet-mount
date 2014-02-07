@@ -20,6 +20,7 @@ err_lvchange_enable=4
 err_mount=5
 err_chgrp=6
 err_umount=7
+err_apm_fail=8
 
 luks_dev="/dev/disk/by-uuid/79f20330-33b7-4ea9-b5b7-efb856aeb29e"
 
@@ -40,6 +41,10 @@ if [ -L /dev/mapper/storejet_luks ]; then
     echo "Storejet LUKS is already opened!"
     exit $err_storejet_luks_open
 fi
+
+echo 'Setting APM... '
+sudo hdparm -B 128 $luks_dev
+done_or_fail $err_apm_fail
 
 # open LUKS
 echo 'Opening LUKS... '
