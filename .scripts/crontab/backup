@@ -82,7 +82,7 @@ echo
 # ! If you add a repo, update ~/.scripts/storejet-mount to force locks on it
 # !
 
-run obnam backup --verify-randomly=512 --deduplicate=verify --repository=anki --exclude='^/home/minoru/.anki/backup --verify-randomly=512' ~/.anki
+run obnam backup --verify-randomly=512 --deduplicate=verify --repository=anki --exclude='^/home/minoru/.anki/backup' ~/.anki
 run obnam forget --keep=12h,14d,5w,12m --repository=anki
 
 run obnam backup --verify-randomly=513 --deduplicate=verify --repository=job_docs ~/docs/job
