@@ -31,6 +31,7 @@
 /.newsbeuter/cache.db.lock
 /.newsbeuter/history.cmdline
 /.newsbeuter/history.search
+/.newsbeuter/urls
 
 /.ncmpcpp/error.log
 
