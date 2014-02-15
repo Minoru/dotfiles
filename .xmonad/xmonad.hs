@@ -2,16 +2,18 @@ import qualified XMonad.StackSet as W
 import XMonad hiding ((|||))
 import XMonad.Actions.UpdatePointer (updatePointer, PointerPosition(Relative))
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, ppUrgent, ppCurrent, xmobarColor, ppOutput, shorten)
+import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
 import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
 import XMonad.Hooks.UrgencyHook (focusUrgent, clearUrgents, withUrgencyHook, NoUrgencyHook(NoUrgencyHook))
-import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Layout.IM (withIM, Property(Role))
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.LayoutCombinators (JumpToLayout(JumpToLayout))
 import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Layout.PerWorkspace (onWorkspace)
+import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Layout.Reflect (reflectHoriz)
+import XMonad.Layout.TwoPane (TwoPane(TwoPane))
 import XMonad.Prompt (defaultXPConfig)
 import XMonad.Prompt.Shell (shellPrompt)
 import XMonad.Util.EZConfig (additionalKeys)
@@ -70,9 +72,14 @@ myManageHook = composeAll
     ]
     where unfloat = ask >>= doF . W.sink
 
-myLayout = Full ||| tall ||| Mirror tall ||| almostFull
+myLayout = Full |||
+           onWorkspace
+             "2:web"
+             (twoPane ||| Mirror twoPane)
+             (tall ||| Mirror tall ||| almostFull)
     where tall = Tall 1 (5/100) (1/2)
           almostFull = AlmostFull (5/9) (5/100) tall
+          twoPane = TwoPane (3/100) (1/2)
 
 myKeys = [  -- names of keys can be found in haskell-X11 package in files
             -- Graphics/X11/Types.hsc and Graphics.X11.ExtraTypes.hsc
