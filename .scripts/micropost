@@ -60,8 +60,4 @@ else
     echo "p `cat $postfile`"
 fi | $sendxmpp "bnw@bnw.im" && echo "success" || echo "fail"
 
-echo -n "Posting to Psto... "
-cat $postfile | $sendxmpp "psto@psto.net" && echo "success" || echo "fail"
-
 rm -f $postfile
-
