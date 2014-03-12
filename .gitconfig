@@ -22,3 +22,5 @@
     ci = commit
     co = checkout
     snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+[pull]
+	rebase = preserve
