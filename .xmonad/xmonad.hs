@@ -42,8 +42,8 @@ import System.IO (hPutStrLn)
 
 import AlmostFull (AlmostFull(AlmostFull))
 
-myWorkspaces = ["1:gtd", "2:web", "3:im", "4:dev"] ++ map show [5..8]
-            ++ ["9:gimp"]
+myWorkspaces = ["1:gtd", "2:dev", "3:web"] ++ map show [4..6]
+            ++ ["7:im", "8", "9:gimp"]
 
 myManageHook = composeAll
     [ isFullscreen --> doFullFloat
@@ -58,9 +58,9 @@ myManageHook = composeAll
 
     , className =? "Anki" --> doShift "1:gtd"
 
-    , className =? "Iceweasel" --> doShift "2:web"
+    , className =? "Iceweasel" --> doShift "3:web"
 
-    , className =? "Chromium"  --> doShift "2:web"
+    , className =? "Chromium"  --> doShift "3:web"
 
     , className =? "Gimp" --> doShift "9:gimp"
     , className =? "Gimp"
@@ -74,7 +74,7 @@ myManageHook = composeAll
 
 myLayout = Full |||
            onWorkspace
-             "2:web"
+             "3:web"
              (twoPane ||| Mirror twoPane)
              (tall ||| Mirror tall ||| almostFull)
     where tall = Tall 1 (5/100) (1/2)
