@@ -10,6 +10,7 @@ set ssl_starttls=yes # activate TLS if available
 set ssl_force_tls=yes # forse SSL
 set beep=yes # beep on errors
 set beep_new=yes # beep when notifying me of new message
+set sleep_time=0 # make mutt fast
 unset mark_old # "read" and "new" is enough
 
 # headers
