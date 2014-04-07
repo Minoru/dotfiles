@@ -79,6 +79,7 @@
 /.scripts/start-redshift
 /.scripts/vbeep
 
+/.config/RawTherapee/
 /.config/Scan Tailor/
 /.config/Trash/
 /.config/Trolltech.conf
