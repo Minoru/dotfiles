@@ -173,3 +173,5 @@
 /.config/icedtea-web/
 /.viking/
 /.viking-maps/
+/.RData
+/.Rhistory
