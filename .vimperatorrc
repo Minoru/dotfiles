@@ -16,7 +16,7 @@ set complete="hbs"
 set editor="urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb -e vim"
 
 " show tab bar, but nothing else
-set gui=tabs
+set gui=tabs,nonavigation
 
 " characters to use to label links
 set hintchars=jklhfdsauopyrewtbvcxz
