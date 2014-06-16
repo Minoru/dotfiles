@@ -19,7 +19,7 @@ set editor="urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb -e vim"
 set gui=tabs,nonavigation
 
 " characters to use to label links
-set hintchars=jklhfdsauopyrewtbvcxz
+set hintchars=jklhfdsaupyrewtbvcxz
 
 " DuckDuckGo is my search engine of preference
 set defsearch=ddg
