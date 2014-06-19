@@ -25,7 +25,6 @@ export XDG_DATA_HOME="$HOME/.config"
 ~/.ssh/id_rsa \
 ~/.ssh/w3crapcli \
 ~/.ssh/speedy \
-~/.ssh/ldap-user-manager-testserver \
 ~/.ssh/bitbucket
 source ~/.keychain/antaeus-sh > /dev/null
 
