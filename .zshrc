@@ -240,7 +240,7 @@ autoload -Uz compinit && compinit
 
 # Fix DISPLAY environment variable in all tmux sessions, to make xclip work
 # properly across SSH. See http://yubinkim.com/?p=203 for details.
-for name in `tmux ls -F '#{session_name}'`; do
+for name in `tmux ls -F '#{session_name}' 2>/dev/null`; do
     tmux setenv -g -t $name DISPLAY $DISPLAY #set display for all sessions
 done
 
