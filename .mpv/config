@@ -1,2 +1,4 @@
 # Write your default config options here!
 fullscreen = yes
+af=scaletempo
+vf=yadif
