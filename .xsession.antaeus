@@ -1,5 +1,6 @@
 #!/bin/sh
 
+ /usr/lib/x86_64-linux-gnu/mate-notification-daemon/mate-notification-daemon &
 .scripts/set-logitech-m570-sensitivity
 .bin/arbtt-capture --sample-rate=10 & # sample once in 10 seconds
 
