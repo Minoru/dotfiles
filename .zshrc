@@ -77,7 +77,6 @@ alias gzip='gzip --best -v'
 alias gunzip='gunzip -v'
 alias less='less --RAW-CONTROL-CHARS --quit-if-one-screen --no-init'
 alias netstat='netstat --numeric --program'
-alias feh='feh --fullscreen --hide-pointer --scale-down'
 alias pqiv='pqiv -f -i -n'
 alias mutt='PATH="/usr/lib/mutt:$PATH" mutt'
 # Some nocorrect aliases (needed only if CORRECT is set)
