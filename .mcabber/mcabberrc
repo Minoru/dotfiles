@@ -467,7 +467,7 @@ set time_prefix = 1
 # (Only available if mcabber is built with OTR support)
 # Set otr to 1 to enable OTR support.
 # You cannot change this option once mcabber is running.
-set otr = 0
+set otr = 1
 #
 # OTR directory
 # You can specify the OTR directory with the otr_dir option
