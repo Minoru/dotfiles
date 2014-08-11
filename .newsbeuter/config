@@ -8,5 +8,5 @@ text-width 72
 unbind-key D
 bind-key d delete-article
 
-user-agent "Mozilla/5.0 (X11; Linux i686; rv:16.0) Gecko/20121011 Thunderbird/16.0.1"
+user-agent "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)"
 
