@@ -1,1 +1,1 @@
-OPTIONS=!mail,DECGraphics,autodig,autopickup,catname=Puss in Boots,color,disclose=+i +a +v +g +c,dogname=Hachi,fruit=chocolate,hilite_pet,horsename=Bolivar,hpmon,lit_corridor,male,pickup_types=$?+=/!",pushweapon,rest_on_space,showexp,standout,time,use_inverse
+OPTIONS=!mail,DECGraphics,autodig,autopickup,catname=Behemoth,color,disclose=+i +a +v +g +c,dogname=Hachi,fruit=chocolate,hilite_pet,horsename=Bolivar,hpmon,lit_corridor,male,pickup_types=$?+=/!",pushweapon,rest_on_space,showexp,standout,time,use_inverse
