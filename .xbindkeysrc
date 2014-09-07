@@ -6,3 +6,6 @@
 
 ("setxkbmap -layout 'ua,us' -variant 'winkeys,' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'")
     control + 3
+
+("xdotool click --clearmodifiers 3")
+    Alt + Menu
