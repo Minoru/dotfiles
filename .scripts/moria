@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Runs nethack logged using ttyrec
+# Runs moria logged using ttyrec
 
 set -e
 
@@ -16,12 +16,14 @@ test_for "xz"
 
 # maybe user just wants to see statistics? No need to record that
 if [ "$1" = "-s" ]; then
-    /usr/games/nethack -s
+    /usr/games/moria -s
+else if [ "$1" = "-S" ]; then
+    /usr/games/moria -S
 else
-    ttyfile=$HOME/misc/game_recordings/nethack/$(date +%F-%T).ttyrec
-    echo "Starting nethack, logging to $ttyfile ..."
-    ttyrec -e "/usr/games/nethack $@" $ttyfile
+    ttyfile=$HOME/misc/game_recordings/moria/$(date +%F-%T).ttyrec
+    echo "Starting moria, logging to $ttyfile ..."
+    ttyrec -e "/usr/games/moria $@" $ttyfile
     echo "Compressing $ttyfile ..."
     xz -6 $ttyfile
 fi
-
+fi

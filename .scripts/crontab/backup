@@ -100,8 +100,8 @@ run obnam forget --keep=12h,14d,5w,12m --repository=library
 run obnam backup --verify-randomly=512 --deduplicate=verify --repository=torrents --exclude='^/home/minoru/torrents/downloads' ~/torrents
 run obnam forget --keep=12h,14d,5w,12m --repository=torrents
 
-run obnam backup --verify-randomly=512 --deduplicate=verify --repository=nethack_games ~/misc/nethack_games
-run obnam forget --keep=12h,14d,5w,12m --repository=nethack_games
+run obnam backup --verify-randomly=512 --deduplicate=verify --repository=game_recordings ~/misc/game_recordings
+run obnam forget --keep=12h,14d,5w,12m --repository=game_recordings
 
 # !
 # ! If you add a repo, update ~/.scripts/storejet-mount to force locks on it
