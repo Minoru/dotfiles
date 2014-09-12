@@ -22,4 +22,8 @@ include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
 <Multi_key> <minus> <8> : "∞" U221E # INFINITY SYMBOL
 <Multi_key> <8> <minus> : "∞" U221E # INFINITY SYMBOL
 
-<Multi_key> <l> <h> : "λ" U03BB
+<Multi_key> <l> <h> : "λ" U03BB # GREEK SMALL LETTER LAMDA
+
+<Multi_key> <i> <r> : "ɹ" U0279 # LATIN SMALL LETTER TURNED R
+
+<Multi_key> <v> <apostrophe> : "✓" U2713 # CHECK MARK
