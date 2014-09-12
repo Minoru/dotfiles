@@ -1,6 +1,3 @@
-set author-width = 24
-
-color main-date      red      default 
 color graph-commit   cyan     default
 color pp-merge       red      default
 color diff-index     white    default
