@@ -23,10 +23,10 @@ set server = jabber.org
 # If you don't know what a resource is, do not set it.
 # Set disable_random_resource to 1 if you don't want mcabber to add a random
 # suffix to the resource name.
-# set resource =
+set resource = antaeus
 set disable_random_resource = 1
 
-set priority = 7
+set priority = 0
 #set priority_away = 0
 
 # Set 'ignore_self_presence' to 1 if you do not want to see your own
