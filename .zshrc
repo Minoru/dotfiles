@@ -71,6 +71,7 @@ alias e="vim"
 alias ta="tmux attach -t"
 alias ncal="ncal -M" # weeks start at Monday
 alias free="free -m"
+alias grep="grep --colour"
 alias bzip2='bzip2 -vv --best'
 alias bunzip2='bunzip2 -vv'
 alias gzip='gzip --best -v'
