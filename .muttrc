@@ -39,6 +39,11 @@ set postponed="+[Gmail]/Drafts"
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 
+# forward *with* attachments
+# https://tdi.github.io/2014/09/12/forwarding-messages-with-attachments-in-mutt/
+set mime_forward
+set mime_forward_rest=yes
+
 mailboxes "=INBOX"
 mailboxes "=[Gmail]/All Mail"
 mailboxes "=[Gmail]/Sent Mail"
