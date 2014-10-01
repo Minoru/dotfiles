@@ -51,6 +51,7 @@
 /.hg/bin/*.pyc
 
 /.mutt/cache/
+/.muttrc.sensitive
 
 /.fbless_save
 

@@ -1,3 +1,6 @@
+# load config file with a sensitive data like passwords
+source .muttrc.sensitive
+
 set sort = threads
 set edit_headers # edit headers when replying
 set include # always insert quote of original message in reply
@@ -24,11 +27,9 @@ set realname = "Alexander Batischev"
 set imap_check_subscribed
 
 set imap_user = "eual.jp@gmail.com"
-#set imap_pass = ""
 set imap_keepalive = 90
 
 set smtp_url  = "smtp://eual.jp@smtp.gmail.com:587/"
-#set smtp_pass = ""
 
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
