@@ -75,6 +75,8 @@ macro pager B "i<save-message>=[Gmail]/Bin<enter>y"
 # report message as spam by presing S
 macro index S "<save-message>=[Gmail]/Spam<enter>y"
 macro pager S "i<save-message>=[Gmail]/Spam<enter>y"
+# delete the whole thread, marking all messages as read
+macro index X "<tag-thread><tag-prefix><clear-flag>N<tag-prefix>d" "Delete the whole thread, marking all messages as read"
 
 # macro pager <esc>L "<bounce-message>report-listspam@lists.debian.org<enter>B" "report as spam to Debian lists"
 
