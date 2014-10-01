@@ -2,8 +2,10 @@ servers = (
   {
     address = "chat.freenode.net";
     chatnet = "Freenode";
-    port = "6667";
+    port = "6697";
     autoconnect = "yes";
+    ssl_verify = "yes";
+    ssl_capath = "/etc/ssl/certs";
   },
   {
     address = "irc.ntu-kpi.kiev.ua";
@@ -20,7 +22,7 @@ channels = (
   { name = "#anime-kpi"; chatnet = "Anime-KPI"; autojoin = "Yes"; },
   { name = "#haskell"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#nethack"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#gentoo-talks"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#gentoo-talks"; chatnet = "Freenode"; autojoin = "Yes"; },
 );
 
 aliases = {
