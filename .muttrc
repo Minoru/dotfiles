@@ -44,6 +44,10 @@ set message_cachedir=~/.mutt/cache/bodies
 set mime_forward
 set mime_forward_rest=yes
 
+set mail_check = 300 # check for email every 5 minutes (300 seconds)
+set timeout = 300 # how often to stop waiting for user input and perform operations like mail checking (300 sec, 5 minutes)
+set rfc2047_parameters # Fix stupid MUAs behaviour (e.g. filenames like =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=)
+
 mailboxes "=INBOX"
 mailboxes "=[Gmail]/All Mail"
 mailboxes "=[Gmail]/Sent Mail"
@@ -53,8 +57,9 @@ mailboxes "=[Gmail]/Spam"
 
 mailboxes "=debian-announce"
 mailboxes "=debian-devel-announce"
-mailboxes "=debian-security-announce"
 mailboxes "=debian-news"
+mailboxes "=debian-security-announce"
+mailboxes "=debian-user"
 mailboxes "=haskell"
 mailboxes "=haskell-beginners"
 mailboxes "=haskell-cafe"
@@ -70,21 +75,21 @@ mailboxes "=okasaki-russian-study-group"
 mailboxes "=arbtt"
 
 # delete message to Bin by presing B
-macro index B "<save-message>=[Gmail]/Bin<enter>y"
-macro pager B "i<save-message>=[Gmail]/Bin<enter>y"
+macro index B "<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
+macro pager B "i<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
 # report message as spam by presing S
-macro index S "<save-message>=[Gmail]/Spam<enter>y"
-macro pager S "i<save-message>=[Gmail]/Spam<enter>y"
+macro index S "<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
+macro pager S "i<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
 # delete the whole thread, marking all messages as read
 macro index X "<tag-thread><tag-prefix><clear-flag>N<tag-prefix>d" "Delete the whole thread, marking all messages as read"
 
-# macro pager <esc>L "<bounce-message>report-listspam@lists.debian.org<enter>B" "report as spam to Debian lists"
+macro pager <esc>L "<bounce-message>report-listspam@lists.debian.org<enter>B" "Report as spam to Debian lists"
 
 # Use abook with Mutt
 # Q to search
 # a to add sender to abook
 set query_command="abook --mutt-query '%s'"
-macro index,pager a "|abook --add-email\n" 'add sender to abook'
+macro index,pager a "|abook --add-email\n" "Add sender to abook"
 
 bind editor <Tab> complete-query
 bind editor ^T complete
@@ -109,8 +114,3 @@ set pgp_replyencrypt=yes
 set pgp_timeout=1800
 set pgp_good_sign="^gpg: Good signature from"
 set crypt_verify_sig=yes
-
-set mail_check = 300 # check for email every 5 minutes (300 seconds)
-set timeout = 300 # how often to stop waiting for user input and perform operations like mail checking (300 sec, 5 minutes)
-set rfc2047_parameters # Fix stupid MUAs behaviour (e.g. filenames like =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=)
-
