@@ -270,7 +270,7 @@ hilights = (
     regexp = "yes";
   }
 );
-keyboard = ( );
+keyboard = ( { key = "^Q"; id = "active_window"; data = ""; } );
 ignores = (
   {
     level = "JOINS PARTS QUITS NICKS";
