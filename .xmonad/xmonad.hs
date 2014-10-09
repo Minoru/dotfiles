@@ -1,7 +1,7 @@
 import qualified XMonad.StackSet as W
 import XMonad hiding ((|||))
 import XMonad.Actions.UpdatePointer (updatePointer, PointerPosition(Relative))
-import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, ppUrgent, ppCurrent, xmobarColor, ppOutput, shorten)
+import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, ppSep, ppUrgent, ppCurrent, xmobarColor, ppOutput, shorten)
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
 import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
@@ -164,6 +164,7 @@ main = do
                  -- name into the XMobar
                  , ppOrder   =
                      \(workspaces:layout:title:_) -> [workspaces,title]
+                 , ppSep     = " "
                  })
             >> updatePointer (Relative 0.5 0.5)
         -- custom event hook to refresh layout if new dock does appear
