@@ -1,5 +1,5 @@
 # load config file with a sensitive data like passwords
-source .muttrc.sensitive
+source ~/.muttrc.sensitive
 
 set sort = threads
 set edit_headers # edit headers when replying
