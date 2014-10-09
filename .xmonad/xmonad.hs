@@ -58,7 +58,7 @@ myManageHook = composeAll
 
     , className =? "Anki" --> doShift "1:gtd"
 
-    , className =? "Iceweasel" --> doShift "3:web"
+    , className =? "Firefox" --> doShift "3:web"
 
     , className =? "Chromium"  --> doShift "3:web"
 
@@ -88,7 +88,7 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
             ((0, xK_Print), spawn "scrot --quality 0")
           , ((mod1Mask, xK_Print), spawn "scrot --focused --quality 0")
 
-          , ((mod1Mask .|. shiftMask, xK_f), spawn "iceweasel")
+          , ((mod1Mask .|. shiftMask, xK_f), spawn "firefox")
           , ((mod1Mask .|. shiftMask, xK_h), spawn "chromium")
 
             -- MPD key bindings
