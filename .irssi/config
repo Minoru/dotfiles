@@ -277,7 +277,6 @@ ignores = (
     channels = ( "#haskell", "#clojure" );
     network = "Freenode";
   },
-  { level = "CTCPS"; }
 );
 notifies = { };
 windows = {
