@@ -157,9 +157,9 @@ main = do
                  -- to 92 symbols in length
                  , ppTitle   = xmobarColor "#00cc00" "" . shorten 92
                  -- show urgent window in pretty red
-                 , ppUrgent  = xmobarColor "#ff1111" ""
-                 -- current workspace is highlighted by orange-yellow
-                 , ppCurrent = xmobarColor "#ffcc00" ""
+                 , ppUrgent  = xmobarColor "#ff2c4b" ""
+                 -- current workspace is highlighted with a nice bluish
+                 , ppCurrent = xmobarColor "#0a9dff" ""
                  -- I can *see* what layout is in effect, no need to put its
                  -- name into the XMobar
                  , ppOrder   =
@@ -172,5 +172,7 @@ main = do
         , handleEventHook = docksEventHook <+> resetLayoutHook
         , workspaces = myWorkspaces
         , terminal = "urxvtc -fn 'xft:Terminus:pixelsize=16:lang=ru' -rv +sb"
+        , focusedBorderColor = "#0a9dff"
+        , normalBorderColor = "#666462"
         } `additionalKeys` myKeys
 
