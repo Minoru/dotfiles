@@ -43,7 +43,7 @@ import System.IO (hPutStrLn)
 import AlmostFull (AlmostFull(AlmostFull))
 
 myWorkspaces = ["1:gtd", "2:dev", "3:web"] ++ map show [4..6]
-            ++ ["7:im", "8", "9:gimp"]
+            ++ ["7:im", "8:mail", "9:gimp"]
 
 myManageHook = composeAll
     [ isFullscreen --> doFullFloat
