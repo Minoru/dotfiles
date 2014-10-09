@@ -56,6 +56,11 @@ set splitbelow
 set background=dark " Background is dark
 syntax on " Enable syntax hilighting
 colorscheme minoru " use self-written colorscheme
+" Funtoo enables search highlighting by default
+" That won't be much of a problem if only Vim didn't restore the search
+" pattern, which in conjunction with hls leads to searches being highlighted
+" right after opening the file, which is annoying
+set nohls
 set scrolloff=3 " keep at least 3 lines above/below the cursor visible
 " show partial command in the ruler
 set showcmd
