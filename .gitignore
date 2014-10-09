@@ -191,3 +191,11 @@
 /.gnome/apps/chrome-gighmmpiobklfepjocnamgkkbiglidom-Default.desktop
 /.config/applications/wine-extension*
 /.moria-save
+/.config/applications/chrome-*
+/.config/applications/mimeinfo.cache
+/.config/enchant/
+/.gnome/apps/chrome*
+/.pip/pip.log
+/.purple/
+/.python-eggs/
+/.wine/
