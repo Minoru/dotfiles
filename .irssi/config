@@ -212,6 +212,10 @@ settings = {
     trackbar_string = "~";
     splitlong_max_length = "0";
     mpd_host = "ip6-localhost";
+    nickcolor_colors = "2 3 4 5 6 7 9 12 13 ";
+    tmux_away_repeat = 60;
+    tmux_away_string = "fg";
+    tmux_away_window = 1;
   };
   otr = { };
 };
