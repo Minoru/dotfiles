@@ -1,5 +1,5 @@
 # load config file with a sensitive data like passwords
-source .muttrc.sensitive
+source ~/.muttrc.sensitive
 source ~/.muttrc.colors
 
 set sort = threads
