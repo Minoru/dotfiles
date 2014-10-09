@@ -95,13 +95,13 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
           , ((mod1Mask .|. shiftMask, xK_Left),  spawn "mpc prev")
           , ((mod1Mask .|. shiftMask, xK_Right), spawn "mpc next")
           , ((mod1Mask .|. shiftMask, xK_Down),  spawn "mpc toggle")
-          , ((mod1Mask .|. shiftMask, xK_Up),    spawn "urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb -e ncmpcpp")
+          , ((mod1Mask .|. shiftMask, xK_Up),    spawn "urxvtc -fn 'xft:Terminus:pixelsize=16:lang=ru' -rv +sb -e ncmpcpp")
 
             -- toggle statusbar
           , ((mod1Mask .|. shiftMask, xK_b), sendMessage ToggleStruts)
 
             -- choose application to run
-          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=16" })
+          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=14:lang=ru" })
 
             -- lock the screen (switching to English layout first so I can input the password later)
           , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; sleep 1; i3lock --dpms --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
@@ -170,6 +170,6 @@ main = do
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
         , handleEventHook = docksEventHook <+> resetLayoutHook
         , workspaces = myWorkspaces
-        , terminal = "urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb"
+        , terminal = "urxvtc -fn 'xft:Terminus:pixelsize=16:lang=ru' -rv +sb"
         } `additionalKeys` myKeys
 
