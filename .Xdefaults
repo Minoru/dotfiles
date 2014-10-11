@@ -37,4 +37,4 @@ urxvt*color12:    #007eee
 ! urxvt*color15:    #e2e2e2
 
 ! Make URxvt throw WM_URGENT on a bell
-URxvt.urgentOnBell: true
+URxvt*.urgentOnBell: true
