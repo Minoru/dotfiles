@@ -26,7 +26,7 @@ export XDG_DATA_HOME="$HOME/.config"
 ~/.ssh/w3crapcli \
 ~/.ssh/speedy \
 ~/.ssh/bitbucket
-source ~/.keychain/antaeus-sh > /dev/null
+source ~/.keychain/$HOST-sh > /dev/null
 
 ~/misc/netassist.sh
 

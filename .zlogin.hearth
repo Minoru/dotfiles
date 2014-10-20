@@ -14,3 +14,11 @@ export EDITOR=/usr/bin/vim
 
 # for some reason, HOST variables is not exported by default
 export HOST="$HOST"
+
+# Start ssh-agent using keychain
+/usr/bin/keychain \
+~/.ssh/id_rsa \
+~/.ssh/w3crapcli \
+~/.ssh/speedy \
+~/.ssh/bitbucket
+source ~/.keychain/$HOST-sh > /dev/null
