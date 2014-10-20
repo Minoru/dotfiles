@@ -24,6 +24,8 @@ channels = (
   { name = "#gentoo-talks"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#funtoo"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#funtoo-ru"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#nethack"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#acehack.de"; chatnet = "Freenode"; autojoin = "Yes"; },
 
   { name = "#anime-kpi"; chatnet = "Anime-KPI"; autojoin = "No"; }
 );
