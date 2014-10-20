@@ -101,7 +101,7 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
           , ((mod1Mask .|. shiftMask, xK_b), sendMessage ToggleStruts)
 
             -- choose application to run
-          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=14:lang=ru" })
+          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=12:lang=ru" })
 
             -- lock the screen (switching to English layout first so I can input the password later)
           , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; sleep 1; i3lock --dpms --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
