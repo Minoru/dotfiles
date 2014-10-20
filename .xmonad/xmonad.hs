@@ -60,17 +60,16 @@ myManageHook = composeAll
 
     , className =? "Firefox" --> doShift "3:web"
 
-    , className =? "Chromium"  --> doShift "3:web"
+    , className =? "Chromium-browser"  --> doShift "3:web"
 
-    , className =? "Gimp" --> doShift "9:gimp"
-    , className =? "Gimp"
-      <&&> stringProperty "WM_WINDOW_ROLE" =? "gimp-file-export"
-      --> unfloat
+    , className =? "Gimp" --> (unfloat <+> doShift "10:gimp")
 
     , stringProperty "WM_WINDOW_ROLE" =? "GtkFileChooserDialog"
       --> unfloat
     ]
-    where unfloat = ask >>= doF . W.sink
+    where
+      unfloat :: ManageHook
+      unfloat = ask >>= doF . W.sink
 
 myLayout = Full |||
            onWorkspace
