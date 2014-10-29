@@ -1,5 +1,7 @@
 #!/bin/sh
 
+.bin/arbtt-capture --sample-rate=10 & # sample once in 10 seconds
+
 xrdb -merge $HOME/.Xdefaults
 xrdb -merge $HOME/.Xresources
 
