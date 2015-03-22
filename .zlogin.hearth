@@ -17,8 +17,10 @@ export HOST="$HOST"
 
 # Start ssh-agent using keychain
 /usr/bin/keychain \
+~/.ssh/bitbucket \
 ~/.ssh/id_rsa \
-~/.ssh/w3crapcli \
 ~/.ssh/speedy \
-~/.ssh/bitbucket
+~/.ssh/theke \
+~/.ssh/theke-deploy \
+~/.ssh/w3crapcli
 source ~/.keychain/$HOST-sh > /dev/null
