@@ -1,1 +1,1 @@
-alias news="torify newsbeuter"
+alias newsbeuter="torify /usr/bin/newsbeuter"
