@@ -1,5 +1,6 @@
 # load config file with a sensitive data like passwords
 source ~/.muttrc.sensitive
+source ~/.muttrc.colors
 
 set sort = threads
 set edit_headers # edit headers when replying
@@ -93,6 +94,10 @@ macro index,pager a "|abook --add-email\n" "Add sender to abook"
 
 bind editor <Tab> complete-query
 bind editor ^T complete
+
+# show the incoming mailboxes list (just like "mutt -y") and back when pressing "y"
+macro index,pager y "<change-folder>?<toggle-mailboxes>" "show incoming mailboxes list"
+bind browser y exit
 
 # Dealing with GnuPG
 # http://codesorcery.net/old/mutt/mutt-gnupg-howto

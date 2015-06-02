@@ -1,4 +1,3 @@
-URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      /usr/bin/iceweasel
-URxvt.matcher.button:   1
-
+URxvt*.perl-ext-common:  default,matcher
+URxvt*.url-launcher:     /usr/bin/firefox
+URxvt*.matcher.button:   1

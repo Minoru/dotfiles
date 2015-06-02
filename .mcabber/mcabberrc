@@ -23,11 +23,11 @@ set server = jabber.org
 # If you don't know what a resource is, do not set it.
 # Set disable_random_resource to 1 if you don't want mcabber to add a random
 # suffix to the resource name.
-set resource = antaeus
+set resource = hearth
 set disable_random_resource = 1
 
-set priority = 0
-#set priority_away = 0
+set priority = 10
+set priority_away = 1
 
 # Set 'ignore_self_presence' to 1 if you do not want to see your own
 # presence in your roster (default: 0).
@@ -46,7 +46,7 @@ set tls = 1
 # 1. gnutls-cli -p 5223 $your_server
 # 2. openssl s_client -connect $your_server:5223 | \
 #    openssl x509 -fingerprint -md5 -noout
-set ssl_fingerprint = 36:6A:23:2D:70:93:CD:B0:73:D4:F4:9A:5C:7E:36:68
+set ssl_fingerprint = 3D:5C:C2:A6:25:A1:18:16:6A:91:08:13:9B:8B:50:AA
 # Set ssl_ignore_checks to 1 to disable all certificate checks except the
 # fingerprint check.
 set ssl_ignore_checks = 1
@@ -169,7 +169,7 @@ set max_history_age = 2
 
 # You can specify a maximum number of data blocks per buffer (1 block contains
 # about 8kB).  The default is 0 (unlimited).  If set, this value must be > 2.
-set max_history_blocks = 8
+set max_history_blocks = 16
 
 # IQ settings
 # Set iq_version_hide_os to 1 if you do not want to allow people to retrieve

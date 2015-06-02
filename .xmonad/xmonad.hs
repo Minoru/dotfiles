@@ -14,7 +14,7 @@ import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Layout.Reflect (reflectHoriz)
 import XMonad.Layout.TwoPane (TwoPane(TwoPane))
-import XMonad.Prompt (defaultXPConfig)
+import XMonad.Prompt (defaultXPConfig, XPConfig(font))
 import XMonad.Prompt.Shell (shellPrompt)
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.Run (spawnPipe)
@@ -58,19 +58,18 @@ myManageHook = composeAll
 
     , className =? "Anki" --> doShift "1:gtd"
 
-    , className =? "Iceweasel" --> doShift "3:web"
+    , className =? "Firefox" --> doShift "3:web"
 
-    , className =? "Chromium"  --> doShift "3:web"
+    , className =? "Chromium-browser"  --> doShift "3:web"
 
-    , className =? "Gimp" --> doShift "9:gimp"
-    , className =? "Gimp"
-      <&&> stringProperty "WM_WINDOW_ROLE" =? "gimp-file-export"
-      --> unfloat
+    , className =? "Gimp" --> (unfloat <+> doShift "10:gimp")
 
     , stringProperty "WM_WINDOW_ROLE" =? "GtkFileChooserDialog"
       --> unfloat
     ]
-    where unfloat = ask >>= doF . W.sink
+    where
+      unfloat :: ManageHook
+      unfloat = ask >>= doF . W.sink
 
 myLayout = Full |||
            onWorkspace
@@ -88,20 +87,20 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
             ((0, xK_Print), spawn "scrot --quality 0")
           , ((mod1Mask, xK_Print), spawn "scrot --focused --quality 0")
 
-          , ((mod1Mask .|. shiftMask, xK_f), spawn "iceweasel")
+          , ((mod1Mask .|. shiftMask, xK_f), spawn "firefox")
           , ((mod1Mask .|. shiftMask, xK_h), spawn "chromium")
 
             -- MPD key bindings
           , ((mod1Mask .|. shiftMask, xK_Left),  spawn "mpc prev")
           , ((mod1Mask .|. shiftMask, xK_Right), spawn "mpc next")
           , ((mod1Mask .|. shiftMask, xK_Down),  spawn "mpc toggle")
-          , ((mod1Mask .|. shiftMask, xK_Up),    spawn "urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb -e ncmpcpp")
+          , ((mod1Mask .|. shiftMask, xK_Up),    spawn "urxvtc -fn 'xft:Terminus:pixelsize=16:lang=ru' -rv +sb -e ncmpcpp")
 
             -- toggle statusbar
           , ((mod1Mask .|. shiftMask, xK_b), sendMessage ToggleStruts)
 
             -- choose application to run
-          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig)
+          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=12:lang=ru" })
 
             -- lock the screen (switching to English layout first so I can input the password later)
           , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; sleep 1; i3lock --dpms --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
@@ -171,7 +170,7 @@ main = do
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
         , handleEventHook = docksEventHook <+> resetLayoutHook
         , workspaces = myWorkspaces
-        , terminal = "urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb"
+        , terminal = "urxvtc -fn 'xft:Terminus:pixelsize=16:lang=ru' -rv +sb"
         , focusedBorderColor = "#0a9dff"
         , normalBorderColor = "#666462"
         } `additionalKeys` myKeys

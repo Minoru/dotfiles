@@ -16,11 +16,6 @@ xset s off
 # setting up the background
 feh --bg-scale '/home/minoru/pictures/wallpapers/current.png' &
 
-# disabling touchpad on typing
-syndaemon -i 1 -K -d -p $HOME/.syndaemon.pid
-# enable tapping
-synclient TapButton1=1 TapButton2=2 TapButton3=3
-
 # start urxvt terminal daemon
 urxvtd --quiet --opendisplay --fork
 

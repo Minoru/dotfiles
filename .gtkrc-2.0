@@ -1,6 +1,6 @@
-# -- THEME AUTO-WRITTEN DO NOT EDIT
+# -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT
 include "/usr/share/themes/Human/gtk-2.0/gtkrc"
 
-include "/home/minoru/.gtkrc.mine"
+include "/home/minoru/.gtkrc-2.0.mine"
 
-# -- THEME AUTO-WRITTEN DO NOT EDIT
+# -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT

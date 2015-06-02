@@ -1,0 +1,29 @@
+#
+# ~/.zlogin for hearth
+#
+
+# Adding ~/.scripts to my PATH
+export PATH=$HOME/.cabal/bin:$HOME/.bin:$HOME/.scripts:$PATH
+export PYTHONSTARTUP="$HOME/.pystartup"
+export BROWSER='/usr/bin/firefox'
+export GTK_IM_MODULE="xim"
+export MPD_HOST='::1'
+export XDG_DATA_HOME="$HOME/.config"
+
+export EDITOR=/usr/bin/vim
+
+# for some reason, HOST variables is not exported by default
+export HOST="$HOST"
+
+! pgrep -u $USER parcimonie && ionice -c 2 -n 7 nice -n 20 \
+~/.bin/parcimonie.sh >$HOME/.parcimonie.log 2>&1 &!
+
+# Start ssh-agent using keychain
+/usr/bin/keychain \
+~/.ssh/bitbucket \
+~/.ssh/id_rsa \
+~/.ssh/speedy \
+~/.ssh/theke \
+~/.ssh/theke-deploy \
+~/.ssh/w3crapcli
+source ~/.keychain/$HOST-sh > /dev/null
