@@ -1,5 +1,4 @@
 auto-reload yes
-reload-time 30
 download-retries 5
 goto-first-unread no
 text-width 72
@@ -8,9 +7,16 @@ text-width 72
 unbind-key D
 bind-key d delete-article
 
-user-agent "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)"
-
 # make currently focused unread item more visible
 color listfocus_unread cyan blue bold
 
 browser /usr/bin/firefox
+
+# tt-rss configuration
+
+ttrss-flag-star "s"
+ttrss-flag-publish "p"
+ttrss-mode "multi"
+urls-source "ttrss"
+
+include "~/.newsbeuter/config.sensitive"
