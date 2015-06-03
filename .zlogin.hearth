@@ -12,8 +12,6 @@ export XDG_DATA_HOME="$HOME/.config"
 
 export EDITOR=/usr/bin/vim
 
-# for some reason, HOST variables is not exported by default
-export HOST="$HOST"
 
 ! pgrep -u $USER parcimonie && ionice -c 2 -n 7 nice -n 20 \
 ~/.bin/parcimonie.sh >$HOME/.parcimonie.log 2>&1 &!
