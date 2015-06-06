@@ -28,4 +28,6 @@ session = ~/torrents/session
 # watchdog: every five minutes, check for new torrents
 schedule = watch_directory,5,5,load_start=~/torrents/torrent-files/*.torrent
 
+encryption = allow_incoming, try_outgoing, enable_retry
+
 # vim: ft=rtorrent :
