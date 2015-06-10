@@ -6,11 +6,11 @@ import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
 import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
 import XMonad.Hooks.UrgencyHook (focusUrgent, clearUrgents, withUrgencyHook, NoUrgencyHook(NoUrgencyHook))
+import XMonad.Layout.Fullscreen (fullscreenFull)
 import XMonad.Layout.IM (withIM, Property(Role))
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.LayoutCombinators (JumpToLayout(JumpToLayout))
-import XMonad.Layout.NoBorders (smartBorders)
-import XMonad.Layout.PerWorkspace (onWorkspace)
+import XMonad.Layout.NoBorders (noBorders, smartBorders)
 import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Layout.Reflect (reflectHoriz)
 import XMonad.Layout.TwoPane (TwoPane(TwoPane))
@@ -42,15 +42,12 @@ import System.IO (hPutStrLn)
 
 import AlmostFull (AlmostFull(AlmostFull))
 
-myWorkspaces = ["1:gtd", "2:dev", "3:web"] ++ map show [4..6]
-            ++ ["7:im", "8:mail", "9:gimp"]
+myWorkspaces = ["1:gtd", "2:dev", "3:web", "4", "5:video", "6", "7:im",
+                "8:mail", "9:gimp"]
 
 myManageHook = composeAll
     [ isFullscreen --> doFullFloat
 
-    , className =? "MPlayer"  --> doFloat
-    , className =? "mplayer2" --> doFloat
-    , className =? "mpv"      --> doFloat
     , className =? "feh"      --> doFloat
     , className =? "Pqiv"     --> doFloat
     , className =? "Xmessage" --> doFloat
@@ -64,6 +61,10 @@ myManageHook = composeAll
 
     , className =? "Gimp" --> (unfloat <+> doShift "10:gimp")
 
+    , className =? "mpv"      --> videoMode
+    , className =? "MPlayer"  --> videoMode
+    , className =? "mplayer2" --> videoMode
+
     , stringProperty "WM_WINDOW_ROLE" =? "GtkFileChooserDialog"
       --> unfloat
     ]
@@ -71,7 +72,13 @@ myManageHook = composeAll
       unfloat :: ManageHook
       unfloat = ask >>= doF . W.sink
 
-myLayout = Full |||
+      videoMode = unfloat
+               <+> doShift "5:video"
+               <+> doF (W.greedyView "5:video")
+
+myLayout = onWorkspace "5:video" absoluteFull $
+           smartBorders $ avoidStruts $
+           Full |||
            onWorkspace
              "3:web"
              (twoPane ||| Mirror twoPane)
@@ -79,6 +86,7 @@ myLayout = Full |||
     where tall = Tall 1 (5/100) (1/2)
           almostFull = AlmostFull (5/9) (5/100) tall
           twoPane = TwoPane (3/100) (1/2)
+          absoluteFull = noBorders $ fullscreenFull Full
 
 myKeys = [  -- names of keys can be found in haskell-X11 package in files
             -- Graphics/X11/Types.hsc and Graphics.X11.ExtraTypes.hsc
@@ -147,7 +155,7 @@ main = do
       defaultConfig
         { manageHook = manageDocks <+> myManageHook
                                    <+> manageHook defaultConfig
-        , layoutHook = smartBorders $ avoidStruts $ myLayout
+        , layoutHook = myLayout
         , logHook =
             -- move mouse pointer to the center of the focused window
                dynamicLogWithPP (xmobarPP
