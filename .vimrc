@@ -84,6 +84,17 @@ function! SetCursorPosition()
     end
 endfunction
 
+" The following is just a slightly tweaked Gentoo's default statusline
+set statusline=   " clear the statusline for when vimrc is reloaded
+set statusline+=%-3.3n\                      " buffer number
+set statusline+=%f\                          " file name
+set statusline+=%h%m%r%w                     " flags
+set statusline+=[%{strlen(&ft)?&ft:'none'},  "   filetype
+set statusline+=%{strlen(&fenc)?&fenc:&enc}, "   encoding
+set statusline+=%{&fileformat}]              "   file format
+set statusline+=%=                           " right align
+set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+
 " }}}}
 " Mappings {{{{
 
