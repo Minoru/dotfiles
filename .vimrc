@@ -335,6 +335,13 @@ augroup ft_haskell
 augroup END
 
 " }}}}
+" Erlang {{{{
+augroup ft_erlang
+    autocmd!
+
+    autocmd FileType erlang call matchadd('ColorColumn', '\%>79v', 100)
+augroup END
+" }}}}
 " Python {{{{
 
 augroup ft_python
