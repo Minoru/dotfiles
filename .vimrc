@@ -114,9 +114,6 @@ noremap gk k
 nnoremap ; :
 nnoremap : ;
 
-" leader key mappings
-set pastetoggle=<leader>p
-
 " setting up DragVisuals plugin
 vmap  <expr>  <LEFT>   DVB_Drag('left')
 vmap  <expr>  <RIGHT>  DVB_Drag('right')
@@ -158,6 +155,10 @@ noremap <C-l> <C-w>l
 nunmap <F3>
 iunmap <F3>
 cunmap <F3>
+" ...but I liked the key, so...
+set pastetoggle=<F3>
+" (I've been using <leader>p, with <leader> mapped to backslash, for quite
+" a while, but it inevitably caused problems, most often with LaTeX sources)
 
 " }}}}
 " Commands {{{{
