@@ -153,6 +153,12 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+" Gentoo maps this to a function that toggles 'ai' and 'list' - this helps
+" when you want to copy from Vim. I don't use this stuff, therefore...
+nunmap <F3>
+iunmap <F3>
+cunmap <F3>
+
 " }}}}
 " Commands {{{{
 
