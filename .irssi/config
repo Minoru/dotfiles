@@ -19,13 +19,12 @@ chatnets = { Freenode = { type = "IRC"; }; "Anime-KPI" = { type = "IRC"; }; };
 
 channels = (
   { name = "#linuxtalk"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#funtoo-ru"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#acehack.de"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#funtoo"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#gentoo-talks"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#haskell"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#nethack"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#gentoo-talks"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#funtoo"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#funtoo-ru"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#nethack"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#acehack.de"; chatnet = "Freenode"; autojoin = "Yes"; },
 
   { name = "#anime-kpi"; chatnet = "Anime-KPI"; autojoin = "No"; }
 );
