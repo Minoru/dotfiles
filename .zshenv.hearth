@@ -1,7 +1,0 @@
-#
-# ~/.zshenv for hearth
-#
-
-# setting EDITOR to anything vi-like automatically enables vi-like keybindings
-# in shell. Reverting to emacs-like...
-bindkey -e

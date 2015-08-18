@@ -1,6 +1,0 @@
-#
-# ~/.zshenv for wanderer
-#
-
-# TODO: remove this when migration to stack is complete
-export PATH=$HOME/.cabal/bin:$PATH
