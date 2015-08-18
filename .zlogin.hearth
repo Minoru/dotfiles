@@ -3,7 +3,6 @@
 #
 
 # Adding ~/.scripts to my PATH
-export PATH=$HOME/.cabal/bin:$HOME/.bin:$HOME/.scripts:$PATH
 export PYTHONSTARTUP="$HOME/.pystartup"
 export BROWSER='/usr/bin/firefox'
 export GTK_IM_MODULE="xim"
