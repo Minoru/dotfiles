@@ -219,6 +219,8 @@ bindkey "\e\e[C" forward-word
 # for urxvt
 bindkey "\e[8~" end-of-line
 bindkey "\e[7~" beginning-of-line
+# exporting EDITOR=vim makes ZSH switch into Vi mode; I don't like that
+bindkey -e
 
 
 #-------------------------------------------------------------------------------
