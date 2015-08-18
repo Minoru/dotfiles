@@ -5,12 +5,6 @@
 # TODO: remove this when migration to stack is complete
 export PATH=$HOME/.cabal/bin:$PATH
 
-export PYTHONSTARTUP="$HOME/.pystartup"
-export BROWSER='/usr/bin/iceweasel'
-export GTK_IM_MODULE="xim"
-export MPD_HOST='::1'
-export XDG_DATA_HOME="$HOME/.config"
-
 # Start ssh-agent using keychain
 /usr/bin/keychain \
 ~/.ssh/github \
