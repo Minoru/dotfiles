@@ -11,5 +11,6 @@ export XDG_DATA_HOME="$HOME/.config"
 
 # Start ssh-agent using keychain
 /usr/bin/keychain \
+~/.ssh/github \
 ~/.ssh/hearth
 source ~/.keychain/wanderer-sh > /dev/null
