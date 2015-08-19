@@ -22,7 +22,7 @@ set gui=tabs,nonavigation
 set hintchars=jklhfdsaupyrewtbcxz
 
 " DuckDuckGo is my search engine of preference
-set defsearch=ddg-tor
+set defsearch=ddg
 
 " mimic the settings I have in .vimrc
 noremap ; :
