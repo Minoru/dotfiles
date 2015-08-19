@@ -1,5 +1,3 @@
 #!/bin/sh
 
-.bin/arbtt-capture --sample-rate=10 & # sample once in 10 seconds
-
 exec /home/minoru/.xmonad/xmonad-x86_64-linux
