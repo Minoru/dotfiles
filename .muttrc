@@ -58,6 +58,7 @@ mailboxes "=[Gmail]/Spam"
 
 mailboxes "=debian-announce"
 mailboxes "=debian-devel-announce"
+mailboxes "=debian-haskell"
 mailboxes "=debian-news"
 mailboxes "=debian-security-announce"
 mailboxes "=debian-user"
