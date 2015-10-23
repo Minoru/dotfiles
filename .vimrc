@@ -239,6 +239,10 @@ set wildignore+=*.hi                             " Haskell's "interactive files"
 " in Visual block mode, allow selecting places where there's no chars
 set virtualedit+=block
 
+" enable mouse in Normal and Insert modes. That allows for scrolling and
+" click-to-put-cursor, the only worthwhile uses for mouse in Vim
+set mouse=ni
+
 " }}}}
 " Language-specific preferences {{{{
 
