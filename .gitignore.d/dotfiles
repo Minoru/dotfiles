@@ -203,3 +203,5 @@
 /.arm/cache/
 /.serverauth.*
 /.newsbeuter/config.sensitive
+/.tmux/plugins/
+/.tmux/resurrect/
