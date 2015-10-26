@@ -2,9 +2,14 @@
 " Author: Alexander Batischev <eual.jp@gmail.com>
 " Source: https://github.com/Minoru/dotfiles
 
-" Pathogen {{{{
+" Vim-plug {{{{
 
-call pathogen#infect()
+call plug#begin('~/.vim/plugins')
+Plug 'scrooloose/nerdcommenter'
+Plug 'aklt/plantuml-syntax'
+" ultrasnips depends on vim-snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+call plug#end()
 
 " }}}}
 " Indentation and the like {{{{

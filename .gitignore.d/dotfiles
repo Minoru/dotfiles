@@ -18,7 +18,7 @@
 /.xsession-errors
 
 /.vim/.netrwhist
-/.vim/bundle/**/doc/tags
+/.vim/plugins/
 /.vim/spell/
 /.vim/undofiles/
 /.viminfo
