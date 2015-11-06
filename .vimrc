@@ -9,8 +9,17 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'aklt/plantuml-syntax'
 " ultrasnips depends on vim-snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'blindFS/vim-taskwarrior'
 call plug#end()
 
+" }}}}
+" {{{{ Plugin settings
+" {{{2 blindFS/vim-taskwarrior
+" work around a bug when only a handful of tasks are displayed due to
+" incorrect terminal height detection
+" Ref: https://github.com/blindFS/vim-taskwarrior/issues/104
+let g:task_rc_override = 'rc.defaultheight=0'
+" }}}
 " }}}}
 " Indentation and the like {{{{
 

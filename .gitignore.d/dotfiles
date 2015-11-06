@@ -26,6 +26,7 @@
 /.vimperator/
 
 /.task/*.data
+/.task/.vim_tw.history
 
 /.newsbeuter/cache.db
 /.newsbeuter/cache.db.lock
