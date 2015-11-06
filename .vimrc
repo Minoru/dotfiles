@@ -166,9 +166,10 @@ noremap <C-l> <C-w>l
 
 " Gentoo maps this to a function that toggles 'ai' and 'list' - this helps
 " when you want to copy from Vim. I don't use this stuff, therefore...
-nunmap <F3>
-iunmap <F3>
-cunmap <F3>
+" (`silent!` to avoid error messages about undefined mapping)
+silent! nunmap <F3>
+silent! iunmap <F3>
+silent! cunmap <F3>
 " ...but I liked the key, so...
 set pastetoggle=<F3>
 " (I've been using <leader>p, with <leader> mapped to backslash, for quite
