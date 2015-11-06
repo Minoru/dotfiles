@@ -1,7 +1,7 @@
-# [Created by task 1.9.4 2/12/2012 16:17:26]
+# [Created by task 2.4.4 11/6/2015 23:40:00]
 # Taskwarrior program configuration file.
-# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
-# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
 
 # Here is an example of entries that use the default, override and blank values
 #   variable=foo   -- By specifying a value, this overrides the default
@@ -17,16 +17,8 @@ dateformat = d.m.Y
 dateformat.annotation = d.m.Y
 dateformat.report = d.m.Y
 
-report.list.columns = id,project,priority,due,due.countdown,depends,description
-report.list.labels = ID,Project,Pri,Due,Time Past,Depends,Description
-report.list.sort = due-,project-,depends+,priority+,description-
-
-report.next.labels = Project,Pri,Due,Time Past,ID,Description
-report.next.sort = due-,priority+,project-,id+
-report.next.columns = project,priority,due,due.countdown,id,description
-report.next.filter = status:pending +UNBLOCKED
-
-color.blocking = 
-
-include /home/minoru/.task/minoru.theme
+report.next.sort = due+,priority-,project+,id-
+report.next.labels = ID,Deps,Project,Tag,Recurring,Due,Until,Description,Urg
+report.next.columns = id,depends,project,tags,recur,due.remaining,until.remaining,description,urgency
+report.next.filter = status:pending +UNBLOCKED limit:page
 
