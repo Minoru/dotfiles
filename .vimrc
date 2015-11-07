@@ -10,6 +10,7 @@ Plug 'aklt/plantuml-syntax'
 " ultrasnips depends on vim-snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'blindFS/vim-taskwarrior'
+Plug 'vim-scripts/LargeFile'
 call plug#end()
 
 " }}}}
