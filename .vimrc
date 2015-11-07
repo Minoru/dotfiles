@@ -218,7 +218,7 @@ set omnifunc=syntaxcomplete#Complete
 
 set encoding=utf-8 " default encoding
 " sequences of encodings and file formats to try
-set fileencodings=utf-8,windows-1251,iso-8859-15,koi8-r,cp866
+set fileencodings=utf-8,windows-1251
 set fileformats=unix,dos,mac
 
 " assume all numbers are decimal (affects CTRL-A and CTRL-X)
