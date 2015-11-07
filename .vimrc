@@ -13,12 +13,16 @@ Plug 'blindFS/vim-taskwarrior'
 call plug#end()
 
 " }}}}
-" {{{{ Plugin settings
+" Plugin settings {{{{
 " {{{2 blindFS/vim-taskwarrior
 " work around a bug when only a handful of tasks are displayed due to
 " incorrect terminal height detection
 " Ref: https://github.com/blindFS/vim-taskwarrior/issues/104
 let g:task_rc_override = 'rc.defaultheight=0'
+
+" do not highlight current field (with my theme it's too dark to read, and
+" I don't see the point anyway - cursor is visible enough)
+let g:task_highlight_field = 0
 " }}}
 " }}}}
 " Indentation and the like {{{{
