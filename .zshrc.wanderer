@@ -1,3 +1,0 @@
-# EDITOR is set to vim, thus ZSH assumes that I'm using vi-style keybindings in
-# the shell, too; but I'm not, so let's reset it
-bindkey -e

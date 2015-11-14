@@ -215,6 +215,8 @@ umask 0027
 # described. Also, add help="run-help" alias (see above in ALIASES section)
 autoload run-help
 # key bindings
+# exporting EDITOR=vim makes ZSH switch into Vi mode; I don't like that
+bindkey -e
 # needed when connected by ssh, don't hurt if you're connected locally
 bindkey "\e[1~" beginning-of-line
 bindkey "\e[4~" end-of-line
@@ -228,8 +230,6 @@ bindkey "\e\e[C" forward-word
 # for urxvt
 bindkey "\e[8~" end-of-line
 bindkey "\e[7~" beginning-of-line
-# exporting EDITOR=vim makes ZSH switch into Vi mode; I don't like that
-bindkey -e
 
 
 #-------------------------------------------------------------------------------
@@ -242,6 +242,11 @@ bindkey -e
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' #'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # Sets autocompletion
 autoload -Uz compinit && compinit
+
+# stack autocompletion as per
+# https://github.com/commercialhaskell/stack/wiki/Shell-autocompletion#for-zsh-users
+autoload -Uz bashcompinit && bashcompinit
+eval "$($HOME/.local/bin/stack --bash-completion-script "$HOME/.local/bin/stack")"
 
 #-------------------------------------------------------------------------------
 #
