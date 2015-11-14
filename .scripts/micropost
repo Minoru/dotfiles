@@ -1,6 +1,6 @@
-#!/bin/sh 
+#!/bin/sh
 
-# Copyright (c) 2012-2013 Alexander Batischev <eual.jp@gmail.com>
+# Copyright (c) 2012-2015 Alexander Batischev <eual.jp@gmail.com>
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -46,6 +46,11 @@ if [ ! -s $postfile ]; then
     rm -f $postfile
     exit 1
 fi
+
+# make a backup
+$backupname="`date +'%Y.%m.%d %T %z.markdown'`"
+mkdir -p "$HOME/.micropost/backups"
+cp -v "$postfile" $HOME/.micropost/backups/"$backupname"
 
 # check if any tags were specified; they should be on the first line, with
 # asterisk at the beginning
