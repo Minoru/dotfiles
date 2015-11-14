@@ -31,6 +31,15 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_NO_STORE
 # Enable extended globs to interpret things like rm ^(file|file2)
 setopt EXTENDED_GLOB
+# split parameters into words after substitution
+# E.g.:
+# D="one two three"
+# With this option on (bash and dash behave like that):
+# ./x $D   # argv == ["x", "one", "two", "three"]
+# Without this option (the default):
+# ./x $D   # argv == ["x", "one two three"]
+# See https://bnw.im/p/EEIAKW (Russian!) for details on this
+setopt SH_WORD_SPLIT
 
 
 
