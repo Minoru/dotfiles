@@ -39,7 +39,7 @@ fi
 sendxmpp="sendxmpp --tls --resource micropost"
 
 postfile="`mktemp '/tmp/micropost-XXXXXXXX'`"
-vim -c 'startinsert' -c 'set spell spelllang=ru,en' $postfile
+vim -c 'startinsert' -c 'set spell spelllang=ru_yo,en' $postfile
 
 if [ ! -s $postfile ]; then
     # file is empty or was deleted; abort
