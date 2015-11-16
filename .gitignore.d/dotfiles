@@ -225,3 +225,6 @@
 
 /.tmux/plugins/
 /.tmux/resurrect/
+/.config/nvim/shada/
+/.config/nvim/swap/
+/.nvim/shada/
