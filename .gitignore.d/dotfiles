@@ -224,6 +224,9 @@
 /.sbt/
 # vym
 /.config/InSilmaril/
+/.config/applications/*.desktop
+/.config/applications/wine/
+/.config/autostart/
 
 /.tmux/plugins/
 /.tmux/resurrect/
