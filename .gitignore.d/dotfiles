@@ -3,6 +3,9 @@
 !.*
 !.*/**
 
+/.gitignore.d/*
+!/.gitignore.d/dotfiles
+
 /.xmonad/*.o
 /.xmonad/*.hi
 /.xmonad/lib/*.o
