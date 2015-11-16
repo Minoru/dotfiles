@@ -212,6 +212,14 @@
 /.sw?
 /.*.sw?
 /.texlive/
+/.stack/build-plan-cache/
+/.stack/build-plan/
+/.stack/global/.stack-work/
+/.stack/indices/
+/.stack/lockfile
+/.stack/programs/
+/.stack/snapshots/
+/.stack/templates/
 
 /.tmux/plugins/
 /.tmux/resurrect/
