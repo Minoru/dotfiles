@@ -211,6 +211,7 @@
 /.android/
 /.sw?
 /.*.sw?
+/.texlive/
 
 /.tmux/plugins/
 /.tmux/resurrect/
