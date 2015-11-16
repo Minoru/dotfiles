@@ -235,4 +235,5 @@
 /.config/nvim/shada/
 /.config/nvim/swap/
 /.config/psi/
+/.gnupg/.#lk*
 /.nvim/shada/
