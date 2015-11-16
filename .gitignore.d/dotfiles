@@ -228,6 +228,7 @@
 /.config/applications/wine/
 /.config/autostart/
 /.config/git-annex/
+/.config/sigil-ebook/
 
 /.tmux/plugins/
 /.tmux/resurrect/
