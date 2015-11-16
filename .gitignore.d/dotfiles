@@ -222,6 +222,8 @@
 /.stack/templates/
 /.erlang.cookie
 /.sbt/
+# vym
+/.config/InSilmaril/
 
 /.tmux/plugins/
 /.tmux/resurrect/
