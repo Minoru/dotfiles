@@ -220,6 +220,7 @@
 /.stack/programs/
 /.stack/snapshots/
 /.stack/templates/
+/.erlang.cookie
 
 /.tmux/plugins/
 /.tmux/resurrect/
