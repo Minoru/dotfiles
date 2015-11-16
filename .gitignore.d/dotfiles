@@ -209,6 +209,8 @@
 /.newsbeuter/config.sensitive
 /.AndroidStudio/
 /.android/
+/.sw?
+/.*.sw?
 
 /.tmux/plugins/
 /.tmux/resurrect/
