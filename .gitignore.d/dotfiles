@@ -234,4 +234,5 @@
 /.tmux/resurrect/
 /.config/nvim/shada/
 /.config/nvim/swap/
+/.config/psi/
 /.nvim/shada/
