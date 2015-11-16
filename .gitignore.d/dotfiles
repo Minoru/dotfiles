@@ -105,6 +105,8 @@
 /.irssi/logs/
 /.irssi/otr/
 /.irssi/sasl.auth
+/.ivy2/*.lock
+/.ivy2/cache/
 /.java/
 /.keychain/
 /.lesshst
@@ -205,4 +207,3 @@
 /.zcompdump
 /.zhistory
 /.~lock.*#
-
