@@ -221,6 +221,7 @@
 /.stack/snapshots/
 /.stack/templates/
 /.erlang.cookie
+/.sbt/
 
 /.tmux/plugins/
 /.tmux/resurrect/
