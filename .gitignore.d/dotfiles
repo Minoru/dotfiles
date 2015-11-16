@@ -227,6 +227,7 @@
 /.config/applications/*.desktop
 /.config/applications/wine/
 /.config/autostart/
+/.config/git-annex/
 
 /.tmux/plugins/
 /.tmux/resurrect/
