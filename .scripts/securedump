@@ -1,0 +1,12 @@
+#!/bin/bash
+if [[ -n "$1" ]]; then
+    sum=`sha1sum "$1" | cut -f1 -d' '`.`echo "$1" | sed 's/^.*\.//'`
+    f="/tmp/$sum"
+    cp "$1" "$f"
+else
+	f="`tempfile`"
+	cat > "$f"
+fi
+trap 'rm "$f"' EXIT
+torify curl -w %{redirect_url} -F "file=@\"$f\"" https://dump.bitcheese.net/upload-file?simple | sed -e 's#http#https#'
+echo
