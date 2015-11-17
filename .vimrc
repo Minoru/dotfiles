@@ -11,6 +11,7 @@ Plug 'aklt/plantuml-syntax'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'blindFS/vim-taskwarrior'
 Plug 'vim-scripts/LargeFile'
+Plug 'MarcWeber/vim-addon-local-vimrc'
 call plug#end()
 
 " }}}}
