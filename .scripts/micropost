@@ -48,7 +48,7 @@ if [ ! -s $postfile ]; then
 fi
 
 # make a backup
-$backupname="`date +'%Y.%m.%d %T %z.markdown'`"
+backupname="`date +'%Y.%m.%d %T %z.markdown'`"
 mkdir -p "$HOME/.micropost/backups"
 cp -v "$postfile" $HOME/.micropost/backups/"$backupname"
 
