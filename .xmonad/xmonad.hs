@@ -5,6 +5,7 @@ import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, pp
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
 import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
+import XMonad.Hooks.SetWMName (setWMName)
 import XMonad.Hooks.UrgencyHook (focusUrgent, clearUrgents, withUrgencyHook, NoUrgencyHook(NoUrgencyHook))
 import XMonad.Layout.Fullscreen (fullscreenFull)
 import XMonad.Layout.IM (withIM, Property(Role))
@@ -177,6 +178,7 @@ main = do
         -- custom event hook to refresh layout if new dock does appear
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
         , handleEventHook = docksEventHook <+> resetLayoutHook
+        , startupHook = setWMName "LG3D"
         , workspaces = myWorkspaces
         , terminal = "urxvtc -fn 'xft:Terminus:pixelsize=16:lang=ru' -rv +sb"
         , focusedBorderColor = "#0a9dff"
