@@ -28,7 +28,8 @@ channels = (
     autojoin = "Yes";
   },
   { name = "#junethack"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#anime-kpi"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#anime-kpi"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#newsbeuter"; chatnet = "Freenode"; autojoin = "Yes"; }
 );
 
 aliases = {

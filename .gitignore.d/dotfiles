@@ -185,6 +185,7 @@
 /.viking-maps/
 /.viking/
 /.vim/.netrwhist
+/.vim/autoload/plug.vim.old
 /.vim/plugins/
 /.vim/spell/
 /.vim/undofiles/
