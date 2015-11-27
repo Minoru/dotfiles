@@ -17,7 +17,8 @@ use_udp_trackers = yes
 peer_exchange = yes
 
 # limit upload so there are some bandwidth for Tor relay
-upload_rate = 300
+upload_rate = 0
+download_rate = 2500
 
 # enable DHT only when needed (i.e. some torrent uses it)
 dht = auto
