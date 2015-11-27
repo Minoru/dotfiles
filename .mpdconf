@@ -264,12 +264,12 @@ audio_output {
 #}
 #
 # FIFO output
-audio_output {
-    type   "fifo"
-    name   "FIFO Output"
-    path   "/home/minoru/.mpd/fifo"
-    format "44100:16:2"
-}
+#audio_output {
+#    type   "fifo"
+#    name   "FIFO Output"
+#    path   "/home/minoru/.mpd/fifo"
+#    format "44100:16:2"
+#}
 # This setting will change all decoded audio to be converted to the specified
 # format before being passed to the audio outputs. By default, this setting is
 # disabled.
