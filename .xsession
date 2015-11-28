@@ -1,5 +1,8 @@
 #!/bin/sh
 
+xrdb -merge $HOME/.Xdefaults
+xrdb -merge $HOME/.Xresources
+
 # start redshift
 .scripts/start-redshift &
 
