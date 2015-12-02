@@ -21,8 +21,12 @@ channels = (
   { name = "#linuxtalk"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#funtoo-ru"; chatnet = "Freenode"; autojoin = "Yes"; },
   { name = "#gentoo-talks"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#nethack.dank.ninja"; chatnet = "Freenode"; autojoin = "Yes"; },
   {
+    name = "#nethack.dank.ninja";
+    chatnet = "Freenode";
+    autojoin = "Yes";
+  },
+  { 
     name = "#devnull_nethack";
     chatnet = "Freenode";
     autojoin = "Yes";
