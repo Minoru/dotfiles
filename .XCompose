@@ -31,3 +31,5 @@ include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
 <Multi_key> <v> <apostrophe> : "✓" U2713 # CHECK MARK
 
 <Multi_key> <m> <u> : "μ"   U03BC    # GREEK SMALL LETTER MU
+
+<Multi_key> <underscore> <space> : "␣" U2423 # OPEN BOX
