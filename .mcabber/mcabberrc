@@ -562,7 +562,7 @@ alias online   = status online
 alias away     = status away
 alias dnd      = status dnd
 alias notavail = status notavail
-#alias names = room names
+alias names = room names --compact
 #alias topic = room topic
 
 # Set use_mouse to 1 to map mouse buttons like keycodes.
