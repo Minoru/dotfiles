@@ -22,5 +22,7 @@
     ci = commit
     co = checkout
     snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+    incoming = !git remote update -p && git log ..@{u}
+    outgoing = log @{u}..
 [pull]
     rebase = preserve
