@@ -11,11 +11,19 @@ set username = fosser
 # If password is not given, it will be interactively asked for.
 # Note: if the password contains leading or trailing spaces, you must
 # enclose it with quotes: set password = " example password "
-#set password = ""
+#set password = yourpassword
+
+# Read password from output of the given command.
+# This is a way to use password managers like 'pass' in order
+# to avoid writing plain passwords into config files.
+#set password_eval = "your command"
 
 # You can provide a server name if you want mcabber to connect
 # to a specific server.
 set server = jabber.org
+
+# To automatically append the server to the JID in say_to, use this option:
+#set default_server = jabber.org
 
 # If port is not given, mcabber will try to find it out.
 #set port = 5222
@@ -99,7 +107,7 @@ set pinginterval = 5
 # your modules.
 # This may be convenient to print help not into the status buffer, but into
 # currently opened buffer. For that set help_to_current option.
-set lang = ru
+set lang = en
 #set help_dirs = "/usr/share/mcabber/help;~/share/mcabber/help"
 #set help_to_current = 0
 
@@ -108,7 +116,7 @@ set lang = ru
 # checking with the following options (you can't change them once mcabber is
 # running).
 #set spell_enable = 1
-#set spell_lang = en_US
+#set spell_lang = en_US ru_RU
 #set spell_encoding = iso8859-1
 #set spell_encoding = UTF-8
 
@@ -126,6 +134,19 @@ set cmdhistory_lines = 250
 # Please note that this option is only used at startup (once mcabber is
 # running you can use "/roster display").
 #set roster_display_filter = ofdna_
+
+# By default, mcabber adds a leading space before each buddy in the roster. You
+# can remove it to gain a little space.
+set roster_no_leading_space = 1
+
+# By default command line completion is case-sensitive; this can be changed
+# by setting the option 'completion_ignore_case' to 1.
+#set completion_ignore_case = 0
+
+# Message Carbons (XEP-0280)
+# If you want to enable Message Carbons at startup (and if your server
+# supports them), set the 'carbons' option to 1.  Default is 0.
+set carbons = 1
 
 # Typing notifications, Chat States, Events (XEP-22/85)
 # Set disable_chatstates to 1 if you don't want to use typing notifications.
@@ -175,6 +196,14 @@ set max_history_blocks = 16
 # Set iq_version_hide_os to 1 if you do not want to allow people to retrieve
 # your OS version.
 #set iq_version_hide_os = 0
+#
+# Set iq_version_hide_version to 1 if you do not want to allow people to
+# retrieve your mcabber version.
+#set iq_version_hide_version = 0
+#
+# Set iq_time_hide to 1 if you do not want to allow people to retrieve
+# your OS time.
+#set iq_time_hide = 0
 #
 # Set iq_last_disable to 1 if you want to disable response to jabber:iq:last
 # queries (XEP-0012).  Set iq_last_disable_when_notavail to 1 if you want
@@ -250,6 +279,7 @@ set hook-post-connect = source ~/.mcabber/post-connect.rc
 
 # FIFO
 # mcabber can create a FIFO named pipe and listen to this pipe for commands.
+# Don't forget to load the FIFO module if you plan to use this feature!
 # Default: disabled.
 # Set 'fifo_hide_commands' to 1 if you don't want to see the FIFO commands
 # in the log window (they will still be written to the tracelog file).
@@ -259,6 +289,17 @@ set hook-post-connect = source ~/.mcabber/post-connect.rc
 #set fifo_name = ~/.mcabber/mcabber.fifo
 #set fifo_hide_commands = 0
 #set fifo_ignore = 0
+#
+#module load fifo
+
+# URL extractor
+# Set 'url_regex' to a regular expression matching urls.  If it matches an
+# url in an incoming messages, it'll print it to the log window.
+# Don't forget to load the urlregex module if you plan to use this feature!
+#set url_regex = "(((https?|ftps?|nntp)://)|www[.][-a-z0-9.]+|(mailto:|news:))(%[0-9A-F]{2}|[-_.!~*';/?:@&=+$,#[:alnum:]])+"
+#
+#module load urlregex
+
 
 # Traces logging
 # If you want advanced traces, please specify a file and a level here.
@@ -305,6 +346,12 @@ set delete_on_reject = 1
 # Set 'muc_auto_whois' to 1 if you want to call /room whois each time
 # somebody joins a room. (default: 0)
 #set muc_auto_whois = 0
+# Set 'muc_print_jid' to see real jid in non-anonynmous room when somebody
+# joins. This setting will be ignored when auto_whois is enabled.
+# 0: only nick (don't print jid even if available)
+# 1: nick and bare jid
+# 2: nick and full jid with resource
+set muc_print_jid = 2
 #
 # Set 'muc_disable_nick_hl' to 1 if you don't want mcabber to color lines
 # containing your nickname in a MUC room.
@@ -314,6 +361,12 @@ set delete_on_reject = 1
 # suggested nicknames (only at the beginning of a line), like ":" or ",".
 # (Default: none)
 set muc_completion_suffix = ": "
+#
+# Set 'muc_bookmark_autoupdate' to 1 if you want changes made to room options
+# be stored automatically on server.  Otherwise you'll have to manually use
+# command /room bookmark, or changes will not be permanent (for session only).
+# This setting will not add any bookmark, only update already existing ones.
+set muc_bookmark_autoupdate = 1
 
 # Status messages
 # The 'message' value will override all others, take care!
@@ -357,11 +410,14 @@ set escdelay = 50
 # msghl:      text color in the chat window for highlighted messages (MUC)
 # bgstatus:   background color of the status lines
 # status:     text color of the status lines
+# log:        text color in the log window
 # roster:     text color of the roster (buddylist) normal items
 # bgrostersel: background color of the selected roster item
 # rostersel:   text color of the selected roster item
 # rosterselmsg:text color of the selected roster item, if there is a new msg
 # rosternewmsg: text color of items with unread messages
+# readmark:   text color of the "read mark" line in buffers
+# timestamp:  text color in the chat window for delayed timestamps
 #
 #set color_background   = black
 #set color_general      = white
@@ -371,11 +427,14 @@ set escdelay = 50
 #set color_msghl        = yellow
 #set color_bgstatus     = blue
 #set color_status       = white
+#set color_log          = white
 #set color_roster       = green
 #set color_bgrostersel  = cyan
 #set color_rostersel    = blue
 #set color_rosterselmsg = red
 #set color_rosternewmsg = red
+#set color_readmark     = red
+#set color_timestamp    = brightblue
 
 # You can color roster items by their status and JID.  For example, to have
 # all roster items white, just all contacts from jabber.org that are away,
@@ -408,6 +467,10 @@ set roster_width=21
 # (left/right).
 #set log_win_on_top = 0
 #set roster_win_on_right = 0
+#
+# The attention sign (default: '!') used when a private message is received
+# can be changed with the 'attention_char' option.
+#set attention_char = !
 #
 # By default, the displayed name of a contact in the roster window will
 # be the JID if no name has been specified.  You can use the following
@@ -448,9 +511,18 @@ set time_prefix = 1
 # Set 'info' to anything you'd like to see in your lower status line.
 #set info = woot
 #
-# Set 'url_regex' to a regular expression matching urls.  If it matches an
-# url in an incoming messages, it'll print it to the log window.
-#set url_regex = "(((https?|ftps?|nntp)://)|www[.][-a-z0-9.]+|(mailto:|news:))(%[0-9A-F]{2}|[-_.!~*';/?:@&=+$,#[:alnum:]])+"
+# Automatic locking on buddy resource that messages are coming from.
+# Useful when your buddies are chatting from their non-highest priority
+# resources, forcing you to use /say_to command.
+set roster_autolock_resource = 1
+#
+# Automatic locking of buffer when scrolled up, and unlocking when scrolled
+# to bottom.
+# Set 'buffer_smart_scrolling' to 1 to enable.
+# Note: manual command "/buffer scroll_lock" will not work when smart scrolling
+# is enabled. Command "/buffer scroll_unlock" will only work if there is a new
+# message received.
+set buffer_smart_scrolling = 1
 
 # Contacts PGP information
 # You can provide a PGP key to be used for a given Jabber user, or
@@ -477,6 +549,12 @@ set otr = 1
 # You can set OTR policies from the configuration file (use /help otrpolicy
 # for the details).
 otrpolicy default opportunistic
+
+# Entity Caps cache
+# You can provide a directory where mcabber will store an offline cache
+# of other clients' capabilities. This will likely reduce network overhead
+# on start of new session.
+#set caps_directory = "~/.mcabber/caps"
 
 # Aliases
 alias me = say /me
