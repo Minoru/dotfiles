@@ -89,7 +89,7 @@ mailboxes "=arbtt"
 macro index B "<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
 macro pager B "i<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
 # report message as spam by presing S
-macro index S "<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
+macro index S "<clear-flag>N<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
 macro pager S "i<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
 # delete the whole thread, marking all messages as read
 macro index X "<tag-thread><tag-prefix><clear-flag>N<tag-prefix><save-message>=[Gmail]/Bin<enter>y" "Delete the whole thread, marking all messages as read"
