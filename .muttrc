@@ -15,6 +15,7 @@ set ssl_force_tls=yes # forse SSL
 set beep=yes # beep on errors
 set beep_new=yes # beep when notifying me of new message
 set sleep_time=0 # make mutt fast
+set imap_idle=yes # use IMAP IDLE extension to check for new mail in current inbox
 unset mark_old # "read" and "new" is enough
 
 # headers
