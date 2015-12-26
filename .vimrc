@@ -117,6 +117,8 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 " Following Steve Losh' advice:
 " http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
 inoremap jk <esc>
+" ...and one variation, since I can't seem to release Shift in time...
+inoremap Jk <esc>
 
 " move by screen line instead of file line
 nnoremap j gj
