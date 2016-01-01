@@ -18,6 +18,7 @@ set sleep_time=0 # make mutt fast
 set imap_idle=yes # use IMAP IDLE extension to check for new mail in current inbox
 unset mark_old # "read" and "new" is enough
 set fast_reply=yes # do not prompt for recepient and subject when replying
+set imap_check_subscribed=yes # pull down the list of mailboxes from the server
 set text_flowed=yes # use "text/plain; format=flowed" MIME type
 
 # headers
@@ -51,41 +52,6 @@ set mime_forward_rest=yes
 set mail_check = 300 # check for email every 5 minutes (300 seconds)
 set timeout = 300 # how often to stop waiting for user input and perform operations like mail checking (300 sec, 5 minutes)
 set rfc2047_parameters # Fix stupid MUAs behaviour (e.g. filenames like =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=)
-
-mailboxes "=IC-92"
-mailboxes "=INBOX"
-mailboxes "=LessWrong-Kyiv"
-mailboxes "=[Gmail]/All Mail"
-mailboxes "=[Gmail]/Bin"
-mailboxes "=[Gmail]/Drafts"
-mailboxes "=[Gmail]/Sent Mail"
-mailboxes "=[Gmail]/Spam"
-mailboxes "=altkeyboards"
-mailboxes "=arbtt"
-mailboxes "=crypto-gram"
-mailboxes "=debian-announce"
-mailboxes "=debian-devel-announce"
-mailboxes "=debian-haskell"
-mailboxes "=debian-news"
-mailboxes "=debian-security-announce"
-mailboxes "=debian-user"
-mailboxes "=haskell"
-mailboxes "=haskell-beginners"
-mailboxes "=haskell-cafe"
-mailboxes "=haskell-russian"
-mailboxes "=juser"
-mailboxes "=loker-sh"
-mailboxes "=ltu-kiev"
-mailboxes "=neovim"
-mailboxes "=obnam-announce"
-mailboxes "=obnam-dev"
-mailboxes "=obnam-support"
-mailboxes "=okasaki-russian-study-group"
-mailboxes "=rockbox"
-mailboxes "=rockbox-cvs"
-mailboxes "=rockbox-dev"
-mailboxes "=userops"
-mailboxes "=xmonad"
 
 # delete message to Bin by presing B
 macro index B "<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
