@@ -443,7 +443,7 @@ augroup ft_mail
     autocmd!
 
     " constrain text width to 72 chars
-    autocmd FileType mail setlocal textwidth=72
+    autocmd FileType mail setlocal textwidth=72 formatoptions+=aw
     " disable folding
     autocmd FileType mail setlocal nofoldenable
 
