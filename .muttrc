@@ -82,8 +82,6 @@ mailboxes "=rockbox-cvs"
 mailboxes "=rockbox-dev"
 mailboxes "=userops"
 mailboxes "=xmonad"
-mailboxes "=okasaki-russian-study-group"
-mailboxes "=arbtt"
 
 # delete message to Bin by presing B
 macro index B "<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
