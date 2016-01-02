@@ -13,11 +13,5 @@ color listfocus_unread cyan blue bold
 
 browser /usr/bin/firefox
 
-# tt-rss configuration
+urls-source "local"
 
-ttrss-flag-star "s"
-ttrss-flag-publish "p"
-ttrss-mode "multi"
-urls-source "ttrss"
-
-include "~/.newsbeuter/config.sensitive"
