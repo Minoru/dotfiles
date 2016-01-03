@@ -208,3 +208,4 @@
 /.zcompdump
 /.zhistory
 /.~lock.*#
+/.vim_local_rc_cache
