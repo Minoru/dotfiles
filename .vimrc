@@ -125,16 +125,6 @@ noremap gk k
 nnoremap ; :
 nnoremap : ;
 
-" setting up DragVisuals plugin
-vmap  <expr>  <LEFT>   DVB_Drag('left')
-vmap  <expr>  <RIGHT>  DVB_Drag('right')
-vmap  <expr>  <DOWN>   DVB_Drag('down')
-vmap  <expr>  <UP>     DVB_Drag('up')
-vmap  <expr>  D        DVB_Duplicate()
-
-" Remove any introduced trailing whitespace after moving...
-let g:DVB_TrimWS = 1
-
 " some Emacs mappings that I do like (got used to them using shell)
 inoremap <c-a> <esc>I
 inoremap <c-e> <esc>A
