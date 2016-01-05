@@ -134,14 +134,6 @@ cnoremap <c-e> <end>
 " fold everything, then unfold just enough to see the current line
 nnoremap <leader>z zMzvzz
 
-" use space to toggle folds
-nnoremap <Space> za
-vnoremap <Space> za
-
-" Source
-vnoremap <leader>S y:execute @@<cr>:echo 'Sourced selection.'<cr>
-nnoremap <leader>S ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
-
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
 
@@ -250,30 +242,6 @@ set mouse=ni
 
 " C/C++ {{{{
 
-function! BindF5_C()
-    " http://habrahabr.ru/blogs/vim/40369/
-    if filereadable("Makefile")
-        set makeprg=make
-         noremap <F5>      :w<CR>:make<CR>:cw<CR>
-        inoremap <F5> <ESC>:w<CR>:make<CR>:cw<CR>
-    else
-         noremap <F5>      :w<CR>:make %:r<CR>:cw<CR>
-        inoremap <F5> <ESC>:w<CR>:make %:r<CR>:cw<CR>
-    endif
-endfunction
-
-function! BindF9_C()
-    " http://habrahabr.ru/blogs/vim/40369/
-    if filereadable("Makefile")
-        set makeprg=make
-         noremap <F9>      :w<CR>:make<CR>:cw<CR>:!./%<<CR>
-        inoremap <F9> <ESC>:w<CR>:make<CR>:cw<CR>:!./%<<CR>
-    else
-         noremap <F9>      :w<CR>:make %:r<CR>:cw<CR>:!./%<<CR>
-        inoremap <F9> <ESC>:w<CR>:make %:r<CR>:cw<CR>:!./%<<CR>
-    endif
-endfunction
-
 augroup ft_c
     autocmd!
 
@@ -287,15 +255,6 @@ augroup ft_c
     " high it would (hopefully) work no matter what other rules there is (i.e.
     " no other rule would change the highlighting)
     autocmd FileType c,cc,cpp,h,hpp,s call matchadd('ColorColumn', '\%>79v', 100)
-
-    " If some kind of C/C++ file is opened, check for Makefile and:
-    " - if file is present, bind F5 to make
-    " - if file is absent, bind F5 to "make without Makefile"
-    " In any case, if compilation wasn't successful, error list will be displayed
-    " TODO: buffer-local mappings might be a better choice here
-    "        noremap <buffer> <F5>      :w<CR>:make<CR>:cw<CR>
-    autocmd FileType c,cc,cpp,h,hpp,s call BindF5_C()
-    autocmd FileType c,cc,cpp,h,hpp,s call BindF9_C()
 
     " fold by blocks
     autocmd FileType c setlocal foldmethod=marker foldmarker={,}
