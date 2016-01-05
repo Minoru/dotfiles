@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'aklt/plantuml-syntax'
 " ultrasnips depends on vim-snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'blindFS/vim-taskwarrior'
 Plug 'vim-scripts/LargeFile'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'godlygeek/tabular'
@@ -17,11 +16,6 @@ call plug#end()
 
 " }}}}
 " Plugin settings {{{{
-" {{{2 blindFS/vim-taskwarrior
-" do not highlight current field (with my theme it's too dark to read, and
-" I don't see the point anyway - cursor is visible enough)
-let g:task_highlight_field = 0
-" }}}
 " }}}}
 " Indentation and the like {{{{
 
