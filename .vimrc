@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'aklt/plantuml-syntax'
 " ultrasnips depends on vim-snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'vim-scripts/LargeFile'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'godlygeek/tabular'
 call plug#end()
