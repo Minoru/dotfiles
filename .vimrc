@@ -116,7 +116,7 @@ inoremap Jk <esc>
 " move by screen line instead of file line
 nnoremap j gj
 nnoremap k gk
-" i rarely need the default behaviour, but let's provide some shortcuts just
+" I rarely need the default behaviour, but let's provide some shortcuts just
 " in case
 noremap gj j
 noremap gk k
@@ -212,7 +212,7 @@ set showbreak=↪
 set autoread
 
 " Don't try to highlight lines longer than 800 characters.
-set synmaxcol=800
+set synmaxcol=200
 
 " Better Completion
 set complete=.,w,b,u,t
