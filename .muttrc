@@ -41,6 +41,8 @@ set spoolfile = "+INBOX"
 set record=""
 set postponed="+[Gmail]/Drafts"
 
+mailboxes "=[Gmail]/Spam"
+
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 
