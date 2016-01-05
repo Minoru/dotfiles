@@ -21,6 +21,11 @@ set fast_reply=yes # do not prompt for recepient and subject when replying
 set imap_check_subscribed=yes # pull down the list of mailboxes from the server
 set text_flowed=yes # use "text/plain; format=flowed" MIME type
 
+# Via https://www.mail-archive.com/mutt-users@mutt.org/msg45789.html
+# and https://www.mail-archive.com/mutt-users@mutt.org/msg45791.html
+set mail_check_recent=no
+bind index , next-unread-mailbox
+
 # headers
 ignore *
 unignore  Date From To CC List-ID Subject Reply-to
