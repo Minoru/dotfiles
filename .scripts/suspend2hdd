@@ -5,7 +5,7 @@
 HOST="`hostname --short`"
 
 i3lock --dpms --no-unlock-indicator --image="/home/minoru/pictures/wallpapers/current.png"
-if [ "$HOST" = "antaeus" ]; then
+if [ "$HOST" = "hearth" ]; then
     sudo s2disk
 elif [ "$HOST" = "speedy" ]; then
     sudo pm-hibernate
