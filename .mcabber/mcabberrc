@@ -460,7 +460,7 @@ color muc * on
 # Log window height (minimum 1, default 5)
 set log_win_height = 2
 # Buddylist window width (minimum 2, default 24)
-set roster_width=21
+set roster_width=22
 #
 # The options 'log_win_on_top' and 'roster_win_on_right' can change the
 # position of the log window (top/bottom) and the position of the roster
