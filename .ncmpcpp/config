@@ -61,8 +61,8 @@ visualizer_fifo_path = "/home/minoru/.mpd/fifo"
 ## you need to compile ncmpcpp with fftw3 support.
 ##
 #
-visualizer_type = "spectrum" # (spectrum/wave)
-visualizer_in_stereo = "yes"
+#visualizer_type = "spectrum" # (spectrum/wave)
+#visualizer_in_stereo = "yes"
 #
 ##### system encoding #####
 ##
