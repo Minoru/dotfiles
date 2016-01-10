@@ -44,8 +44,6 @@ set formatoptions+=ro
 set formatoptions+=n
 " don't break lines after a one-letter word
 set formatoptions+=1
-" when indenting, use the second line's indent instead of the first
-set formatoptions+=2
 " remove comment leader when joining lines (if that makes sense)
 set formatoptions+=j
 
