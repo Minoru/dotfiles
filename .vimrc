@@ -46,6 +46,9 @@ set formatoptions+=n
 set formatoptions+=1
 " remove comment leader when joining lines (if that makes sense)
 set formatoptions+=j
+" do not auto-wrap lines that were already longer than 'textwidth' when we
+" entered Insert mode
+set formatoptions+=b
 
 " }}}}
 " Appearance {{{{
