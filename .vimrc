@@ -386,7 +386,10 @@ augroup ft_mail
     autocmd!
 
     " constrain text width to 72 chars
-    autocmd FileType mail setlocal textwidth=72 formatoptions+=aw
+    autocmd FileType mail setlocal textwidth=72
+    " do not insert quote leader after hitting 'o' or 'O' in Normal mode
+    autocmd FileType mail setlocal formatoptions-=o
+    autocmd FileType mail setlocal formatoptions+=aw
     " disable folding
     autocmd FileType mail setlocal nofoldenable
 
