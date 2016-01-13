@@ -6,7 +6,6 @@
 /usr/bin/keychain \
 ~/.ssh/bitbucket \
 ~/.ssh/id_rsa \
-~/.ssh/speedy \
 ~/.ssh/theke \
 ~/.ssh/theke-deploy \
 ~/.ssh/w3crapcli
