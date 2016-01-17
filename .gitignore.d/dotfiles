@@ -168,7 +168,9 @@
 /.stack/global/.stack-work/
 /.stack/indices/
 /.stack/lockfile
+/.stack/precompiled/
 /.stack/programs/
+/.stack/setup-exe-cache/
 /.stack/snapshots/
 /.stack/templates/
 /.subversion/
