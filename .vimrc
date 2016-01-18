@@ -132,9 +132,6 @@ inoremap <c-e> <esc>A
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
-" fold everything, then unfold just enough to see the current line
-nnoremap <leader>z zMzvzz
-
 " Sudo to write
 cnoremap w!! w !sudo tee % >/dev/null
 
@@ -154,14 +151,6 @@ silent! cunmap <F3>
 set pastetoggle=<F3>
 " (I've been using <leader>p, with <leader> mapped to backslash, for quite
 " a while, but it inevitably caused problems, most often with LaTeX sources)
-
-" }}}}
-" Commands {{{{
-
-" view diff between current buffer and its last saved state
-" copied from :help DiffOrig
-command! DiffOrig vert new | set bt=nofile | r ++edit # | 0d_
-    \ | diffthis | wincmd p | diffthis
 
 " }}}}
 " Miscellaneous {{{{
