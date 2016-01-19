@@ -59,25 +59,20 @@ done_or_fail $err_lvchange_enable
 # mount partitions
 echo 'Mounting partitions...'
 
-echo -n '\tbackup... '
-# sync all data and metadata every 6 hours
-sudo mount /media/storejet-backup
+echo -ne '\tbackup... '
+sudo mount /mnt/storejet-backup
 done_or_fail $err_mount
-echo -n '\tannex... '
-sudo mount /media/storejet-annex
+echo -ne '\tannex... '
+sudo mount /mnt/storejet-annex
 done_or_fail $err_mount
 
 echo 'Fixing persmissions on mountpoints...'
 
-echo -n '\tbackup... '
-sudo chgrp minoru /media/storejet-backup
-sudo chmod g+rwx /media/storejet-backup
+echo -ne '\tbackup... '
+sudo chgrp minoru /mnt/storejet-backup
+sudo chmod g+rwx /mnt/storejet-backup
 done_or_fail $err_chgrp
-for repo in anki job_docs KPI_docs misc_docs library torrents ; do
-    cd "/media/storejet-backup/$repo"
-    obnam force-lock
-done
-echo -n '\tannex... '
-sudo chgrp minoru /media/storejet-annex
-sudo chmod g+rwx /media/storejet-annex
+echo -ne '\tannex... '
+sudo chgrp minoru /mnt/storejet-annex
+sudo chmod g+rwx /mnt/storejet-annex
 done_or_fail $err_chgrp
