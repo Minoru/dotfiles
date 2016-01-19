@@ -32,7 +32,7 @@ fi
 # presence of the luks device - if it's present than we have luks open. The
 # device under /dev/mapper is actually a symbolic link, that's why we use -L
 # test
-if [ ! -L /dev/mapper/storejet_luks ]; then
+if [ ! -b /dev/mapper/storejet_luks ]; then
     echo "Storejet LUKS is not opened!"
     exit $err_storejet_luks_open
 fi
