@@ -212,3 +212,4 @@
 /.~lock.*#
 /.vim_local_rc_cache
 /.obnam.conf
+/.config/sxiv
