@@ -15,6 +15,10 @@ call plug#end()
 
 " }}}}
 " Plugin settings {{{{
+" clang_complete {{{{
+let g:clang_snippets_engine="ultisnips"
+let g:clang_conceal_snippets=0
+" }}}}
 " }}}}
 " Indentation and the like {{{{
 
