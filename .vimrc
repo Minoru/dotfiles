@@ -18,6 +18,7 @@ call plug#end()
 " clang_complete {{{{
 let g:clang_snippets_engine="ultisnips"
 let g:clang_conceal_snippets=0
+let g:clang_close_preview=1
 " }}}}
 " }}}}
 " Indentation and the like {{{{
