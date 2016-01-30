@@ -317,6 +317,8 @@ augroup END
 augroup ft_erlang
     autocmd!
 
+    " 2-space tabs
+    autocmd FileType erlang setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd FileType erlang call matchadd('ColorColumn', '\%>79v', 100)
 augroup END
 " }}}}
