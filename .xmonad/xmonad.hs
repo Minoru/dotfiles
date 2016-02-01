@@ -43,8 +43,8 @@ import System.IO (hPutStrLn)
 
 import AlmostFull (AlmostFull(AlmostFull))
 
-myWorkspaces = ["1:gtd", "2", "3:web", "4:dev", "5:video", "6", "7:im",
-                "8:mail", "9:gimp"]
+myWorkspaces = ["1:anki", "2:gtd", "3:web", "4:dev", "5:video", "6", "7:im",
+                "8:mail", "9"]
 
 myManageHook = composeAll
     [ isFullscreen --> doFullFloat
