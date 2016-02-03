@@ -1,6 +1,6 @@
 import qualified XMonad.StackSet as W
 import XMonad hiding ((|||))
-import XMonad.Actions.UpdatePointer (updatePointer, PointerPosition(Relative))
+import XMonad.Actions.UpdatePointer (updatePointer)
 import XMonad.Hooks.DynamicLog (dynamicLogWithPP, xmobarPP, ppTitle, ppOrder, ppSep, ppUrgent, ppCurrent, xmobarColor, ppOutput, shorten)
 import XMonad.Hooks.EwmhDesktops (ewmh)
 import XMonad.Hooks.ManageDocks hiding (docksEventHook)
@@ -174,7 +174,7 @@ main = do
                      \(workspaces:layout:title:_) -> [workspaces,title]
                  , ppSep     = " "
                  })
-            >> updatePointer (Relative 0.5 0.5)
+            >> updatePointer (0.5, 0.5) (0, 0)
         -- custom event hook to refresh layout if new dock does appear
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
         , handleEventHook = docksEventHook <+> resetLayoutHook
