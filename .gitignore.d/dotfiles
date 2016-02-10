@@ -213,3 +213,4 @@
 /.vim_local_rc_cache
 /.obnam.conf
 /.config/sxiv
+.emacs.d/*~
