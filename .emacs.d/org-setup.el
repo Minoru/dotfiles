@@ -3,6 +3,10 @@
 ;; An item can only be marked DONE if all its subitems are DONE
 (setq org-enforce-todo-dependencies t)
 
+;; auto-wrap at 80 columns
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
+(setq-default fill-column 80)
+
 (global-set-key "\C-ca" 'org-agenda)
 
 (custom-set-variables
