@@ -8,5 +8,6 @@
 ~/.ssh/id_rsa \
 ~/.ssh/theke \
 ~/.ssh/theke-deploy \
-~/.ssh/w3crapcli
+~/.ssh/w3crapcli \
+~/.ssh/gitlab
 source ~/.keychain/$HOST-sh > /dev/null
