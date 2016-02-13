@@ -214,3 +214,4 @@
 /.obnam.conf
 /.config/sxiv
 /.emacs.d/*
+!/.emacs.d/minoru-theme.el
