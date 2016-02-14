@@ -8,7 +8,10 @@ unbind-key D
 bind-key d delete-article
 
 # make currently focused unread item more visible
-color listfocus_unread cyan blue bold
+color listnormal blue black
+color listnormal_unread green black
+color listfocus white black
+color listfocus_unread white black bold
 
 browser /usr/bin/firefox
 
