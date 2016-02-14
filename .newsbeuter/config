@@ -1,4 +1,4 @@
-reload-time 10
+auto-reload yes
 download-retries 5
 goto-first-unread no
 text-width 72
