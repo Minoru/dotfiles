@@ -242,7 +242,7 @@ layers configuration. You are free to put any user code."
 
   (setq
    ;; Org-Mode needs to know which files to examine when building agenda views
-   org-agenda-files '("~/docs/gtd/")
+   org-agenda-files '("~/docs/gtd/current/")
 
    ;; An item can only be marked DONE if all its subitems are DONE
    org-enforce-todo-dependencies t)
