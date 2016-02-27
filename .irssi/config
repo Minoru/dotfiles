@@ -6,7 +6,7 @@ servers = (
     autoconnect = "yes";
     use_ssl = "yes";
     ssl_verify = "yes";
-  },
+  }
 );
 
 chatnets = {
@@ -261,6 +261,7 @@ settings = {
     beep_msg_level = "MSGS NOTICES SNOTES INVITES DCC DCCMSGS HILIGHT";
     beep_when_away = "no";
     beep_when_window_active = "no";
+    completion_keep_publics = "0";
   };
 
   "fe-text" = { actlist_sort = "refnum"; };
