@@ -1,17 +1,17 @@
 [user]
-	name = Alexander Batischev
-	email = eual.jp@gmail.com
+    name = Alexander Batischev
+    email = eual.jp@gmail.com
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [diff]
-	renames = copy
-	algorithm = patience
+    renames = copy
+    algorithm = patience
 [push]
-	default = upstream
+    default = upstream
 [core]
-	quotepath = false
+    quotepath = false
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [color]
     branch = auto
     diff = auto
