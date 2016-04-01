@@ -7,6 +7,8 @@ text-width 72
 unbind-key D
 bind-key d delete-article
 
+bind-key ESC quit
+
 # make currently focused unread item more visible
 color listnormal blue black
 color listnormal_unread green black
