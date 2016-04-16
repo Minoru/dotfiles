@@ -18,3 +18,7 @@ color listfocus_unread white black bold
 browser /usr/bin/firefox
 
 urls-source "local"
+
+ignore-mode "display"
+
+include "~/.newsbeuter/config.sensitive"
