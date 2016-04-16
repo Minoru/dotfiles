@@ -141,6 +141,7 @@
 /.newsbeuter/config.sensitive
 /.newsbeuter/history.cmdline
 /.newsbeuter/history.search
+/.newsbeuter/queue
 /.newsbeuter/urls
 /.nvim/shada/
 /.octave_hist
