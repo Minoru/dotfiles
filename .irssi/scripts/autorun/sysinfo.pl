@@ -1,1 +1,1 @@
-/home/minoru/docs/git/irssi-sysinfo/sysinfo.pl
+/home/minoru/src/original/irssi-sysinfo/sysinfo.pl
