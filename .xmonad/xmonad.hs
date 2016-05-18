@@ -97,7 +97,7 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
           , ((mod1Mask, xK_Print), spawn "scrot --focused --quality 0")
 
           , ((mod1Mask .|. shiftMask, xK_f), spawn "firefox")
-          , ((mod1Mask .|. shiftMask, xK_h), spawn "chromium")
+          , ((mod1Mask .|. shiftMask, xK_h), spawn "chromium --disable-gpu")
 
             -- MPD key bindings
           , ((mod1Mask .|. shiftMask, xK_Left),  spawn "mpc prev")
