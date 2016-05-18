@@ -1,4 +1,5 @@
 auto-reload yes
+suppress-first-reload yes
 download-retries 5
 goto-first-unread no
 text-width 72
