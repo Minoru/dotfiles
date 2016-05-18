@@ -107,7 +107,7 @@ alias rtorrent='tmux a -t rtorrent || tmux new -s rtorrent "echo \"\033]0;rtorre
 alias mcabber='tmux a -t mcabber || tmux new -s mcabber "echo \"\033]0;mcabber\a\" && mcabber" \; set status off'
 alias irssi='tmux a -t irssi || tmux new -s irssi "stty start \"\" stop \"\" && echo \"\033]0;irssi\a\" && irssi" \; set status off'
 alias ocaml='rlwrap ocaml'
-alias newsbeuter="torify newsbeuter"
+alias newsbeuter='tmux a -t news || tmux new -s news "echo \"\033]0;news\a\" && torify newsbeuter 2>/dev/null" \; set status off'
 alias find_original='git annex find | xargs -I "{}" -- find -L ~/torrents/downloads -samefile {}'
 
 if [ "$TERM" = "linux" ]; then
