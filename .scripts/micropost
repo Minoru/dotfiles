@@ -49,20 +49,26 @@ fi
 
 # make a backup
 backupname="`date +'%Y.%m.%d %T %z.markdown'`"
+backupname="$HOME/.micropost/backups/$backupname"
 mkdir -p "$HOME/.micropost/backups"
-cp -v "$postfile" $HOME/.micropost/backups/"$backupname"
+cp -v "$postfile" "$backupname"
 
 # check if any tags were specified; they should be on the first line, with
 # asterisk at the beginning
 tags="`head -1 $postfile | grep '^\*'`"
+# body starts on the second line
+body="`tail -n+2 $postfile`"
+
+if [ -z "$tags" ]; then
+    echo "No tags? Seriously? I'm quitting."
+    draftname="${backupname%markdown}draft.markdown"
+    mv -v "$backupname" "$draftname"
+    exit 1
+fi
+
 echo -n "Posting to BNW... "
-if [ -n "$tags" ]; then
-    # strip leading asterisk - BNW doesn't need it
-    tags="`echo \"$tags\" | sed 's#^\s*\*\s*##'`"
-    # the body of the message starts from the second line, thus tail
-    echo "p -t $tags `cat $postfile | tail -n+2`"
-else
-    echo "p `cat $postfile`"
-fi | $sendxmpp "bnw@bnw.im" && echo "success" || echo "fail"
+# strip leading asterisk - BNW doesn't need it
+tags="`echo \"$tags\" | sed 's#^\s*\*\s*##'`"
+echo "p -t $tags $body" | $sendxmpp "bnw@bnw.im" && echo "success" || echo "fail"
 
 rm -f $postfile
