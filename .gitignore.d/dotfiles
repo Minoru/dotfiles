@@ -6,6 +6,9 @@
 /.gitignore.d/*
 !/.gitignore.d/dotfiles
 
+/.emacs.d/*
+!/.emacs.d/private/minoru-theme/minoru-theme.el
+
 /**/.~lock.*#
 /.*.sw?
 /.*_history
@@ -28,7 +31,6 @@
 /.bzr.log
 /.cabal/*
 /.cache/
-# vym
 /.config/InSilmaril/
 /.config/Luminance/
 /.config/QtProject.conf
@@ -69,6 +71,7 @@
 /.config/recently-used.xbel
 /.config/rockbox.org/
 /.config/sigil-ebook/
+/.config/sxiv
 /.config/vcsh/
 /.config/webkit/
 /.config/zathura/
@@ -144,6 +147,7 @@
 /.newsbeuter/queue
 /.newsbeuter/urls
 /.nvim/shada/
+/.obnam.conf
 /.octave_hist
 /.parcimonie.log
 /.pip/pip.log
@@ -192,6 +196,7 @@
 /.vim/plugins/
 /.vim/spell/
 /.vim/undofiles/
+/.vim_local_rc_cache
 /.viminfo
 /.vimperator/
 /.w3m/
@@ -211,8 +216,3 @@
 /.zcompdump
 /.zhistory
 /.~lock.*#
-/.vim_local_rc_cache
-/.obnam.conf
-/.config/sxiv
-/.emacs.d/*
-!/.emacs.d/private/minoru-theme/minoru-theme.el
