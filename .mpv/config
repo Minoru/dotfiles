@@ -2,3 +2,8 @@
 fullscreen = yes
 af=scaletempo
 vf=yadif
+
+# Screenshot settings
+screenshot-format = jpg
+screenshot-template = "%f %P"
+screenshot-jpeg-quality = 97
