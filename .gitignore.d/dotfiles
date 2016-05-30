@@ -75,6 +75,7 @@
 /.config/vcsh/
 /.config/webkit/
 /.config/zathura/
+/.cpan
 /.darcs/
 /.dbus/
 /.dia/
