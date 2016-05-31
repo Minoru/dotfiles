@@ -331,7 +331,7 @@ keyboard = ( { key = "^Q"; id = "active_window"; data = ""; } );
 ignores = (
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#haskell", "#clojure", "#erlang", "#perl" );
+    channels = ( "#haskell", "#clojure", "#erlang", "#perl", "#nethack" );
     network = "Freenode";
   },
 );
