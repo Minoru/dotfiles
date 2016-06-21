@@ -460,6 +460,16 @@ augroup ft_awk
 augroup END
 
 " }}}}
+" Go {{{{
+
+augroup ft_golang
+    autocmd!
+
+    autocmd FileType go setlocal noexpandtab tabstop=8 softtabstop=0 shiftwidth=0
+
+augroup END
+
+" }}}}
 
 " }}}
 " Local config with machine-specific settings {{{{
