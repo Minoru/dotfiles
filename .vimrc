@@ -302,6 +302,9 @@ augroup ft_haskell
     autocmd FileType haskell,lhaskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " disable folding
     autocmd FileType haskell,lhaskell setlocal nofoldenable
+    " make % work inside code like (\(x, y) -> x + y)
+    " https://www.reddit.com/r/haskell/comments/4k8iy5/til_when_using_vim_to_edit_haskell_setlocal/
+    autocmd FileType haskell,lhaskell setlocal cpoptions+=M
     " highlight everything farther than 80th column
     autocmd FileType haskell,lhaskell call matchadd('ColorColumn', '\%>79v', 100)
     " replace tabs with nice Unicode symbols
