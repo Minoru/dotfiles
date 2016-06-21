@@ -11,6 +11,7 @@ Plug 'aklt/plantuml-syntax'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'godlygeek/tabular'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
 
 " }}}}
