@@ -71,16 +71,4 @@ echo -n "Posting to BNW... "
 bnw_tags="`echo \"$tags\" | sed 's#^\s*\*\s*##'`"
 echo "p -t $bnw_tags $body" | $sendxmpp "bnw@bnw.im" && echo "success" || echo "fail"
 
-# Juick and Point expect each tag to be prefixed with an asterisk
-#
-# `tags` is a comma-separated list of tags. It already got an asterist at the
-# beginning
-juick_tags="`echo \"$tags\" | sed 's#,# *#g'`"
-
-echo -n "Posting to Juick... "
-echo "$juick_tags $body" | $sendxmpp "juick@juick.com" && echo "success" || echo "fail"
-
-echo -n "Posting to Point... "
-echo "$juick_tags $body" | $sendxmpp "p@point.im" && echo "success" || echo "fail"
-
 rm -f $postfile
