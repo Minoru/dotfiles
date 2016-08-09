@@ -13,6 +13,7 @@
 /.*.sw?
 /.*_history
 /.AndroidStudio/
+/.AndroidStudio1.5/
 /.LuminanceHDR/
 /.RData
 /.Rhistory
@@ -47,10 +48,12 @@
 /.config/autostart/
 /.config/chromium/
 /.config/comix/
+/.config/darktable/
 /.config/dconf/
 /.config/desktop-directories/
 /.config/easytag/
 /.config/enchant/
+/.config/fontforge/
 /.config/geeqie/
 /.config/gegl-0.2/plug-ins/Makefile
 /.config/git-annex/
@@ -65,12 +68,14 @@
 /.config/mc/
 /.config/menus/
 /.config/mime
+/.config/mimeapps.list
 /.config/nvim/shada/
 /.config/nvim/swap/
 /.config/psi/
 /.config/recently-used.xbel
 /.config/rockbox.org/
 /.config/sigil-ebook/
+/.config/svgcleaner/
 /.config/sxiv
 /.config/vcsh/
 /.config/webkit/
@@ -86,10 +91,12 @@
 /.esd_auth
 /.fbless_save
 /.fehbg
+/.floorc.json
 /.fontconfig/
 /.gconf/apps/%gconf.xml
 /.gconf/apps/gnome-settings/
 /.gconfd/
+/.gem/
 /.ghc/
 /.gimp-2.8/
 /.gnome/apps/chrome*
@@ -99,6 +106,8 @@
 /.gnupg/random_seed
 /.gnupg/secring.gpg
 /.gnupg/trustdb.gpg
+/.gqview/
+/.gradle/
 /.gstreamer-0.10/
 /.gtkrc-2.0.bak
 /.hg/bin/*.pyc
@@ -115,9 +124,11 @@
 /.keychain/
 /.lesshst
 /.lftp/
+/.links/
 /.lltag/
 /.local/
 /.lyrics/
+/.maildir/
 /.matplotlib/
 /.mc/
 /.mcabber/logs/
@@ -132,6 +143,7 @@
 /.mutt/cache/
 /.mutt_certificates
 /.muttrc.sensitive
+/.mypaint/
 /.ncftp/bookmarks
 /.ncftp/firewall
 /.ncftp/history
@@ -147,6 +159,7 @@
 /.newsbeuter/history.search
 /.newsbeuter/queue
 /.newsbeuter/urls
+/.npm/
 /.nvim/shada/
 /.obnam.conf
 /.octave_hist
@@ -159,9 +172,12 @@
 /.pwsafe.dat
 /.pwsafe.dat~
 /.python-eggs/
+/.racket/
 /.recently-used
 /.rnd
 /.sbt/
+/.scanview.cfg
+/.scribus/
 /.scripts/start-redshift
 /.selected_editor
 /.sendxmpprc
@@ -192,6 +208,7 @@
 /.ufrawrc
 /.viking-maps/
 /.viking/
+/.vim/.VimballRecord
 /.vim/.netrwhist
 /.vim/autoload/plug.vim.old
 /.vim/plugins/
@@ -201,6 +218,7 @@
 /.viminfo
 /.vimperator/
 /.w3m/
+/.wget-hsts
 /.wine/
 /.wireshark/
 /.xchm
