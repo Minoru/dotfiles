@@ -211,6 +211,9 @@
 /.vim/.VimballRecord
 /.vim/.netrwhist
 /.vim/autoload/plug.vim.old
+/.vim/bin
+/.vim/doc
+/.vim/plugin
 /.vim/plugins/
 /.vim/spell/
 /.vim/undofiles/
@@ -235,3 +238,6 @@
 /.zcompdump
 /.zhistory
 /.~lock.*#
+/.config/nvim/.*~
+/.config/nvim/.netrwhist
+/.config/nvim/plugins/

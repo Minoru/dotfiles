@@ -26,8 +26,14 @@ dht = auto
 session_save = yes
 session = ~/torrents/session
 
-# watchdog: every five minutes, check for new torrents
-schedule = watch_directory,5,5,load_start=~/torrents/torrent-files/*.torrent
+# watchdog: every five seconds, check for new torrents
+#schedule = watch_directory,5,5,load=~/torrents/torrent-files/*.torrent
+schedule = watch_directory_anime,5,10,"load_start=~/torrents/torrent-files/anime/*.torrent,d.set_directory=~/video/anime/"
+schedule = watch_directory_books,6,10,"load_start=~/torrents/torrent-files/books/*.torrent,d.set_directory=~/torrents/downloads/books/"
+schedule = watch_directory_distros,7,10,"load_start=~/torrents/torrent-files/distros/*.torrent,d.set_directory=~/torrents/downloads/distros/"
+schedule = watch_directory_series,8,10,"load_start=~/torrents/torrent-files/series/*.torrent,d.set_directory=~/torrents/downloads/series/"
+schedule = watch_directory_movies,9,10,"load_start=~/torrents/torrent-files/movies/*.torrent,d.set_directory=~/torrents/downloads/movies/"
+schedule = watch_directory_music,10,10,"load_start=~/torrents/torrent-files/music/*.torrent,d.set_directory=~/torrents/downloads/music/"
 
 encryption = allow_incoming, try_outgoing, enable_retry
 
