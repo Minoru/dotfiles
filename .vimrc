@@ -12,6 +12,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'godlygeek/tabular'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tpope/vim-fugitive'
+Plug 'lambdalisue/vim-gita'
 call plug#end()
 
 " }}}}
