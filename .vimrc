@@ -14,6 +14,7 @@ Plug 'godlygeek/tabular'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/vim-gita'
+Plug 'raichoo/purescript-vim'
 call plug#end()
 
 " }}}}
