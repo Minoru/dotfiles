@@ -260,7 +260,7 @@ settings = {
     autolog_path = "~/.irssi/logs/$tag/$0.log";
     beep_msg_level = "MSGS NOTICES SNOTES INVITES DCC DCCMSGS HILIGHT";
     beep_when_away = "no";
-    beep_when_window_active = "no";
+    beep_when_window_active = "yes";
     completion_keep_publics = "0";
   };
 
@@ -333,7 +333,7 @@ ignores = (
     level = "JOINS PARTS QUITS NICKS";
     channels = ( "#haskell", "#clojure", "#erlang", "#perl", "#nethack" );
     network = "Freenode";
-  },
+  }
 );
 notifies = { };
 windows = {
