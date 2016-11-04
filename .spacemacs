@@ -125,11 +125,6 @@ values."
    ;; works in the GUI. (default nil)
    dotspacemacs-distinguish-gui-tab nil
    ;; (Not implemented) dotspacemacs-distinguish-gui-ret nil
-   ;; The command key used for Evil commands (ex-commands) and
-   ;; Emacs commands (M-x).
-   ;; By default the command key is `:' so ex-commands are executed like in Vim
-   ;; with `:' and Emacs commands are executed with `<leader> :'.
-   dotspacemacs-command-key ";"
    ;; If non nil `Y' is remapped to `y$'. (default t)
    dotspacemacs-remap-Y-to-y$ t
    ;; Name of the default layout (default "Default")
@@ -257,9 +252,8 @@ layers configuration. You are free to put any user code."
    ;; Use "jk" instead of Escape
    evil-escape-key-sequence "jk")
 
-  ;; A few screens ago, I set command-key to ";" so that it's easier to type.
-  ;; But I sometimes need original function of ";" key, i.e. ability to jump
-  ;; between matches found by f, F, t and T motions.
+  ;; Swap ":" and ";" for easier typing
+  (define-key evil-normal-state-map (kbd ";") 'evil-ex)
   (define-key evil-normal-state-map (kbd ":") 'evil-repeat-find-char)
 
   ;; Actually enable auto-wrapping for all text modes
