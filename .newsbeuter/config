@@ -11,6 +11,9 @@ bind-key d delete-article
 
 bind-key ESC quit
 
+unbind-key O
+bind-key O open-all-unread-in-browser-and-mark-read
+
 # make currently focused unread item more visible
 color listnormal blue black
 color listnormal_unread green black
