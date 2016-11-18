@@ -26,3 +26,5 @@
     outgoing = log @{u}..
 [pull]
     rebase = preserve
+[grep]
+    lineNumber = true
