@@ -15,6 +15,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/vim-gita'
 Plug 'raichoo/purescript-vim'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " }}}}
