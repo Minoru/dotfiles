@@ -5,8 +5,6 @@ reload-threads 20
 goto-first-unread no
 text-width 72
 
-download-retries 3
-
 use-proxy yes
 proxy-type socks5
 proxy localhost:9050
