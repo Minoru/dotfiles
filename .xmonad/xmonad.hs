@@ -158,7 +158,6 @@ main = do
                                    <+> manageHook defaultConfig
         , layoutHook = myLayout
         , logHook =
-            -- move mouse pointer to the center of the focused window
                dynamicLogWithPP (xmobarPP
                  { ppOutput  = hPutStrLn xmproc
                  -- show current window's title in nice darkish green, limited
@@ -174,6 +173,7 @@ main = do
                      \(workspaces:layout:title:_) -> [workspaces,title]
                  , ppSep     = " "
                  })
+            -- move mouse pointer to the center of the focused window
             >> updatePointer (0.5, 0.5) (0, 0)
         -- custom event hook to refresh layout if new dock does appear
         -- via http://www.haskell.org/pipermail/xmonad/2011-August/011644.html
