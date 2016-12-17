@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/vim-gita'
 Plug 'raichoo/purescript-vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " }}}}
