@@ -190,33 +190,6 @@ function lcd() {
 }
 
 
-#
-# GTD STUFF
-#
-# Copied from this series of posts:
-# - http://cs-syd.eu/posts/2015-06-14-gtd-with-taskwarrior-part-1-intro.html
-# - http://cs-syd.eu/posts/2015-06-21-gtd-with-taskwarrior-part-2-collection.html
-# - http://cs-syd.eu/posts/2015-06-28-gtd-with-taskwarrior-part-3-tickling.html
-# - http://cs-syd.eu/posts/2015-07-05-gtd-with-taskwarrior-part-4-processing.html
-# - http://cs-syd.eu/posts/2015-07-12-gtd-with-taskwarrior-part-5-doing.html
-
-alias in='task add +in'
-alias ti='task in'
-alias tw='task w'
-alias sd='vim /home/minoru/docs/gtd/someday.markdown'
-alias t=task
-setopt promptsubst
-export PROMPT='%{$fg[yellow]%}$(task +in +PENDING count) '$PROMPT
-
-__tickle () {
-    deadline=$1
-    shift
-    task add +in +tickle wait:$deadline $@
-}
-alias tickle=__tickle
-
-alias think='tickle tomorrow'
-
 #-------------------------------------------------------------------------------
 #
 # MISCELLANEOUS
