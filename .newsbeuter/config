@@ -26,8 +26,9 @@ color listnormal_unread green black
 color listfocus white black
 color listfocus_unread white black bold
 
-highlight article "^Title: .*$" green default
-highlight article "^(Feed|Author|Link|Date):.*$" cyan default
+highlight article "^Feed: .*$" white default
+highlight article "^Title: .*$" white default bold
+highlight article "^(Author|Link|Date):.*$" cyan default
 
 browser /usr/bin/firefox
 
