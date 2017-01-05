@@ -236,6 +236,9 @@ set wildignore+=*.o,*.obj                        " compiled object files
 set wildignore+=*.spl                            " compiled spelling word lists
 set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.hi                             " Haskell's "interactive files"
+set wildignore+=*.a                              " static libraries
+set wildignore+=*.mo                             " compiled localization files
+set wildignore+=*.info,*.gcov,*.gcna,*.gcno      " profiling and coverage files
 
 " in Visual block mode, allow selecting places where there's no chars
 set virtualedit+=block
