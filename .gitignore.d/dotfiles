@@ -244,3 +244,5 @@
 /.config/nvim/autoload/plug.vim.old
 /.davfs2/secrets
 /.davfs2/cache/
+/.cargo/git/
+/.cargo/registry/
