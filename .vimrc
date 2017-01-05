@@ -18,6 +18,7 @@ Plug 'raichoo/purescript-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " }}}}
@@ -26,6 +27,10 @@ call plug#end()
 let g:clang_snippets_engine="ultisnips"
 let g:clang_conceal_snippets=0
 let g:clang_close_preview=1
+" }}}}
+" vim-markdown {{{{
+" Highlight YAML frontmatter (used in Hakyll posts)
+let g:vim_markdown_frontmatter = 1
 " }}}}
 " }}}}
 " Indentation and the like {{{{
