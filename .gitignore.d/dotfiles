@@ -241,5 +241,6 @@
 /.config/nvim/.*~
 /.config/nvim/.netrwhist
 /.config/nvim/plugins/
+/.config/nvim/autoload/plug.vim.old
 /.davfs2/secrets
 /.davfs2/cache/
