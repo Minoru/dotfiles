@@ -95,8 +95,7 @@ alias du='nocorrect du -sh'
 alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -i'
 alias rm='nocorrect rm -i'
-# Using NeoVim here
-alias vim='nocorrect nvim'
+alias vim='nocorrect vim'
 alias mc='nocorrect mc'
 alias mkdir='nocorrect mkdir -p'
 # You need run-help module to be loaded to have 'run-help' command
