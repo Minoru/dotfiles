@@ -10,9 +10,7 @@ export BROWSER='/usr/bin/iceweasel'
 export GTK_IM_MODULE="xim"
 export MPD_HOST='127.0.0.1'
 export XDG_DATA_HOME="$HOME/.config"
-export EDITOR=/usr/bin/nvim
-
-alias vim=nvim
+export EDITOR=/usr/bin/vim
 
 if [ -n "$HOST" -a -f "$HOME/.zlogin.$HOST" ]; then
     source "$HOME/.zlogin.$HOST"
