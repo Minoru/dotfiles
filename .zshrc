@@ -245,11 +245,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' #'r:|[._-]=* r:|=*' 'l:|=* r
 # Sets autocompletion
 autoload -Uz compinit && compinit
 
-# stack autocompletion as per
-# https://github.com/commercialhaskell/stack/wiki/Shell-autocompletion#for-zsh-users
-autoload -Uz bashcompinit && bashcompinit
-eval "$($HOME/.local/bin/stack --bash-completion-script "$HOME/.local/bin/stack")"
-
 #-------------------------------------------------------------------------------
 #
 # LOCAL SETTINGS
