@@ -60,19 +60,19 @@ done_or_fail $err_lvchange_enable
 echo 'Mounting partitions...'
 
 echo -ne '\tbackup... '
-sudo mount /mnt/storejet-backup
+sudo mount /media/storejet-backup
 done_or_fail $err_mount
 echo -ne '\tannex... '
-sudo mount /mnt/storejet-annex
+sudo mount /media/storejet-annex
 done_or_fail $err_mount
 
 echo 'Fixing persmissions on mountpoints...'
 
 echo -ne '\tbackup... '
-sudo chgrp minoru /mnt/storejet-backup
-sudo chmod g+rwx /mnt/storejet-backup
+sudo chgrp minoru /media/storejet-backup
+sudo chmod g+rwx /media/storejet-backup
 done_or_fail $err_chgrp
 echo -ne '\tannex... '
-sudo chgrp minoru /mnt/storejet-annex
-sudo chmod g+rwx /mnt/storejet-annex
+sudo chgrp minoru /media/storejet-annex
+sudo chmod g+rwx /media/storejet-annex
 done_or_fail $err_chgrp

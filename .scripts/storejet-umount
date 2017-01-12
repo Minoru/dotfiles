@@ -41,10 +41,10 @@ fi
 echo 'Unmounting partitions...'
 
 echo -ne '\tbackup... '
-sudo umount /mnt/storejet-backup
+sudo umount /media/storejet-backup
 done_or_fail $err_umount
 echo -ne '\tannex... '
-sudo umount /mnt/storejet-annex
+sudo umount /media/storejet-annex
 done_or_fail $err_umount
 
 # deactivate LVM

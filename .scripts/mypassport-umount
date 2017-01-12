@@ -41,7 +41,7 @@ fi
 echo 'Unmounting partitions...'
 
 echo -ne '\tbackup... '
-sudo umount /mnt/mypassport-backup
+sudo umount /media/mypassport-backup
 done_or_fail $err_umount
 
 # deactivate LVM
