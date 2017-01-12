@@ -246,3 +246,5 @@
 /.davfs2/cache/
 /.cargo/git/
 /.cargo/registry/
+/.nix-defexpr/
+/.nix-profile
