@@ -57,7 +57,7 @@ set tls = 1
 #set ssl_fingerprint = 8C:D7:50:00:DA:22:BB:39:EC:E5:25:BC:78:A5:FD:3C
 # Set ssl_ignore_checks to 1 to disable all certificate checks except the
 # fingerprint check.
-set ssl_ignore_checks = 0
+set ssl_ignore_checks = 1
 
 # PGP support
 # Set pgp to 1 to enable OpenPGP.
