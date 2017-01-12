@@ -248,3 +248,4 @@
 /.cargo/registry/
 /.nix-defexpr/
 /.nix-profile
+/.compose-cache/
