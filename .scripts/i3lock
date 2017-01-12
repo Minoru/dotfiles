@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Lifted from i3lock's manpage (version 2.8 removed --dpms, so we emulate it
+# with a script now).
+
+revert() {
+  xset dpms 0 0 0
+}
+trap revert SIGHUP SIGINT SIGTERM
+xset +dpms dpms 5 5 5
+$HOME/.nix-profile/bin/i3lock -n
+revert

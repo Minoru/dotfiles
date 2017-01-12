@@ -112,7 +112,7 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
           , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=12:lang=ru" })
 
             -- lock the screen (switching to English layout first so I can input the password later)
-          , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; sleep 1; i3lock --dpms --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
+          , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; sleep 1; /home/minoru/.scripts/i3lock --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
 
             -- handle volume
           , ((0, xF86XK_AudioLowerVolume), spawn "amixer sset Master 1dB-")
