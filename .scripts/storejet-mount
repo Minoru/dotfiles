@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # Looks for and mounts my Transcend Storejet, opening LUKS, enabling LVM and
-# mounting partitions, then forcing Obnam locks on backup partition in case the
-# device was improperly ejected and some locks weren't deleted
+# mounting partitions
 
 done_or_fail() {
     if [ $? ]; then
@@ -59,19 +58,12 @@ done_or_fail $err_lvchange_enable
 # mount partitions
 echo 'Mounting partitions...'
 
-echo -ne '\tbackup... '
-sudo mount /media/storejet-backup
-done_or_fail $err_mount
 echo -ne '\tannex... '
 sudo mount /media/storejet-annex
 done_or_fail $err_mount
 
 echo 'Fixing persmissions on mountpoints...'
 
-echo -ne '\tbackup... '
-sudo chgrp minoru /media/storejet-backup
-sudo chmod g+rwx /media/storejet-backup
-done_or_fail $err_chgrp
 echo -ne '\tannex... '
 sudo chgrp minoru /media/storejet-annex
 sudo chmod g+rwx /media/storejet-annex

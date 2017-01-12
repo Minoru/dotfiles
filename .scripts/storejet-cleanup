@@ -4,7 +4,5 @@
 # (there was a power outage, for example)
 
 sudo umount /media/storejet-annex
-sudo umount /media/storejet-backup
 sudo dmsetup remove storejet_lvm-annex
-sudo dmsetup remove storejet_lvm-backup
 sudo dmsetup remove storejet_luks

@@ -40,9 +40,6 @@ fi
 # umount partitions
 echo 'Unmounting partitions...'
 
-echo -ne '\tbackup... '
-sudo umount /media/storejet-backup
-done_or_fail $err_umount
 echo -ne '\tannex... '
 sudo umount /media/storejet-annex
 done_or_fail $err_umount
