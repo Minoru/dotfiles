@@ -30,7 +30,7 @@ highlight article "^Feed: .*$" white default
 highlight article "^Title: .*$" white default bold
 highlight article "^(Author|Link|Date):.*$" cyan default
 
-browser /usr/bin/firefox
+browser /home/minoru/.nix-profile/bin/firefox
 
 urls-source "local"
 
