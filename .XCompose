@@ -1,4 +1,4 @@
-include "/usr/share/X11/locale/ru_RU.UTF-8/Compose"
+include "/home/minoru/.nix-profile/share/X11/locale/ru_RU.UTF-8/Compose"
 
 # Compose ~=
 <Multi_key> <asciitilde> <equal> : "≈"   U2248 # ALMOST EQUAL TO
