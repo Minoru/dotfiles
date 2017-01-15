@@ -249,3 +249,4 @@
 /.nix-defexpr/
 /.nix-profile
 /.compose-cache/
+/.config/flacon/
