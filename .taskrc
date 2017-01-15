@@ -21,3 +21,11 @@ weekstart = monday
 report.next.filter  = status:pending limit:page (-in) (-someday) (-waiting)
 report.next.columns = id,start.age,depends,priority,project,scheduled.countdown,due.remaining,until.remaining,description,urgency
 report.next.labels  = ID,Active,Deps,P,Project,S,Due,Until,Description,Urg
+
+# Added by tasksh's "review" command
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-1week ) and ( +PENDING or +WAITING )
