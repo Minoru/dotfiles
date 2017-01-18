@@ -289,42 +289,6 @@ hilights = (
     nick = "yes";
     word = "yes";
     regexp = "yes";
-  },
-  {
-    text = "[СсC][aа]ш[к]{0,1}[aаeеyу]";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  },
-  {
-    text = "[СсC][aа]ш([ .,]|[eе]ньк[aаyуeе])";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  },
-  {
-    text = "[СсC][aа]нь$";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  },
-  {
-    text = "[СсC][aа]ньк[aаeеyу]";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  },
-  {
-    text = "[СсC][aа]н[яeею]";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  },
-  {
-    text = "[СсC][aа]ш\\)*$";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
   }
 );
 keyboard = ( { key = "^Q"; id = "active_window"; data = ""; } );
