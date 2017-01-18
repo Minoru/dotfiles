@@ -250,3 +250,4 @@
 /.nix-profile
 /.compose-cache/
 /.config/flacon/
+/.config/QtProject/
