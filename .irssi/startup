@@ -1,2 +1,2 @@
-load /nix/store/qqs5mrcdbl5b6j1yxk50ms9mv3phy16v-irssi-otr-1.0.2/lib/irssi/modules/libotr.so
+load ~/.nix-profile/lib/irssi/modules/libotr.so
 
