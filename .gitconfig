@@ -28,3 +28,5 @@
     rebase = preserve
 [grep]
     lineNumber = true
+[gpg]
+	program = gpg2
