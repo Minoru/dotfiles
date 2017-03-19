@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec /home/minoru/.xmonad/xmonad-i386-linux
