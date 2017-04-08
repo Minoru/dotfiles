@@ -27,3 +27,8 @@ report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-1week ) and ( +PENDING or +WAITING )
 
 color.blocking = bold white on color08
+report.overdue.columns = start.age,entry.age,depends,priority,project,tags,recur.indicator,scheduled.countdown,due,until,id,description,urgency
+report.overdue.labels  = Active,Age,Deps,P,Project,Tag,R,S,Due,Until,ID,Description,Urg
+
+report.next.columns = start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,id,description,urgency
+report.next.labels  = Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,ID,Description,Urg
