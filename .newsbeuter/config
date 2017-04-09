@@ -6,7 +6,7 @@ goto-first-unread no
 text-width 72
 
 use-proxy yes
-proxy-type socks5
+proxy-type socks5h
 proxy localhost:9050
 
 # Due to https://github.com/akrennmair/newsbeuter/issues/457 , I'm un-learning
