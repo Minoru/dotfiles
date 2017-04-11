@@ -32,3 +32,6 @@ report.overdue.labels  = Active,Age,Deps,P,Project,Tag,R,S,Due,Until,ID,Descript
 
 report.next.columns = start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,id,description,urgency
 report.next.labels  = Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,ID,Description,Urg
+
+# Tasks that are part of a project aren't considered more important than standalone tasks
+urgency.project.coefficient = 0.0
