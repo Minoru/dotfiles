@@ -35,3 +35,5 @@ report.next.labels  = Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,ID,Descrip
 
 # Tasks that are part of a project aren't considered more important than standalone tasks
 urgency.project.coefficient = 0.0
+
+report.overdue.sort = due+,urgency-
