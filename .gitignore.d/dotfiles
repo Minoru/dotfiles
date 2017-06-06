@@ -252,3 +252,17 @@
 /.config/flacon/
 /.config/QtProject/
 /.icons
+/.config/emaildefaults
+/.config/keybase/
+/.config/kritarc
+/.config/libreofficedev/
+/.config/pulse/
+/.thunderbird/
+/.stack/setup-exe-src/
+/.newsbeuter/cookies.txt
+/.instead/
+/.gnupg/.gpg-v21-migrated
+/.gnupg/private-keys-v1.d/
+/.gnupg/tofu.db
+/.gnupg/crls.d/DIR.txt
+/.nix-channels
