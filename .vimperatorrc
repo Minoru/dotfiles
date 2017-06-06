@@ -10,7 +10,7 @@ map Л K
 
 " search in Firefox location bar entries first, then in bookmarks, then search
 " engines and keyword URLs
-set complete="lbs"
+set complete="hbs"
 
 " set vim in urxvtc as an editor to run when user press C-i in some inputbox
 set editor="urxvtc -fn 'xft:Terminus:pixelsize=16' -rv +sb -e vim"
