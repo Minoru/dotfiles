@@ -2,12 +2,12 @@
 , gettext, libiconv, makeWrapper, perl }:
 
 stdenv.mkDerivation rec {
-  name = "newsbeuter-dev-20170409";
+  name = "newsbeuter-dev-20170722";
 
   src = fetchgit {
     url = "https://github.com/akrennmair/newsbeuter.git";
-    rev = "f8db61a3d9c32d354ba1102a40bd8b4c26cfa0f9";
-    sha256 = "0nisj5cv7gcfg25w6cjyc7gzh1y3i0cgkkqbar5r088mza33rp2f";
+    rev = "d20cf49a5b83ed209ca08def2629aae669e16b08";
+    sha256 = "1b138sarxi02djl1cgc687hp7wf4z87693frfsv85nf4n5gdnn5y";
   };
 
 
@@ -18,10 +18,12 @@ stdenv.mkDerivation rec {
       ++ stdenv.lib.optional stdenv.isDarwin makeWrapper;
 
   preBuild = ''
-    sed -i -e 110,115d config.sh
+    sed -i -e 107,113d config.sh
     sed -i "1 s%^.*$%#!${perl}/bin/perl%" txt2h.pl
     export LDFLAGS=-lncursesw
   '';
+
+  enableParallelBuilding = true;
 
   installFlags = [ "DESTDIR=$(out)" "prefix=" ];
 
@@ -34,7 +36,7 @@ stdenv.mkDerivation rec {
   meta = {
     homepage    = http://www.newsbeuter.org;
     description = "An open-source RSS/Atom feed reader for text terminals";
-    maintainers = with stdenv.lib.maintainers; [ minoru ];
+    maintainers = with stdenv.lib.maintainers; [ ];
     license     = stdenv.lib.licenses.mit;
     platforms   = stdenv.lib.platforms.unix;
   };
