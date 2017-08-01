@@ -267,3 +267,4 @@
 /.gnupg/crls.d/DIR.txt
 /.nix-channels
 /.config/git/gitk
+/.fonts/
