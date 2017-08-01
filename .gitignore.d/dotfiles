@@ -268,3 +268,4 @@
 /.nix-channels
 /.config/git/gitk
 /.fonts/
+/.config/konsolerc
