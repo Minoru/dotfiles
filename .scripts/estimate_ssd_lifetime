@@ -1,0 +1,84 @@
+#!/bin/sh
+
+root_lifetime_writes=$(sudo tune2fs -l /dev/mapper/curry_lvm-root \
+      | grep 'Lifetime writes' \
+      | cut -f2 -d':' \
+      | sed -r 's/^ +//')
+
+home_lifetime_writes=$(sudo tune2fs -l /dev/mapper/curry_lvm-home \
+      | grep 'Lifetime writes' \
+      | cut -f2 -d':' \
+      | sed -r 's/^ +//')
+
+smart_data=$(sudo smartctl -H -a /dev/sda)
+
+power_on_hours=$(echo "$smart_data"\
+      | grep '9 Power_On_Hours' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+
+power_cycle_count=$(echo "$smart_data"\
+      | grep '12 Power_Cycle_Count' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+
+unused_reserved_block_count=$(echo "$smart_data"\
+      | grep '180 Unused_Rsvd_Blk_Cnt_Tot' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+
+host_sectors_written=$(echo "$smart_data"\
+      | grep '246 Unknown_Attribute' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+host_sectors_written_gb=$(echo "scale=2;$host_sectors_written*2/1024/1024" | bc)
+
+pages_written_by_host=$(echo "$smart_data"\
+      | grep '247 Unknown_Attribute' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+pages_written_by_host_gb=$(echo "scale=2;$pages_written_by_host*16/1024/1024" | bc)
+
+pages_written_by_ftl=$(echo "$smart_data"\
+      | grep '248 Unknown_Attribute' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+pages_written_by_ftl_gb=$(echo "scale=2;$pages_written_by_ftl*16/1024/1024" | bc)
+
+percent_lifetime_remaining=$(echo "$smart_data"\
+      | grep '202 Unknown_SSD_Attribute' \
+      | sed -r 's/^ +//;s/ +/ /g' \
+      | cut -d' ' -f10)
+percent_lifetime_remaining=$(echo "100-$percent_lifetime_remaining" | bc)
+
+write_amplification_factor=$(echo "scale=6; ($pages_written_by_ftl + $pages_written_by_host)/$pages_written_by_ftl" | bc)
+
+# I bought the disk on 11th of January, 2017
+date_buy=1484082000
+today=$(date +%s)
+months_since_purchase=$(echo "scale=2;($today - $date_buy) / (30*24*60*60)" | bc)
+estimate=$(echo "scale=2;$months_since_purchase*140*1024/$host_sectors_written_gb" | bc)
+estimate_years=$(echo "scale=2;$estimate/12" | bc)
+estimate_remaining=$(echo "$estimate - $months_since_purchase" | bc)
+estimate_remaining_years=$(echo "scale=2;$estimate_remaining/12" | bc)
+
+nand_written_gb=$(echo "$pages_written_by_host_gb + $pages_written_by_ftl_gb" | bc)
+estimate_nand=$(echo "scale=2;$months_since_purchase*140*1024/$nand_written_gb" | bc)
+estimate_nand_years=$(echo "scale=2;$estimate_nand/12" | bc)
+estimate_nand_remaining=$(echo "$estimate_nand - $months_since_purchase" | bc)
+estimate_nand_remaining_years=$(echo "scale=2;$estimate_nand_remaining/12" | bc)
+
+echo "/dev/mapper/curry_lvm-root lifetime writes: $root_lifetime_writes"
+echo "/dev/mapper/curry_lvm-home lifetime writes: $home_lifetime_writes"
+echo "Power-on hours: $power_on_hours"
+echo "Power cycles: $power_cycle_count"
+echo "Unused reserved block count (attr 180): $unused_reserved_block_count"
+echo "Cummulative host sectors written (attribute 246): $host_sectors_written ($host_sectors_written_gb GB; sector is 2KB)"
+echo "Number of NAND pages of data written by the host (attribute 247): $pages_written_by_host ($pages_written_by_host_gb GB; page is 16KB)"
+echo "Number of NAND pages written by the FTL (attribute 248): $pages_written_by_ftl ($pages_written_by_ftl_gb GB)"
+echo "Write amplification factor is: ($pages_written_by_host + $pages_written_by_ftl)/$pages_written_by_ftl = $write_amplification_factor"
+echo "Percent lifetime remaining (attribute 202): $percent_lifetime_remaining%"
+echo "Estimate: $estimate months, or $estimate_years years ($months_since_purchase months * 140TB / $host_sectors_written_gb GB)"
+echo "          $estimate_remaining months or $estimate_remaining_years years remaining"
+echo "Estimate: $estimate_nand months, or $estimate_nand_years years ($months_since_purchase months * 140TB / $nand_written_gb GB - the latter calculated from NAND)"
+echo "          $estimate_nand_remaining months, or $estimate_nand_remaining_years years remaining"
