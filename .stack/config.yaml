@@ -3,3 +3,6 @@ templates:
         author-name: Alexander Batischev
         author-email: eual.jp@gmail.com
         github-username: Minoru
+nix:
+    enable: true
+    pure: false
