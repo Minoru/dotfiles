@@ -8,14 +8,12 @@ import XMonad.Hooks.ManageHelpers(isFullscreen, doFullFloat)
 import XMonad.Hooks.SetWMName (setWMName)
 import XMonad.Hooks.UrgencyHook (focusUrgent, clearUrgents, withUrgencyHook, NoUrgencyHook(NoUrgencyHook))
 import XMonad.Layout.Fullscreen (fullscreenFull)
-import XMonad.Layout.IM (withIM, Property(Role))
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.LayoutCombinators (JumpToLayout(JumpToLayout))
 import XMonad.Layout.NoBorders (noBorders, smartBorders)
 import XMonad.Layout.PerWorkspace (onWorkspace)
-import XMonad.Layout.Reflect (reflectHoriz)
 import XMonad.Layout.TwoPane (TwoPane(TwoPane))
-import XMonad.Prompt (defaultXPConfig, XPConfig(font))
+import XMonad.Prompt (XPConfig(font))
 import XMonad.Prompt.Shell (shellPrompt)
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.Run (spawnPipe)
@@ -29,16 +27,8 @@ import Graphics.X11.ExtraTypes.XF86 (
   , xF86XK_AudioNext
   )
 
-import Control.Applicative (liftA2, (<*))
-import Control.Monad (liftM2, msum, when)
-import Control.Monad.Trans.Class (lift)
-import Control.Monad.Trans.Writer (tell)
-import Control.Monad.Writer (WriterT, execWriterT)
-import Data.List (intercalate, stripPrefix)
-import Data.Maybe (catMaybes, mapMaybe)
+import Control.Monad (when)
 import Data.Monoid (All(All))
-import Data.Monoid (Last(Last), getLast)
-import Data.Traversable (traverse)
 import System.IO (hPutStrLn)
 
 import AlmostFull (AlmostFull(AlmostFull))
@@ -109,7 +99,7 @@ myKeys = [  -- names of keys can be found in haskell-X11 package in files
           , ((mod1Mask .|. shiftMask, xK_b), sendMessage ToggleStruts)
 
             -- choose application to run
-          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt defaultXPConfig { font = "xft:Terminus:pixelsize=12:lang=ru" })
+          , ((mod1Mask .|. shiftMask, xK_p), shellPrompt def { font = "xft:Terminus:pixelsize=12:lang=ru" })
 
             -- lock the screen (switching to English layout first so I can input the password later)
           , ((mod1Mask .|. shiftMask, xK_l), spawn "setxkbmap -layout 'us' -option -option 'compose:lwin' -option 'terminate:ctrl_alt_bksp' -option 'ctrl:swapcaps'; sleep 1; /home/minoru/.scripts/i3lock --no-unlock-indicator --image=/home/minoru/pictures/wallpapers/current.png")
@@ -153,9 +143,9 @@ main = do
     xmproc  <- spawnPipe "xmobar $HOME/.xmobarrc.`hostname --short`"
     xmonad $ ewmh $
       withUrgencyHook NoUrgencyHook
-      defaultConfig
+      def
         { manageHook = manageDocks <+> myManageHook
-                                   <+> manageHook defaultConfig
+                                   <+> manageHook def
         , layoutHook = myLayout
         , logHook =
                dynamicLogWithPP (xmobarPP
@@ -170,7 +160,8 @@ main = do
                  -- I can *see* what layout is in effect, no need to put its
                  -- name into the XMobar
                  , ppOrder   =
-                     \(workspaces:layout:title:_) -> [workspaces,title]
+                     \(workspaceNames:_currentLayout:windowTitle:_)
+                       -> [workspaceNames,windowTitle]
                  , ppSep     = " "
                  })
             -- move mouse pointer to the center of the focused window
