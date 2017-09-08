@@ -1,0 +1,24 @@
+name:         minoru-xmonadrc
+license:      BSD-3
+author:       Alexander Batischev
+maintainer:   Alexander Batischev <eual.jp@gmail.com>
+category:     System
+
+dependencies:
+  - X11
+  - X11-xft
+  - base
+  - xmonad
+  - xmonad-contrib
+  - transformers
+  - mtl
+
+ghc-options:
+  - -Wall
+  - -threaded
+  - -O2
+
+executables:
+  xmonad-minoru:
+    source-dirs: src
+    main:        Main.hs

@@ -269,3 +269,5 @@
 /.config/git/gitk
 /.fonts/
 /.config/konsolerc
+/.xmonad/.stack-work/
+/.xmonad/minoru-xmonadrc.cabal
