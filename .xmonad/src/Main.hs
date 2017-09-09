@@ -156,7 +156,7 @@ main = do
                  { ppOutput  = hPutStrLn xmproc
                  -- show current window's title in nice darkish green, limited
                  -- to 92 symbols in length
-                 , ppTitle   = xmobarColor "#00cc00" "" . shorten 92
+                 , ppTitle   = xmobarColor "#00cc00" "" . shorten 140
                  -- show urgent window in pretty red
                  , ppUrgent  = xmobarColor "#ff2c4b" ""
                  -- current workspace is highlighted with a nice bluish
