@@ -13,6 +13,9 @@ import XMonad.Layout.LayoutCombinators (JumpToLayout(JumpToLayout))
 import XMonad.Layout.NoBorders (noBorders, smartBorders)
 import XMonad.Layout.PerWorkspace (onWorkspace)
 import XMonad.Layout.TwoPane (TwoPane(TwoPane))
+import XMonad.Layout.Cross (simpleCross)
+import XMonad.Layout.ThreeColumns (ThreeCol(ThreeColMid))
+import XMonad.Layout.Circle (Circle(Circle))
 import XMonad.Prompt (XPConfig(font))
 import XMonad.Prompt.Shell (shellPrompt)
 import XMonad.Util.EZConfig (additionalKeys)
@@ -68,16 +71,17 @@ myManageHook = composeAll
                <+> doF (W.greedyView "5:video")
 
 myLayout = onWorkspace "5:video" absoluteFull $
-           smartBorders $ avoidStruts $
-           Full |||
+           avoidStruts $
+           (smartBorders Full) |||
            onWorkspace
              "3:web"
              (twoPane ||| Mirror twoPane)
-             (tall ||| Mirror tall ||| almostFull)
+             (Circle ||| simpleCross ||| threeColMid ||| tall ||| Mirror tall ||| almostFull)
     where tall = Tall 1 (5/100) (1/2)
           almostFull = AlmostFull (5/9) (5/100) tall
           twoPane = TwoPane (3/100) (1/2)
           absoluteFull = noBorders $ fullscreenFull Full
+          threeColMid = ThreeColMid 1 (3/100) (1/2) -- not bad, might be useful
 
 myKeys = [  -- names of keys can be found in haskell-X11 package in files
             -- Graphics/X11/Types.hsc and Graphics.X11.ExtraTypes.hsc
