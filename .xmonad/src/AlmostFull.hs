@@ -7,7 +7,7 @@ import Data.Maybe
 
 data AlmostFull a = AlmostFull Rational Rational (Tall a) deriving (Read, Show)
 
-numWindows (W.Stack x l r) = 1 + length l + length r
+numWindows (W.Stack _ l r) = 1 + length l + length r
 
 instance LayoutClass AlmostFull a where
   pureLayout (AlmostFull ratio _ t) r@(Rectangle rx ry rw rh) s =
@@ -23,10 +23,10 @@ instance LayoutClass AlmostFull a where
     return . pureAfMessage' l m . fromMaybe 1 $
     (W.stack . W.workspace . W.current $ w) >>= return . length . W.integrate
 
-  description (AlmostFull ratio delta t) = "AlmostFull " ++ description t
+  description (AlmostFull _ratio _delta t) = "AlmostFull " ++ description t
 
 pureAfMessage' :: AlmostFull a -> SomeMessage -> Int -> Maybe (AlmostFull a)
-pureAfMessage' l@(AlmostFull ratio delta t) m winCount =
+pureAfMessage' (AlmostFull ratio delta t) m winCount =
   case winCount of
     0 -> finalize (f $ fromMessage m) (Just t)
     1 -> finalize (f $ fromMessage m) (Just t)
