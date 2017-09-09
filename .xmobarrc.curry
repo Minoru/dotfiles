@@ -1,3 +1,5 @@
+-- vim: set ft=haskell:
+
 Config { font = "xft:Terminus:pixelsize=14:lang=ru"
        , bgColor = "black"
        , fgColor = "#666462"
