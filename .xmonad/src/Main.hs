@@ -164,8 +164,8 @@ main = do
                  -- I can *see* what layout is in effect, no need to put its
                  -- name into the XMobar
                  , ppOrder   =
-                     \(workspaceNames:_currentLayout:windowTitle:_)
-                       -> [workspaceNames,windowTitle]
+                     \(workspaceNames:currentLayout:windowTitle:_)
+                       -> [workspaceNames,currentLayout,windowTitle]
                  , ppSep     = " "
                  })
             -- move mouse pointer to the center of the focused window
