@@ -15,4 +15,5 @@ Config { font = "xft:Terminus:pixelsize=14:lang=ru"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%StdinReader%}{ : %battery% : <fc=#ffcc00>%date%</fc>"
+       , pickBroadest = True
        }
