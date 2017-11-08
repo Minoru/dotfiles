@@ -278,3 +278,5 @@
 /.gnupg/openpgp-revocs.d/
 /.gnupg/sshcontrol
 /.texlive2016/
+/.calibre-library/
+/.config/calibre/
