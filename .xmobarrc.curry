@@ -1,6 +1,6 @@
 -- vim: set ft=haskell:
 
-Config { font = "xft:Liberation Mono:pixelsize=15:lang=ru"
+Config { font = "xft:Hack:pixelsize=15:lang=ru"
        , bgColor = "black"
        , fgColor = "#666462"
        , position = TopSize C 100 28
