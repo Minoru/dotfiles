@@ -446,6 +446,9 @@ augroup ft_markdown
     " limit text width to 80
     autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
+    " disable folding
+    autocmd BufRead,BufNewFile *.md setlocal nofoldenable
+
 augroup END
 
 " }}}
