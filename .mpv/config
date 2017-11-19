@@ -1,6 +1,6 @@
 # Write your default config options here!
 fullscreen = yes
-af=scaletempo
+af=rubberband
 vf=yadif
 
 # Screenshot settings
