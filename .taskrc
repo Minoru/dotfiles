@@ -34,7 +34,9 @@ report.next.columns = start.age,entry.age,depends,priority,project,tags,recur,sc
 report.next.labels  = Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,ID,Description,Urg
 report.next.filter = status:pending limit:page +READY
 
-# Tasks that are part of a project aren't considered more important than standalone tasks
+# Some things shouldn't influence the urgency of a task
 urgency.project.coefficient = 0.0
+urgency.blocking.coefficient = 0.0
+urgency.annotations.coefficient = 0.0
 
 report.overdue.sort = due+,urgency-
