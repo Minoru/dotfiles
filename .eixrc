@@ -1,3 +1,0 @@
-# enable -R option, i.e. look in eix-remote's cache when looking for ebuilds.
-# That enables search in the overlays that aren't enabled on this machine.
-REMOTE_DEFAULT=1
