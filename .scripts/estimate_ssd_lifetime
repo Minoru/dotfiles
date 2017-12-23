@@ -23,30 +23,30 @@ power_cycle_count=$(echo "$smart_data"\
       | cut -d' ' -f10)
 
 unused_reserved_block_count=$(echo "$smart_data"\
-      | grep '180 Unused_Rsvd_Blk_Cnt_Tot' \
+      | grep '180 Unused_Reserve_NAND_Blk' \
       | sed -r 's/^ +//;s/ +/ /g' \
       | cut -d' ' -f10)
 
 host_sectors_written=$(echo "$smart_data"\
-      | grep '246 Unknown_Attribute' \
+      | grep '246 Total_Host_Sector_Write' \
       | sed -r 's/^ +//;s/ +/ /g' \
       | cut -d' ' -f10)
 host_sectors_written_gb=$(echo "scale=2;$host_sectors_written*2/1024/1024" | bc)
 
 pages_written_by_host=$(echo "$smart_data"\
-      | grep '247 Unknown_Attribute' \
+      | grep '247 Host_Program_Page_Count' \
       | sed -r 's/^ +//;s/ +/ /g' \
       | cut -d' ' -f10)
 pages_written_by_host_gb=$(echo "scale=2;$pages_written_by_host*16/1024/1024" | bc)
 
 pages_written_by_ftl=$(echo "$smart_data"\
-      | grep '248 Unknown_Attribute' \
+      | grep '248 Bckgnd_Program_Page_Cnt' \
       | sed -r 's/^ +//;s/ +/ /g' \
       | cut -d' ' -f10)
 pages_written_by_ftl_gb=$(echo "scale=2;$pages_written_by_ftl*16/1024/1024" | bc)
 
 percent_lifetime_remaining=$(echo "$smart_data"\
-      | grep '202 Unknown_SSD_Attribute' \
+      | grep '202 Percent_Lifetime_Used' \
       | sed -r 's/^ +//;s/ +/ /g' \
       | cut -d' ' -f10)
 percent_lifetime_remaining=$(echo "100-$percent_lifetime_remaining" | bc)
