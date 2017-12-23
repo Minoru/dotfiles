@@ -1,14 +1,14 @@
 { stdenv, fetchgit, sqlite, curl, pkgconfig, libxml2, stfl, json-c-0-11, ncurses
 , gettext, libiconv, asciidoc, docbook_xml_xslt, docbook_xml_dtd_45, libxslt
-, makeWrapper }:
+, makeWrapper, git }:
 
 stdenv.mkDerivation rec {
-  name = "newsboat-dev-20171022-2";
+  name = "newsboat-dev-20171210-1";
 
   src = fetchgit {
     url = "https://github.com/newsboat/newsboat.git";
-    rev = "b6c3eb5ba9f93afbf1eaf1503c46e7e96e83f8f8";
-    sha256 = "12w9f6z6qicz52jix556sczgc5adn1g859wiag0avihgzqqa3aik";
+    rev = "5f3ce08b10dc1977ebbb4113e5b23efb94f669cd";
+    sha256 = "1sq2fxgnmwi8c6kzrgr1nz17sii8az3y6zw2l4dw7pgp0wh3180n";
     leaveDotGit = true;
   };
 
@@ -16,13 +16,8 @@ stdenv.mkDerivation rec {
     # use gettext instead of libintlOrEmpty so we have access to the msgfmt
     # command
     = [ pkgconfig sqlite curl libxml2 stfl json-c-0-11 ncurses gettext libiconv
-        asciidoc docbook_xml_xslt docbook_xml_dtd_45 libxslt ]
+        asciidoc docbook_xml_xslt docbook_xml_dtd_45 libxslt git ]
       ++ stdenv.lib.optional stdenv.isDarwin makeWrapper;
-
-  preBuild = ''
-    export CXXFLAGS='-DGIT_HASH=\"r2.10.1-53-gb6c3e\"'
-    sed -i -e 's/-ggdb/-O3/; s/-fprofile-arcs -ftest-coverage//' Makefile
-  '';
 
   enableParallelBuilding = true;
 
