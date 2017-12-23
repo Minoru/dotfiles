@@ -283,3 +283,4 @@
 /.rubberband.wisdom.d
 /.config/borg/security/
 /.config/asciinema/config
+/.stack/loaded-snapshot-cache/
