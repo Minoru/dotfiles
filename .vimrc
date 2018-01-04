@@ -19,6 +19,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'plasticboy/vim-markdown'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " }}}}
