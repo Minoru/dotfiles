@@ -3,12 +3,12 @@
 , makeWrapper, git }:
 
 stdenv.mkDerivation rec {
-  name = "newsboat-dev-20180103-1";
+  name = "newsboat-dev-20180105-1";
 
   src = fetchgit {
     url = "https://github.com/newsboat/newsboat.git";
-    rev = "8ca94e4906588a2cedddb4267089ae819a3e52a4";
-    sha256 = "1as2scvw92iy1s9v1ir5yb8cfwrl0a20b72sqf2lwiyabd2240y8";
+    rev = "c6913c1f937fd833a8a11e9765c598957d84dc86";
+    sha256 = "049k7dyw7kwpbiz57yh8p15ifhpgmahk04ln5a9i7nbc786sqgsc";
     leaveDotGit = true;
   };
 
