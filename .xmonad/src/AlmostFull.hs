@@ -16,7 +16,7 @@ instance LayoutClass AlmostFull a where
         ws = [W.focus s]
         rs = [Rectangle rx' ry rw' rh]
         rw' = ceiling . (ratio *) . fromIntegral $ rw
-        rx' = rx + (ceiling $ (fromIntegral $ rw - rw') / 2)
+        rx' = rx + (ceiling $ (fromIntegral $ rw - rw') / (2.0 :: Double))
       _ -> pureLayout t r s
 
   handleMessage l m = withWindowSet $ \w ->
