@@ -33,8 +33,10 @@ pureAfMessage' (AlmostFull ratio delta t) m winCount =
     _ -> finalize (Just ratio) (pureMessage t m)
   where
     finalize :: Maybe Rational -> Maybe (Tall a) -> Maybe (AlmostFull a)
-    finalize ratio t = ratio >>= \ratio -> t >>= \t ->
-      return $ AlmostFull ratio delta t
+    finalize (Just ratio_) (Just tall_) =
+      Just $ AlmostFull ratio_ delta tall_
+    finalize _ _ = Nothing
+
     f (Just Shrink) = Just (max 0 $ ratio-delta)
     f (Just Expand) = Just (min 1 $ ratio+delta)
     f _             = Nothing
