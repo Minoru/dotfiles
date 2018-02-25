@@ -20,6 +20,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'plasticboy/vim-markdown'
 Plug 'leafgarland/typescript-vim'
+Plug 'pbrisbin/vim-syntax-shakespeare'
 call plug#end()
 
 " }}}}
