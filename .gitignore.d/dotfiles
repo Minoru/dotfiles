@@ -255,6 +255,7 @@
 /.config/emaildefaults
 /.config/keybase/
 /.config/kritarc
+/.config/kritadisplayrc
 /.config/libreofficedev/
 /.config/pulse/
 /.thunderbird/
