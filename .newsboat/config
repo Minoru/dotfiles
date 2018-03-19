@@ -5,6 +5,7 @@ reload-threads 20
 goto-first-unread no
 text-width 72
 confirm-exit yes
+mark-as-read-on-hover yes
 
 # Due to https://github.com/akrennmair/newsbeuter/issues/457 , I'm un-learning
 # to delete processed articles—something I used to do before. To that end, I'm
