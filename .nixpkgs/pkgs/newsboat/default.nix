@@ -1,4 +1,4 @@
-{ stdenv, fetchgit, sqlite, curl, pkgconfig, libxml2, stfl, json-c-0-11, ncurses
+{ stdenv, fetchgit, sqlite, curl, pkgconfig, libxml2, stfl, json_c, ncurses
 , gettext, libiconv, asciidoc, docbook_xml_xslt, docbook_xml_dtd_45, libxslt
 , makeWrapper, git }:
 
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   buildInputs
     # use gettext instead of libintlOrEmpty so we have access to the msgfmt
     # command
-    = [ pkgconfig sqlite curl libxml2 stfl json-c-0-11 ncurses gettext libiconv
+    = [ pkgconfig sqlite curl libxml2 stfl json_c ncurses gettext libiconv
         asciidoc docbook_xml_xslt docbook_xml_dtd_45 libxslt git ]
       ++ stdenv.lib.optional stdenv.isDarwin makeWrapper;
 
