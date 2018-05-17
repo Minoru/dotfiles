@@ -5,11 +5,5 @@
 # solved by shell aliases alone as I usually start Anki up using "Run Program"
 # feature of XMonad, my WM. Thus the wrapper.
 
-if [ `hostname --short` = "curry" ]
-then
-    anki=$HOME/.nix-profile/bin/anki
-else
-    anki=/usr/bin/anki
-fi
-
+anki=$HOME/.nix-profile/bin/anki
 $anki -b $HOME/.anki
