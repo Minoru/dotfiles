@@ -257,6 +257,10 @@ augroup ft_c
     " Look for tags file from here and up the tree until home
     autocmd FileType c,cc,cpp,h,hpp,s setlocal tags+=tags;$HOME
 
+    " Recognize Doxygen-style comments
+    " Cf. https://stackoverflow.com/a/28078855/2350060
+    autocmd FileType c,cc,cpp,h,hpp,s setlocal comments^=:///
+
     " Highlight symbols in the column farther than the column 79; better than
     " 'colorcolumn' setting because it doesn't display annoying vertical red bar.
     "
