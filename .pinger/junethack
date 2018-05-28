@@ -3,12 +3,13 @@ delay_between_pings_ms=10000
 host_timeout_ms=50000
 long_delay_ms=25000
 
-title=Junethack 2017 tournament servers
+title=Junethack 2018 tournament servers
 
 HOSTS SECTION:
 nethack.alt.org=NAO
-eu.un.nethack.nu=UnNethack
-nethack4.org=Nethack4
-em.slashem.me=SlashEMExtended
+nethack4.org=nethack4.org
+em.slashem.me=slashem.me
 ascension.run=ascension.run
-hardfought.org=hardfought.org
+hardfought.org=us.hardfought.org
+eu.hardfought.org=eu.hardfought.org
+au.hardfought.org=au.hardfought.org
