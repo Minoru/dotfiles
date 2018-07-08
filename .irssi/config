@@ -306,6 +306,16 @@ ignores = (
     level = "JOINS PARTS QUITS NICKS";
     channels = ( "#haskell", "#clojure", "#erlang", "#perl", "#nethack" );
     network = "Freenode";
+  },
+  {
+    level = "JOINS PARTS QUITS";
+    servertag = "Mozilla";
+    channels = ( "#rust", "#rust-beginners" );
+  },
+  {
+    level = "JOINS PARTS QUITS";
+    servertag = "Mozilla";
+    channels = ( "#rust-ru" );
   }
 );
 notifies = { };
