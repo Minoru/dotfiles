@@ -21,6 +21,7 @@ Plug 'cespare/vim-toml'
 Plug 'plasticboy/vim-markdown'
 Plug 'leafgarland/typescript-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'elmcast/elm-vim'
 call plug#end()
 
 " }}}}
