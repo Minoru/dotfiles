@@ -316,7 +316,37 @@ ignores = (
     level = "JOINS PARTS QUITS";
     servertag = "Mozilla";
     channels = ( "#rust-ru" );
-  }
+  },
+  {
+    level = "ALL";
+    pattern = "Hey, I thought you guys might be interested in this blog by freenode staff member Bryan 'kloeri' Ostergaard https://bryanostergaard.com/";
+    regexp = "yes";
+    channels = ( "##rust" );
+  },
+  {
+    level = "ALL";
+    pattern = "or maybe this blog by freenode staff member Matthew 'mst' Trout https://MattSTrout.com/";
+    regexp = "yes";
+    channels = ( "##rust" );
+  },
+  {
+    level = "ALL";
+    pattern = "Read what IRC investigative journalists have uncovered on the freenode pedophilia scandal https://encyclopediadramatica.rs/Freenodegate";
+    regexp = "yes";
+    channels = ( "##rust" );
+  },
+  {
+    level = "ALL";
+    pattern = "This message was brought to you by Private Internet Access";
+    regexp = "yes";
+    channels = ( "##rust" );
+  },
+  {
+    level = "ALL";
+    pattern = "<script type=\"text/javascript\" src=\"http://web.nba1001.net:8888/tj/tongji.js\"></script>";
+    regexp = "yes";
+    channels = ( "##rust" );
+  },
 );
 notifies = { };
 windows = {
