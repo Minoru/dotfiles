@@ -347,6 +347,16 @@ ignores = (
     regexp = "yes";
     channels = ( "##rust" );
   },
+  {
+    level = "ALL";
+    pattern = "Want IRC ads? https://williampitcock.com/";
+    channels = ( "#rust-ru", "#rust-beginners" );
+  },
+  {
+    level = "ALL";
+    pattern = "Make sure to report this IP to any DNSBLs you might think of! That'll totally stop the flood. https://dronebl.org/ I also recommend installing https://github.com/kaniini/antissh";
+    channels = ( "#rust-ru", "#rust-beginners" );
+  },
 );
 notifies = { };
 windows = {
