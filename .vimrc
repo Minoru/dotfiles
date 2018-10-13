@@ -7,8 +7,6 @@
 call plug#begin('~/.vim/plugins')
 Plug 'scrooloose/nerdcommenter'
 Plug 'aklt/plantuml-syntax'
-" ultrasnips depends on vim-snippets
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'godlygeek/tabular'
 Plug 'octol/vim-cpp-enhanced-highlight'
