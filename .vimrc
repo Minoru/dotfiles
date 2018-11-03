@@ -67,6 +67,11 @@ set formatoptions+=j
 " do not auto-wrap lines that were already longer than 'textwidth' when we
 " entered Insert mode
 set formatoptions+=b
+" There's really no downside to enabling this:
+" 1. In Markdown and other text files, this will spell-check everything;
+" 2. In code, this will only check string literals and comments.
+set spell
+set spelllang+=en,ru_yo
 
 " }}}}
 " Appearance {{{{
