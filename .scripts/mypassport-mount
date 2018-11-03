@@ -52,7 +52,7 @@ sudo cryptsetup luksOpen $luks_dev mypassport_luks
 done_or_fail $err_luks_open
 
 # activate LVM
-sleep 1
+sleep 3
 echo -n 'Activating LVM... '
 sudo lvm lvchange -ay mypassport_lvm
 done_or_fail $err_lvchange_enable
