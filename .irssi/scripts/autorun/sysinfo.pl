@@ -1,1 +1,0 @@
-/home/minoru/src/original/irssi-sysinfo/sysinfo.pl
