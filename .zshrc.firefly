@@ -1,3 +1,4 @@
 export EDITOR=/usr/bin/vim
+export PATH=$HOME/.local/bin:$PATH
 
 [[ -n ${IN_NIX_SHELL} ]] && PROMPT="%{$fg[yellow]%}nix-shell %# %{$reset_color%}"
