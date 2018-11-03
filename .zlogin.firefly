@@ -1,1 +1,1 @@
-export EDITOR=$HOME/.nix-profile/bin/vim
+export BROWSER='/usr/bin/firefox'

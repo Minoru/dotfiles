@@ -5,5 +5,5 @@
 # solved by shell aliases alone as I usually start Anki up using "Run Program"
 # feature of XMonad, my WM. Thus the wrapper.
 
-anki=$HOME/.nix-profile/bin/anki
+anki=$(env anki)
 $anki -b $HOME/.anki
