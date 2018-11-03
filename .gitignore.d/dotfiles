@@ -292,3 +292,11 @@
 /.FBReader/
 /.elm/
 /.config/blender/
+/.ICEauthority
+/.xsession-errors.old
+/.xfce4-session.verbose-log*
+/.config/xfce4/
+/.config/user-dirs.dirs
+/.config/user-dirs.locale
+/.config/GIMP/
+/.config/Thunar/
