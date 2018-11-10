@@ -28,3 +28,5 @@
     lineNumber = true
 [gpg]
 	program = gpg2
+[protocol]
+	version = 2
