@@ -301,3 +301,6 @@
 /.config/GIMP/
 /.config/Thunar/
 /.sane/
+/.config/pavucontrol.ini
+/.config/quodlibet/
+/.config/ristretto/
