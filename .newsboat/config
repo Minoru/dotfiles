@@ -1,7 +1,7 @@
 auto-reload yes
 suppress-first-reload yes
 download-retries 5
-reload-threads 80
+reload-threads 400
 goto-first-unread no
 text-width 72
 confirm-exit yes
