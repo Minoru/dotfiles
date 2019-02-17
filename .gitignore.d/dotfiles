@@ -306,3 +306,7 @@
 /.config/ristretto/
 /.cargo/bin/
 /.config/Luminance HDR Development Team/Luminance HDR.conf
+/.rustup/toolchains/
+/.rustup/update-hashes/
+/.rustup/downloads/
+/.rustup/tmp/
