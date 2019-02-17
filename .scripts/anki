@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# Anki 2.0 uses ~/Anki to store the data. To change the location, we need to
-# pass '-b' parameter each time we start Anki. That's inconvenient and can't be
-# solved by shell aliases alone as I usually start Anki up using "Run Program"
-# feature of XMonad, my WM. Thus the wrapper.
-
-anki=$(env anki)
-$anki -b $HOME/.anki
