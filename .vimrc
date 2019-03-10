@@ -21,6 +21,7 @@ Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'elmcast/elm-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'arrufat/vala.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
 " }}}}
