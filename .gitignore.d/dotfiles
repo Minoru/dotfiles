@@ -310,3 +310,10 @@
 /.rustup/update-hashes/
 /.rustup/downloads/
 /.rustup/tmp/
+/.gnupg/pubring.kbx
+/.gnupg/pubring.kbx~
+/.hledger-web_client_session_key.aes
+/.config/xarchiver/xarchiverrc
+/.config/VirtualBox/
+/.config/Mousepad/
+/.calibre/
