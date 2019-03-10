@@ -20,6 +20,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'elmcast/elm-vim'
 Plug 'udalov/kotlin-vim'
+Plug 'arrufat/vala.vim'
 call plug#end()
 
 " }}}}
