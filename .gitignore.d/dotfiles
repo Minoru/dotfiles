@@ -317,3 +317,5 @@
 /.config/VirtualBox/
 /.config/Mousepad/
 /.calibre/
+/.pwsafe/pwsafe.cfg
+.config/keepassxc/keepassxc.ini
