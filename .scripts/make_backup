@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+sudo ~/.scripts/mypassport-mount
+
+borg create \
+    -v \
+    --stats \
+    --progress \
+    --exclude-caches \
+    --exclude '/home/minoru/cloud' \
+    --exclude 're:\.git/annex/' \
+    --exclude 're:\.stack-work/' \
+    --exclude 'sh:**/target/debug/' \
+    --exclude 'sh:**/target/release/' \
+    '/media/mypassport-backup/borgbackup::{now}' \
+    ~
+
+sudo ~/.scripts/mypassport-umount
