@@ -319,3 +319,4 @@
 /.calibre/
 /.pwsafe/pwsafe.cfg
 .config/keepassxc/keepassxc.ini
+/.cargo/.crates.toml
