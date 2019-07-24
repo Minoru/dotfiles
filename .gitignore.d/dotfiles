@@ -320,3 +320,9 @@
 /.pwsafe/pwsafe.cfg
 .config/keepassxc/keepassxc.ini
 /.cargo/.crates.toml
+/.cargo/.package-cache
+/.config/PVS-Studio/
+/.config/gtk-3.0/
+/.docker/
+/.IdeaIC2019.1/
+/.idea-build/
