@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 # Looks for and mounts my WP MyPassport, opening LUKS, enabling LVM and
 # mounting partitions, then forcing Obnam locks on backup partition in case the
 # device was improperly ejected and some locks weren't deleted
