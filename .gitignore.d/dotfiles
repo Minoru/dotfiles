@@ -328,3 +328,4 @@
 /.idea-build/
 /.config/mypaint/
 /.cargo/advisory-db/
+/.zenmap/
