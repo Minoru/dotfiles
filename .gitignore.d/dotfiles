@@ -216,6 +216,7 @@
 /.vim/plugin
 /.vim/plugins/
 /.vim/spell/
+!/.vim/undofiles/.gitkeep
 /.vim/undofiles/
 /.vim_local_rc_cache
 /.viminfo
@@ -329,3 +330,5 @@
 /.config/mypaint/
 /.cargo/advisory-db/
 /.zenmap/
+!/.vim/swapfiles/.gitkeep
+/.vim/swapfiles/

@@ -180,10 +180,18 @@ set pastetoggle=<F3>
 
 set autochdir " current dir determined by current buffer
 " undofiles preserve undo history between edits (i.e. you can close vim)
+" Note two slashes at the end -- this makes Vim create swapfile's name from
+" the full path to the edited file, ensuring their uniqueness.
 set undofile undodir=~/.vim/undofiles//
 " just in case, autocreate undodir if it doesn't exist
 if !isdirectory(expand(&undodir))
     call mkdir(expand(&undodir), "p")
+endif
+" store swap files away from the edited files. This helps with slow
+" filesystems, e.g. DAV. See the comment above re two slashes
+set directory=~/.vim/swapfiles//,~/tmp//,/var/tmp//,/tmp//
+if !isdirectory(expand("~/.vim/swapfiles"))
+    call mkdir(expand("~/.vim/swapfiles"), "p")
 endif
 
 set modeline " read configuration parameters from current file
