@@ -332,3 +332,5 @@
 /.zenmap/
 !/.vim/swapfiles/.gitkeep
 /.vim/swapfiles/
+/.config/poedit/
+/.config/wireshark/
