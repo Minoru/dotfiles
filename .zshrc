@@ -113,6 +113,8 @@ alias news='tmux a -t "=news" || tmux new -s news "echo \"\033]0;news\a\" && new
 alias find_original='git annex find | xargs -I "{}" -- find -L ~/torrents/downloads -samefile {}'
 alias t='clear && task'
 
+alias ip='ip -color=auto'
+
 if [ "$TERM" = "linux" ]; then
     alias mplayer='mplayer -vo fbdev2'
     alias startx='rm -f ~/.xsession-errors; setsid startx; while [ "`jobs | wc -l`" -ne "0" ]; do fg ; done; exit'
