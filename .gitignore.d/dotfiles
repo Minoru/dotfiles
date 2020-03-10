@@ -336,3 +336,4 @@
 /.config/wireshark/
 /.config/QMatrixClient/
 /.config/nheko/
+/.cargo/.crates2.json
