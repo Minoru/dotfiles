@@ -339,3 +339,7 @@
 /.cargo/.crates2.json
 /.config/Keybase/
 /.config/transmission/
+/.config/vlc/
+/.stack/pantry/
+/.stack/stack.sqlite3
+/.stack/stack.sqlite3.pantry-write-lock
