@@ -343,3 +343,6 @@
 /.stack/pantry/
 /.stack/stack.sqlite3
 /.stack/stack.sqlite3.pantry-write-lock
+/.nuget/
+/.dotnet/
+/.config/NuGet/
