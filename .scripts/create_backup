@@ -10,8 +10,8 @@ borg create \
     --progress \
     --exclude-caches \
     --exclude '/home/minoru/cloud' \
-    --exclude 're:\.git/annex/' \
-    --exclude 're:\.stack-work/' \
+    --exclude 'sh:**/.git/annex/' \
+    --exclude 'sh:**/.stack-work/' \
     --exclude 'sh:**/target/' \
     '/media/mypassport-backup/borgbackup::{now}' \
     ~
