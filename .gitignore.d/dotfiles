@@ -346,3 +346,4 @@
 /.nuget/
 /.dotnet/
 /.config/NuGet/
+/.config/crev/
