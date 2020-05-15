@@ -20,6 +20,8 @@ Plug 'elmcast/elm-vim'
 Plug 'udalov/kotlin-vim'
 Plug 'arrufat/vala.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'ledger/vim-ledger'
+Plug 'anekos/hledger-vim' " for omni-completion
 call plug#end()
 
 " }}}}
@@ -502,6 +504,17 @@ augroup ft_golang
 augroup END
 
 " }}}}
+"
+" Hledger {{{{
+
+augroup ft_ledger
+    autocmd!
+
+    " omni-completion from hledger-vim, because it works better than
+    " vim-ledger
+    autocmd FileType ledger setlocal omnifunc=hledger#complete#omnifunc
+
+augroup END
 
 " }}}
 " Local config with machine-specific settings {{{{
