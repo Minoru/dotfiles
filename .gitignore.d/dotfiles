@@ -345,3 +345,6 @@
 /.dotnet/
 /.config/NuGet/
 /.config/crev/
+/.config/ibus/
+/.config/evolution/
+/.dmrc
