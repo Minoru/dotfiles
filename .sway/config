@@ -52,7 +52,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 input type:keyboard {
     xkb_layout us,ru
-    xkb_options grp:alt_space_toggle,ctrl:swapcaps,compose:lwin
+    xkb_options grp:alt_space_toggle,ctrl:nocaps,compose:lwin
 }
 
 ### Looks
