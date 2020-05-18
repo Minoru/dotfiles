@@ -1,0 +1,16 @@
+# To make this work, I had to append the following to the
+# /etc/pam.d/gdm-password:
+#
+#   session required        pam_env.so readenv=0 user_readenv=1
+
+SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
+# Make Firefox listen to *both* X11 and Wayland IPC sockets, so `firefox URL`
+# communicates with the same instance no matter where it's run
+MOZ_DBUS_REMOTE DEFAULT=1
+
+# Run Firefox with Wayland enabled
+MOZ_ENABLE_WAYLAND DEFAULT=1
+
+# Run Qt applications with native Wayland support
+QT_QPA_PLATFORM DEFAULT=wayland
