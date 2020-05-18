@@ -254,7 +254,6 @@
 /.config/QtProject/
 /.icons
 /.config/emaildefaults
-/.config/keybase/
 /.config/kritarc
 /.config/kritadisplayrc
 /.config/libreofficedev/
@@ -337,7 +336,6 @@
 /.config/QMatrixClient/
 /.config/nheko/
 /.cargo/.crates2.json
-/.config/Keybase/
 /.config/transmission/
 /.config/vlc/
 /.stack/pantry/
