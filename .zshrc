@@ -111,7 +111,6 @@ alias irssi='tmux a -t "=irssi" || tmux new -s irssi "stty start \"\" stop \"\" 
 alias ocaml='rlwrap ocaml'
 alias news='tmux a -t "=news" || tmux new -s news "echo \"\033]0;news\a\" && newsboat 2>/dev/null" \; set status off'
 alias find_original='git annex find | xargs -I "{}" -- find -L ~/torrents/downloads -samefile {}'
-alias t='clear && task'
 
 alias ip='ip -color=auto'
 
@@ -189,6 +188,12 @@ function mcd() {
 function lcd() {
     # cd to directory and do ls
     cd "$1" && ls
+}
+
+function t() {
+    task $*
+    clear
+    task
 }
 
 
