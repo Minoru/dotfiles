@@ -100,6 +100,9 @@ bindsym --to-code {
     $mod+$up focus up
     $mod+$right focus right
 
+    $mod+Tab focus prev
+    $mod+Shift+Tab focus next
+
     # Move the focused window with the same, but add Shift
     $mod+Shift+$left move left
     $mod+Shift+$down move down
