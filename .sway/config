@@ -24,6 +24,10 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# Internal monitor
+output eDP-1 disable
+# HDMI
+output DP-3 position 0,0
 #
 # Example configuration:
 #
