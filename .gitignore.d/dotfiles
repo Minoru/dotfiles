@@ -348,3 +348,5 @@
 /.config/ibus/
 /.config/evolution/
 /.dmrc
+/.anydesk/
+/.config/solaar/
