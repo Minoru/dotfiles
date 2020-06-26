@@ -1,3 +1,0 @@
-URxvt*.perl-ext-common:  default,matcher
-URxvt*.url-launcher:     /home/minoru/.nix-profile/bin/firefox
-URxvt*.matcher.button:   1
