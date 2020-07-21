@@ -351,3 +351,5 @@
 /.anydesk/
 /.config/solaar/
 /.julia/
+/.stack/global/stack.yaml.lock
+/.config/gajim/
