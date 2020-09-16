@@ -94,7 +94,7 @@ set nickname = Minoru
 # If you need a ping/keepalive to leave your connection open, you
 # can use the pinginterval.  Setting this option to 0 disables the ping.
 # Default value is 40 seconds.
-set pinginterval = 5
+#set pinginterval = 5
 
 # Language
 # Help files have been translated into a few languages.
