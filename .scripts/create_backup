@@ -12,7 +12,6 @@ borg create \
     --exclude '/home/minoru/cloud' \
     --exclude 'sh:**/.git/annex/' \
     --exclude 'sh:**/.stack-work/' \
-    --exclude 'sh:**/target/' \
     '/media/mypassport-backup/borgbackup::{now}' \
     ~
 
