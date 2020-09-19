@@ -354,3 +354,4 @@
 /.stack/global/stack.yaml.lock
 /.config/gajim/
 /.config/remmina/
+/.pipewire-media-session/
