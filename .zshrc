@@ -191,9 +191,7 @@ function lcd() {
 }
 
 function t() {
-    task $*
-    clear
-    task
+    task $* && (clear; task)
 }
 
 
