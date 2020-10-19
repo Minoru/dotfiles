@@ -4,6 +4,6 @@ af=rubberband
 vf=yadif
 
 # Screenshot settings
-screenshot-format = jpg
+screenshot-format = webp
 screenshot-template = "%f %P"
 screenshot-jpeg-quality = 97
