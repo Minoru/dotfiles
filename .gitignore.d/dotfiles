@@ -357,3 +357,6 @@
 /.pipewire-media-session/
 /.config/pipewire-media-session/
 /.config/gomuks/
+/.ansible/
+/.sbcl/
+/.vagrant.d/
