@@ -1,0 +1,11 @@
+
+;;; The following lines added by ql:add-to-init-file:
+#-quicklisp
+(let ((quicklisp-init (merge-pathnames ".sbcl/quicklisp/setup.lisp"
+                                       (user-homedir-pathname))))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)))
+
+(ql:quickload :rutilsx)
+(in-package :rutilsx)
+(named-readtables:in-readtable rutilsx-readtable)
