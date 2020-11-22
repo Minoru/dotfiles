@@ -360,3 +360,5 @@
 /.ansible/
 /.sbcl/
 /.vagrant.d/
+/.config/Clementine/
+/.gnupg/crls.d/
