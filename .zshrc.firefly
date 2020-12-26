@@ -2,3 +2,8 @@ export EDITOR=/usr/bin/vim
 export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$PATH
 
 [[ -n ${IN_NIX_SHELL} ]] && PROMPT="%{$fg[yellow]%}nix-shell %# %{$reset_color%}"
+
+# Aliases from https://functional.cafe/@juliobiason/105317446151670462
+# They require https://crates.io/crates/bat to be installed
+alias cat='bat --paging=never'
+alias less='bat --paging=always'
