@@ -22,6 +22,7 @@ Plug 'arrufat/vala.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ledger/vim-ledger'
 Plug 'anekos/hledger-vim' " for omni-completion
+Plug 'kongo2002/fsharp-vim'
 call plug#end()
 
 " }}}}
@@ -323,7 +324,6 @@ augroup ft_javascript
 augroup END
 
 " }}}}
-"
 " Haskell {{{{
 
 augroup ft_haskell
@@ -504,7 +504,6 @@ augroup ft_golang
 augroup END
 
 " }}}}
-"
 " Hledger {{{{
 
 augroup ft_ledger
@@ -517,6 +516,7 @@ augroup ft_ledger
 augroup END
 
 " }}}
+" }}}}
 " Local config with machine-specific settings {{{{
 
 " Use local config when available
@@ -527,5 +527,4 @@ if filereadable(".vimrc.local")
   " CPUs: read :h gzip-example and use `pigz` instead of `gzip`
   source .vimrc.local
 endif
-
 " }}}}
