@@ -363,3 +363,4 @@
 /.config/Clementine/
 /.gnupg/crls.d/
 /.config/luminance-hdr/
+/.templateengine/
