@@ -156,7 +156,10 @@ bindsym --to-code {
     $mod+Shift+e layout toggle split
 
     # Make the current focus fullscreen
-    $mod+Shift+f fullscreen
+    #$mod+Shift+f fullscreen
+
+    # Toggle current window between floating and tiling
+    $mod+Shift+f floating toggle
 }
 
 #
