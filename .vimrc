@@ -516,6 +516,18 @@ augroup ft_ledger
 augroup END
 
 " }}}
+" XAML {{{{
+
+augroup ft_xaml
+    autocmd!
+
+    " Xaml
+    au BufNewFile,BufRead *.xaml,*.axaml setf xml
+    au BufNewFile,BufRead *.xaml,*.axaml setlocal textwidth=120 tabstop=2 shiftwidth=2 expandtab
+
+augroup END
+
+" }}}
 " }}}}
 " Local config with machine-specific settings {{{{
 
