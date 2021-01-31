@@ -42,7 +42,7 @@ fi
 # umount partitions
 echo 'Unmounting partitions...'
 
-echo -ne '\tbackup... '
+echo -n '\tbackup... '
 sudo umount /media/mypassport-backup
 done_or_fail $err_umount
 

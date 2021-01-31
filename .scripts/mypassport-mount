@@ -62,13 +62,13 @@ done_or_fail $err_lvchange_enable
 # mount partitions
 echo 'Mounting partitions...'
 
-echo -ne '\tbackup... '
+echo -n '\tbackup... '
 sudo mount /media/mypassport-backup
 done_or_fail $err_mount
 
 echo 'Fixing persmissions on mountpoints...'
 
-echo -ne '\tbackup... '
+echo -n '\tbackup... '
 sudo chgrp minoru /media/mypassport-backup
 sudo chmod g+rwx /media/mypassport-backup
 done_or_fail $err_chgrp
