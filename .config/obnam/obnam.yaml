@@ -1,0 +1,5 @@
+server_url: https://localhost:8471
+verify_tls_cert: false
+roots:
+  - /home/minoru
+# log: /tmp/obnam.log
