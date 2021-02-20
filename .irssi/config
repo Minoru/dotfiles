@@ -307,26 +307,10 @@ hilights = (
   }
 );
 keyboard = ( { key = "^Q"; id = "active_window"; data = ""; } );
-ignores = (
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#haskell", "#clojure", "#erlang", "#perl", "#nethack" );
-    network = "Freenode";
-  },
-);
+ignores = ();
 notifies = { };
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-  2 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#linuxtalk";
-        tag = "Freenode";
-      }
-    );
-  };
 };
 mainwindows = { 1 = { first_line = "1"; lines = "56"; }; };
 
