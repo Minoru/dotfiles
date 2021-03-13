@@ -364,3 +364,4 @@
 /.gnupg/crls.d/
 /.config/luminance-hdr/
 /.templateengine/
+/.cargo/credentials
