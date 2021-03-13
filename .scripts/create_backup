@@ -4,6 +4,13 @@ set -e
 
 sudo ~/.scripts/mypassport-mount
 
+sudo systemctl start obnam
+echo "Waiting for Obnam server to start..."
+sleep 3
+
+obnam backup
+sudo systemctl stop obnam
+
 borg create \
     -v \
     --stats \
