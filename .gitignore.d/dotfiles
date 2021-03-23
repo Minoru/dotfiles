@@ -365,3 +365,4 @@
 /.config/luminance-hdr/
 /.templateengine/
 /.cargo/credentials
+/.ghcup/

@@ -259,3 +259,5 @@ autoload -Uz compinit && compinit
 if [ -n "$HOST" -a -f "$HOME/.zshrc.$HOST" ]; then
     source "$HOME/.zshrc.$HOST"
 fi
+
+[ -f "/home/minoru/.ghcup/env" ] && source "/home/minoru/.ghcup/env" # ghcup-env
