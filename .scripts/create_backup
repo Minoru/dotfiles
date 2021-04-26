@@ -8,7 +8,7 @@ borg create \
     -v \
     --stats \
     --progress \
-    --exclude-caches \
+    --exclude-caches --keep-exclude-tags \
     --exclude '/home/minoru/cloud' \
     --exclude 'sh:**/.git/annex/' \
     --exclude 'sh:**/.stack-work/' \
