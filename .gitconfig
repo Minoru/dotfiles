@@ -30,3 +30,5 @@
 	program = gpg2
 [protocol]
 	version = 2
+[init]
+	defaultBranch = main
