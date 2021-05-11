@@ -23,6 +23,8 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ledger/vim-ledger'
 Plug 'anekos/hledger-vim' " for omni-completion
 Plug 'kongo2002/fsharp-vim'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " }}}}
