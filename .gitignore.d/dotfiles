@@ -366,3 +366,4 @@
 /.templateengine/
 /.cargo/credentials
 /.ghcup/
+/.degit/
