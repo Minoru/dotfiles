@@ -15,6 +15,14 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "yes";
   },
+  {
+    address = "znc.debiania.in.ua";
+    chatnet = "Libera.Chat";
+    port = "6667";
+    autoconnect = "yes";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+  }
 );
 
 chatnets = {
@@ -25,12 +33,8 @@ chatnets = {
     max_whois = "1";
   };
 
-  OFTC = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "4";
-    max_whois = "1";
-  };
+  OFTC = { type = "IRC"; max_kicks = "1"; max_msgs = "4"; max_whois = "1"; };
+  "Libera.Chat" = { type = "IRC"; };
 };
 
 channels = ( );
@@ -307,10 +311,8 @@ hilights = (
   }
 );
 keyboard = ( { key = "^Q"; id = "active_window"; data = ""; } );
-ignores = ();
+ignores = ( );
 notifies = { };
-windows = {
-  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-};
+windows = { 1 = { immortal = "yes"; name = "(status)"; level = "ALL"; }; };
 mainwindows = { 1 = { first_line = "1"; lines = "56"; }; };
 
