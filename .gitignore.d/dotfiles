@@ -367,3 +367,5 @@
 /.cargo/credentials
 /.ghcup/
 /.degit/
+/.cmake/packages/
+/.hunter/_Base/
