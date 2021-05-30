@@ -470,8 +470,8 @@ call s:HL('djangoVarBlock', 'orange', '')
 " HTML {{{
 
 " Punctuation
-call s:HL('htmlTag',    'darkroast', 'bg', 'none')
-call s:HL('htmlEndTag', 'darkroast', 'bg', 'none')
+call s:HL('htmlTag',    'coffee', 'bg', 'none')
+call s:HL('htmlEndTag', 'coffee', 'bg', 'none')
 
 " Tag names
 call s:HL('htmlTagName',        'coffee', '', 'bold')
