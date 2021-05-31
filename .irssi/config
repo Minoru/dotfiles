@@ -311,7 +311,9 @@ hilights = (
   }
 );
 keyboard = ( { key = "^Q"; id = "active_window"; data = ""; } );
-ignores = ( );
+ignores = (
+  { level = "JOINS PARTS QUITS"; channels = ( "#libera" ); }
+);
 notifies = { };
 windows = { 1 = { immortal = "yes"; name = "(status)"; level = "ALL"; }; };
 mainwindows = { 1 = { first_line = "1"; lines = "56"; }; };
