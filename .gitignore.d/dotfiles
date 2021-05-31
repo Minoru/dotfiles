@@ -369,3 +369,4 @@
 /.degit/
 /.cmake/packages/
 /.hunter/_Base/
+/.newsboat/errors.log

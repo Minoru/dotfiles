@@ -9,6 +9,8 @@ show-read-articles no
 show-read-feeds no
 suppress-first-reload yes
 
+error-log "~/.newsboat/errors.log"
+
 bind-key ESC quit
 
 unbind-key O
