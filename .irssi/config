@@ -3,7 +3,7 @@ servers = (
     address = "znc.debiania.in.ua";
     chatnet = "Freenode";
     port = "6667";
-    autoconnect = "yes";
+    autoconnect = "no";
     use_ssl = "yes";
     ssl_verify = "yes";
   },
