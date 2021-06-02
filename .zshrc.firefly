@@ -1,5 +1,6 @@
 export EDITOR=/usr/bin/vim
 export PATH=$HOME/.cargo/bin:$HOME/.dotnet/tools:$HOME/.local/bin:$PATH
+export GOPATH=$HOME/.go
 
 [[ -n ${IN_NIX_SHELL} ]] && PROMPT="%{$fg[yellow]%}nix-shell %# %{$reset_color%}"
 
