@@ -370,3 +370,4 @@
 /.cmake/packages/
 /.hunter/_Base/
 /.newsboat/errors.log
+/.config/obnam/passwords.yaml
