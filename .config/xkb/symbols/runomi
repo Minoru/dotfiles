@@ -1,0 +1,16 @@
+xkb_symbols   {
+    include "pc+us+ru(ruu):2+inet(evdev)+group(alt_space_toggle)+ctrl(nocaps)+compose(lwin)"
+
+    // ru(ruu) puts «ё» onto RAlt+е, which is inconvenient to type. Let's
+    // reverse this: put ё back onto the tilde key, and remove it from the
+    // е key.
+    key <TLDE> {
+        type[group2] = "FOUR_LEVEL",
+        symbols[Group2] = [ Cyrillic_io, Cyrillic_IO, apostrophe, apostrophe ]
+    };
+    key <AD05> {
+        type = "ALPHABETIC",
+        symbols[Group1]= [           t,           T ],
+        symbols[Group2]= [ Cyrillic_ie, Cyrillic_IE ]
+    };
+};

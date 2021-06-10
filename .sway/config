@@ -55,8 +55,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Read `man 5 sway-input` for more information about this section.
 
 input type:keyboard {
-    xkb_layout us,ru(ruu)
-    xkb_options grp:alt_space_toggle,ctrl:nocaps,compose:lwin
+    # The layout is defined in ~/.config/xkb/symbols/runomi
+    xkb_layout runomi
 }
 
 ### Looks
