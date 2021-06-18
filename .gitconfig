@@ -1,6 +1,7 @@
 [user]
     name = Alexander Batischev
     email = eual.jp@gmail.com
+    signingkey = 0x356961A20C8BFD03
 [merge]
     tool = vimdiff
 [diff]
@@ -32,3 +33,5 @@
 	version = 2
 [init]
 	defaultBranch = main
+[commit]
+    gpgsign = true
