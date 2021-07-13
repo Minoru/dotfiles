@@ -530,6 +530,17 @@ augroup ft_xaml
 augroup END
 
 " }}}
+" Scala {{{{
+
+augroup ft_scala
+    autocmd!
+
+    " Xaml
+    au BufNewFile,BufRead *.scala,*.scala setlocal nospell
+
+augroup END
+
+" }}}
 " }}}}
 " Local config with machine-specific settings {{{{
 
