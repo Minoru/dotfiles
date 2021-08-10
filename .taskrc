@@ -13,9 +13,9 @@
 # Files
 data.location=/home/minoru/.task
 
-dateformat = d.m.Y
-dateformat.annotation = d.m.Y
-dateformat.report = d.m.Y
+dateformat = Y.m.d
+dateformat.annotation = Y.m.d
+dateformat.report = Y.m.d
 weekstart = monday
 
 # Added by tasksh's "review" command
