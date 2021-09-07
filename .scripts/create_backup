@@ -19,7 +19,7 @@ sudo systemctl start obnam
 echo "Waiting for Obnam server to start..."
 sleep 3
 
-obnam backup
+obnam backup || echo "Obnam exited with code $?"
 sudo systemctl stop obnam
 
 sudo ~/.scripts/mypassport-umount
