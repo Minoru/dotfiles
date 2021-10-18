@@ -377,3 +377,5 @@
 /.config/cmus/lib.pl
 /.config/cmus/playlists/
 /.config/cmus/search-history
+/.ipython/
+/.sage/
