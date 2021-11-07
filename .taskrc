@@ -39,3 +39,4 @@ urgency.blocking.coefficient = 0.0
 urgency.annotations.coefficient = 0.0
 
 report.overdue.sort = due+,urgency-
+context.fediobs=proj:fediobs
