@@ -379,3 +379,4 @@
 /.config/cmus/search-history
 /.ipython/
 /.sage/
+/.nyx/cache.sqlite
