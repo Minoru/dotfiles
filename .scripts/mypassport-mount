@@ -59,6 +59,9 @@ echo -n 'Activating LVM... '
 sudo lvm lvchange -ay mypassport_lvm
 done_or_fail $err_lvchange_enable
 
+echo 'Checking partitions...'
+sudo e2fsck /dev/mapper/mypassport_lvm-backup
+
 # mount partitions
 echo 'Mounting partitions...'
 

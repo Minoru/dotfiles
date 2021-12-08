@@ -56,6 +56,9 @@ echo -n 'Activating LVM... '
 sudo lvm lvchange -ay storejet_lvm
 done_or_fail $err_lvchange_enable
 
+echo 'Checking partitions...'
+sudo e2fsck /dev/mapper/storejet_lvm-annex
+
 # mount partitions
 echo 'Mounting partitions...'
 
