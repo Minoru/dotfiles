@@ -40,3 +40,5 @@ urgency.annotations.coefficient = 0.0
 
 report.overdue.sort = due+,urgency-
 context.fediobs=proj:fediobs
+
+color.blocking = white on gray5
