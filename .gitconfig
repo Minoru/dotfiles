@@ -35,3 +35,5 @@
 	defaultBranch = main
 [commit]
     gpgsign = true
+[rerere]
+	enabled = true
