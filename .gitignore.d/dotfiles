@@ -380,3 +380,4 @@
 /.ipython/
 /.sage/
 /.nyx/cache.sqlite
+/.jigdo-lite
