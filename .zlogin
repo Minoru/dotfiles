@@ -7,7 +7,6 @@ export HOST
 export PATH=$HOME/.local/bin:$HOME/.bin:$HOME/.scripts:$PATH
 export PYTHONSTARTUP="$HOME/.pystartup"
 export GTK_IM_MODULE="xim"
-export XDG_DATA_HOME="$HOME/.config"
 export EDITOR=/usr/bin/vim
 
 if [ -n "$HOST" -a -f "$HOME/.zlogin.$HOST" ]; then
