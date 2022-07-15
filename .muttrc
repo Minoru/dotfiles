@@ -84,6 +84,9 @@ bind editor ^T complete
 macro index,pager y "<change-folder>?<toggle-mailboxes>" "show incoming mailboxes list"
 bind browser y exit
 
+# display the email in Firefox
+macro attach H "<pipe-message>cat > /tmp/mutt.html; firefox --safe-mode /tmp/mutt.html<enter>" "Show in browser"
+
 # Dealing with GnuPG
 # http://codesorcery.net/old/mutt/mutt-gnupg-howto
 set pgp_decode_command="env LC_ALL=C gpg2 %?p?--passphrase-fd 0? --no-verbose --batch --output - %f"
