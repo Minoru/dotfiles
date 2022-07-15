@@ -459,6 +459,8 @@ augroup END
 " }}}}
 " Markdown {{{
 
+" Disable preservim/vim-markdown folding extension because it's ugly
+let g:vim_markdown_folding_disabled = 1
 augroup ft_markdown
     autocmd!
 
