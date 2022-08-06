@@ -4,6 +4,10 @@ set -e
 
 sudo ~/.scripts/mypassport-mount
 
+getmail
+
+mbsync --all
+
 borg create \
     -v \
     --stats \

@@ -381,3 +381,5 @@
 /.sage/
 /.nyx/cache.sqlite
 /.jigdo-lite
+/.mbsyncrc
+/.getmail/
