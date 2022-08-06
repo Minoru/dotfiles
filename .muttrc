@@ -34,8 +34,6 @@ hdr_order Date From To CC List-ID Subject Reply-to
 set from = "eual.jp@gmail.com"
 set realname = "Alexander Batischev"
 
-set imap_check_subscribed
-
 set imap_user = "eual.jp@gmail.com"
 set imap_keepalive = 90
 
