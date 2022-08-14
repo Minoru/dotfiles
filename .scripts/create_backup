@@ -4,9 +4,9 @@ set -e
 
 sudo ~/.scripts/mypassport-mount
 
-getmail
+time getmail
 
-mbsync --all
+time mbsync --all
 
 borg create \
     -v \
