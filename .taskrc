@@ -31,7 +31,7 @@ report.overdue.labels  = Active,Age,Deps,P,Project,Tag,R,S,Due,Until,ID,Descript
 
 report.next.columns = start.age,entry.age,depends,priority,tags,recur,scheduled.countdown,due.relative,until.remaining,id,description,urgency
 report.next.labels  = Active,Age,Deps,P,Tag,Recur,S,Due,Until,ID,Description,Urg
-report.next.filter = status:pending limit:page +READY
+report.next.filter = status:pending -WAITING limit:page +READY
 
 # Some things shouldn't influence the urgency of a task
 urgency.project.coefficient = 0.0
@@ -39,6 +39,6 @@ urgency.blocking.coefficient = 0.0
 urgency.annotations.coefficient = 0.0
 
 report.overdue.sort = due+,urgency-
-context.fediobs=proj:fediobs
 
 color.blocking = white on gray5
+news.version=2.6.0
