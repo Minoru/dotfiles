@@ -23,8 +23,6 @@
     ci = commit
     co = checkout
     lg = log --abbrev-commit --graph --all --decorate --oneline
-[pull]
-    rebase = preserve
 [grep]
     lineNumber = true
 [gpg]
