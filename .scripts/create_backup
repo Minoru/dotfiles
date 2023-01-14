@@ -19,6 +19,22 @@ borg create \
     '/media/mypassport-backup/borgbackup::{now}' \
     ~
 
+borg prune \
+    --stats \
+    --progress \
+    --keep-daily 180 \
+    --keep-weekly 260 \
+    --keep-monthly 120 \
+    --keep-yearly 100 \
+    /media/mypassport-backup/borgbackup
+
+borg compact \
+    --cleanup-commits \
+    --progress \
+    --verbose \
+    --threshold=1 \
+    /media/mypassport-backup/borgbackup
+
 sudo systemctl start obnam
 echo "Waiting for Obnam server to start..."
 sleep 3
