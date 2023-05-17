@@ -26,11 +26,4 @@ borg prune \
     --keep-yearly 100 \
     /media/mypassport-backup/borgbackup
 
-borg compact \
-    --cleanup-commits \
-    --progress \
-    --verbose \
-    --threshold=1 \
-    /media/mypassport-backup/borgbackup
-
 sudo ~/.scripts/mypassport-umount
