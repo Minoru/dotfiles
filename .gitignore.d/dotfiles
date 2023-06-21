@@ -384,3 +384,8 @@
 /.mbsyncrc
 /.getmail/
 /.sudo_as_admin_successful
+/.config/.gsd-keyboard.settings-ported
+/.config/GNOME-xdg-terminals.list
+/.config/gnome-initial-setup-done
+/.config/systemd/user/sockets.target.wants/
+/.config/xdg-terminals.list
