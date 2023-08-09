@@ -3,6 +3,7 @@
 set -e
 
 sudo ~/.scripts/mypassport-mount
+trap 'sudo ~/.scripts/mypassport-umount' EXIT
 
 getmail
 
@@ -25,5 +26,3 @@ borg prune \
     --keep-monthly 120 \
     --keep-yearly 100 \
     /media/mypassport-backup/borgbackup
-
-sudo ~/.scripts/mypassport-umount
