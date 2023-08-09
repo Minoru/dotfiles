@@ -390,3 +390,4 @@
 /.config/systemd/user/sockets.target.wants/
 /.config/xdg-terminals.list
 /.config/.avalonia-build-tasks/
+/.config/nautilus/
