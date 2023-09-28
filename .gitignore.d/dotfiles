@@ -391,3 +391,5 @@
 /.config/xdg-terminals.list
 /.config/.avalonia-build-tasks/
 /.config/nautilus/
+/.config/racket/
+/.config/yelp/
