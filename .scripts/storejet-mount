@@ -65,10 +65,3 @@ echo 'Mounting partitions...'
 echo -ne '\tannex... '
 sudo mount /media/storejet-annex
 done_or_fail $err_mount
-
-echo 'Fixing persmissions on mountpoints...'
-
-echo -ne '\tannex... '
-sudo chgrp minoru /media/storejet-annex
-sudo chmod g+rwx /media/storejet-annex
-done_or_fail $err_chgrp

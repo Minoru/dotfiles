@@ -53,4 +53,3 @@ done_or_fail $err_lvchange_disable
 echo -n 'Closing LUKS... '
 sudo cryptsetup luksClose storejet_luks
 done_or_fail $err_luks_close
-

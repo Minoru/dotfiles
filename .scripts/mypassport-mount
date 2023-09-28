@@ -68,10 +68,3 @@ echo 'Mounting partitions...'
 echo -n '\tbackup... '
 sudo mount /media/mypassport-backup
 done_or_fail $err_mount
-
-echo 'Fixing persmissions on mountpoints...'
-
-echo -n '\tbackup... '
-sudo chgrp minoru /media/mypassport-backup
-sudo chmod g+rwx /media/mypassport-backup
-done_or_fail $err_chgrp
