@@ -394,3 +394,5 @@
 /.config/racket/
 /.config/yelp/
 /.config/kdeconnect/
+/.config/syncthing/
+/.config/systemd/user/default.target.wants/syncthing.service
