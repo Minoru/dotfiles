@@ -7,7 +7,6 @@ confirm-exit yes
 mark-as-read-on-hover yes
 show-read-articles no
 show-read-feeds no
-suppress-first-reload yes
 
 error-log "~/.newsboat/errors.log"
 
