@@ -5,6 +5,8 @@ trap 'sudo ~/.scripts/mypassport-umount' EXIT
 
 getmail
 
+repo=/media/mypassport-backup/borgbackup
+
 borg create \
     -v \
     --stats \
@@ -13,7 +15,7 @@ borg create \
     --exclude '/home/minoru/cloud' \
     --exclude 'sh:**/.git/annex/' \
     --exclude 'sh:**/.stack-work/' \
-    '/media/mypassport-backup/borgbackup::{now}' \
+    "${repo}::{now}" \
     ~
 
 borg prune \
@@ -23,4 +25,14 @@ borg prune \
     --keep-weekly 260 \
     --keep-monthly 120 \
     --keep-yearly 100 \
-    /media/mypassport-backup/borgbackup
+    "${repo}"
+
+df -h "${repo}"
+
+borg \
+    --verbose \
+    --progress \
+    compact \
+    "${repo}"
+
+df -h "${repo}"
