@@ -1,6 +1,6 @@
 servers = (
   {
-    address = "znc.debiania.in.ua";
+    address = "znc.tty8.org";
     chatnet = "OFTC";
     port = "6667";
     autoconnect = "yes";
@@ -8,7 +8,7 @@ servers = (
     ssl_verify = "yes";
   },
   {
-    address = "znc.debiania.in.ua";
+    address = "znc.tty8.org";
     chatnet = "Libera.Chat";
     port = "6667";
     autoconnect = "yes";
