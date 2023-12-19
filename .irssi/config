@@ -1,14 +1,6 @@
 servers = (
   {
     address = "znc.debiania.in.ua";
-    chatnet = "Freenode";
-    port = "6667";
-    autoconnect = "no";
-    use_ssl = "yes";
-    ssl_verify = "yes";
-  },
-  {
-    address = "znc.debiania.in.ua";
     chatnet = "OFTC";
     port = "6667";
     autoconnect = "yes";
@@ -26,13 +18,6 @@ servers = (
 );
 
 chatnets = {
-  Freenode = {
-    type = "IRC";
-    max_kicks = "1";
-    max_msgs = "4";
-    max_whois = "1";
-  };
-
   OFTC = { type = "IRC"; max_kicks = "1"; max_msgs = "4"; max_whois = "1"; };
   "Libera.Chat" = { type = "IRC"; };
 };
