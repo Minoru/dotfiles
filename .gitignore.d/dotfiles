@@ -397,3 +397,5 @@
 /.config/syncthing/
 /.config/systemd/user/default.target.wants/syncthing.service
 /.config/totem/
+/.cargo/.package-cache-mutate
+/.config/massif-visualizerrc
