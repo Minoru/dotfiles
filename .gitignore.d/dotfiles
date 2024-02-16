@@ -399,3 +399,5 @@
 /.config/totem/
 /.cargo/.package-cache-mutate
 /.config/massif-visualizerrc
+/.config/monitors.xml
+/.config/monitors.xml~
