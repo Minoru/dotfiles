@@ -98,6 +98,7 @@ alias rm='nocorrect rm -i'
 alias vim='nocorrect vim'
 alias mc='nocorrect mc'
 alias mkdir='nocorrect mkdir -p'
+alias ip='nocorrect ip -h'
 # You need run-help module to be loaded to have 'run-help' command
 # See MISCELLANEOUS section below
 alias help="run-help"
