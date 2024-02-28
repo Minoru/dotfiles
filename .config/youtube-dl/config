@@ -1,1 +1,1 @@
--f bestvideo[height<=?1080]+bestaudio/best
+-f bestvideo[height<=?1440]+bestaudio/best
