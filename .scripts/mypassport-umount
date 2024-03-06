@@ -55,3 +55,6 @@ done_or_fail $err_lvchange_disable
 echo -n 'Closing LUKS... '
 sudo cryptsetup luksClose mypassport_luks
 done_or_fail $err_luks_close
+
+echo -n 'Spinning down the drive... '
+sudo hdparm -Y $luks_dev
