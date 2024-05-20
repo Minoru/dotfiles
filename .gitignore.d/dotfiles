@@ -402,3 +402,4 @@
 /.config/monitors.xml
 /.config/monitors.xml~
 /.config/Kiwix/
+/.cargo/.global-cache
