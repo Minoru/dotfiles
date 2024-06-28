@@ -1,23 +1,17 @@
 #!/bin/sh
 
-set -e
-
 # Umount WD My Passport
 
-done_or_fail() {
+show_result() {
     if [ $? ]; then
-        echo 'done!'
+        echo "done!"
     else
-        echo 'fail!'
-        exit $1
+        echo "fail!"
     fi
 }
 
 err_mypassport_not_connected=1
 err_mypassport_luks_open=2
-err_luks_close=3
-err_lvchange_enable=4
-err_mount=5
 
 luks_dev="/dev/disk/by-uuid/8f9d8afa-60a9-4a1a-8bbb-5845395235a3"
 
@@ -44,17 +38,18 @@ echo 'Unmounting partitions...'
 
 echo -n '\tbackup... '
 sudo umount /media/mypassport-backup
-done_or_fail $err_umount
+show_result
 
 # deactivate LVM
 echo -n 'Deactivating LVM... '
 sudo lvm lvchange -an mypassport_lvm
-done_or_fail $err_lvchange_disable
+show_result
 
 # close LUKS
 echo -n 'Closing LUKS... '
 sudo cryptsetup luksClose mypassport_luks
-done_or_fail $err_luks_close
+show_result
 
 echo -n 'Spinning down the drive... '
 sudo hdparm -Y $luks_dev
+show_result
