@@ -403,3 +403,4 @@
 /.config/monitors.xml~
 /.config/Kiwix/
 /.cargo/.global-cache
+/.config/eog/
