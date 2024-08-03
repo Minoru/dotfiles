@@ -5,6 +5,8 @@ trap 'sudo ~/.scripts/mypassport-umount' EXIT
 
 getmail
 
+rsync -avP newsboat.org:/var/www/newsboat.org/www ~/misc/backups/newsboat.org-www
+
 repo=/media/mypassport-backup/borgbackup
 
 borg create \
