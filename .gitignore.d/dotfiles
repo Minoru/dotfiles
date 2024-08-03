@@ -404,3 +404,5 @@
 /.config/Kiwix/
 /.cargo/.global-cache
 /.config/eog/
+/.logseq/
+/.config/Logseq/
