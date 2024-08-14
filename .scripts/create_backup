@@ -5,6 +5,13 @@ trap 'sudo ~/.scripts/mypassport-umount' EXIT
 
 getmail
 
+echo
+echo
+echo "Please fetch the password for newsboat.org's SSH key -- you'll be asked for it in a second"
+echo
+echo "Press any key to continue"
+echo
+read nothing
 rsync -avP newsboat.org:/var/www/newsboat.org/www ~/misc/backups/newsboat.org-www
 
 repo=/media/mypassport-backup/borgbackup
