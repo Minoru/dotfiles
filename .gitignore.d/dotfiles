@@ -365,6 +365,7 @@
 /.config/luminance-hdr/
 /.templateengine/
 /.cargo/credentials
+/.cargo/credentials.toml
 /.ghcup/
 /.degit/
 /.cmake/packages/
