@@ -408,3 +408,4 @@
 /.logseq/
 /.config/Logseq/
 /.pictures/
+/.scripts/create_backup
