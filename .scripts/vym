@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# Vym looks for `flags' dir in the current directory, so let's cd to one that
-# has `flags`.
-
-cd /nix/store/wdqn7r02pr679q4kb4cwb2kg6lq1zdzf-vym-2.2.4/share/vym/
-vym

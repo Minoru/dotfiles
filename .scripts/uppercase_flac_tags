@@ -1,9 +1,0 @@
-#!/bin/sh
-
-for filename in "$@"; do
-    tmpfile=`mktemp uppercase_flat_tags.XXXXXXXXXX`
-    metaflac --export-tags-to=- "$filename" | \
-        awk --field-separator '=' '{ print toupper($1) "=" $2; }' > $tmpfile
-    metaflac --remove-all-tags --import-tags-from=$tmpfile "$filename"
-    rm -f $tmpfile
-done

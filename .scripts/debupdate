@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# We really need su because sudo doesn't have -c option
-
-sudo su -c "torify aptitude update ; torify aptitude -y safe-upgrade && aptitude clean ; torify apt-file update"
-cabal update
