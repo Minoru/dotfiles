@@ -409,3 +409,8 @@
 /.config/Logseq/
 /.pictures/
 /.scripts/create_backup
+/.scripts/mypassport-mount
+/.scripts/mypassport-umount
+/.scripts/storejet-cleanup
+/.scripts/storejet-mount
+/.scripts/storejet-umount
