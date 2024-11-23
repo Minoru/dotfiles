@@ -142,7 +142,8 @@
 /.mplayer/gui.*
 /.mutt/cache/
 /.mutt_certificates
-/.muttrc.sensitive
+/.mutt/gmail.com
+/.mutt/mailtray.org
 /.mypaint/
 /.ncftp/bookmarks
 /.ncftp/firewall

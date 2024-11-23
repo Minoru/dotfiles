@@ -1,6 +1,4 @@
-# load config file with a sensitive data like passwords
-source ~/.muttrc.sensitive
-source ~/.muttrc.colors
+source ~/.mutt/colors
 
 set sort = threads
 set edit_headers # edit headers when replying
@@ -31,23 +29,9 @@ ignore *
 unignore  Date From To CC List-ID Subject Reply-to
 hdr_order Date From To CC List-ID Subject Reply-to
 
-set from = "eual.jp@gmail.com"
 set realname = "Alexander Batischev"
 
-set imap_user = "eual.jp@gmail.com"
 set imap_keepalive = 90
-
-set smtp_url  = "smtp://eual.jp@smtp.gmail.com:587/"
-
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set record=""
-set postponed="+[Gmail]/Drafts"
-
-mailboxes "=[Gmail]/Spam"
-
-set header_cache=~/.mutt/cache/headers
-set message_cachedir=~/.mutt/cache/bodies
 
 # forward *with* attachments
 # https://tdi.github.io/2014/09/12/forwarding-messages-with-attachments-in-mutt/
@@ -57,15 +41,6 @@ set mime_forward_rest=yes
 set mail_check = 300 # check for email every 5 minutes (300 seconds)
 set timeout = 300 # how often to stop waiting for user input and perform operations like mail checking (300 sec, 5 minutes)
 set rfc2047_parameters # Fix stupid MUAs behaviour (e.g. filenames like =?iso-8859-1?Q?file=5F=E4=5F991116=2Ezip?=)
-
-# delete message to Bin by presing B
-macro index B "<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
-macro pager B "i<save-message>=[Gmail]/Bin<enter>y" "Move to Bin"
-# report message as spam by presing S
-macro index S "<clear-flag>N<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
-macro pager S "i<save-message>=[Gmail]/Spam<enter>y" "Report as spam"
-# delete the whole thread, marking all messages as read
-macro index X "<tag-thread><tag-prefix><clear-flag>N<tag-prefix><save-message>=[Gmail]/Bin<enter>y" "Delete the whole thread, marking all messages as read"
 
 macro pager <esc>L "<bounce-message>report-listspam@lists.debian.org<enter>B" "Report as spam to Debian lists"
 
