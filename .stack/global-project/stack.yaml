@@ -7,4 +7,4 @@
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
 packages: []
-snapshot: lts-23.2
+snapshot: lts-23.7
