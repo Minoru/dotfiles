@@ -23,6 +23,7 @@
     ci = commit
     co = checkout
     lg = log --abbrev-commit --graph --all --decorate --oneline
+    sw = switch
 [grep]
     lineNumber = true
 [gpg]
