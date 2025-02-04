@@ -411,3 +411,4 @@
 /.scripts/
 /.config/gtk-4.0/
 /.stack/global-project/.stack-work/
+/.config/deluge/
