@@ -416,3 +416,7 @@
 /.arduinoIDE/
 /.config/Arduino IDE/
 /.config/arduino-ide/
+/.config/dolphinrc
+/.config/kconf_updaterc
+/.config/kde.org/
+/.config/kicad/
