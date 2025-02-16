@@ -412,3 +412,7 @@
 /.config/gtk-4.0/
 /.stack/global-project/.stack-work/
 /.config/deluge/
+/.arduino15/
+/.arduinoIDE/
+/.config/Arduino IDE/
+/.config/arduino-ide/
