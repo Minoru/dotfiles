@@ -420,3 +420,4 @@
 /.config/kconf_updaterc
 /.config/kde.org/
 /.config/kicad/
+/.yarn/
