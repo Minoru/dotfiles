@@ -4,3 +4,4 @@ pu parity N
 pu stopbits 1
 pu rtscts No
 pu xonxoff No
+pu addcarreturn YES
