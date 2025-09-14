@@ -46,9 +46,9 @@ macro pager <esc>L "<bounce-message>report-listspam@lists.debian.org<enter>B" "R
 
 # Use abook with Mutt
 # Q to search
-# a to add sender to abook
+# A to add sender to abook
 set query_command="abook --mutt-query '%s'"
-macro index,pager a "|abook --add-email\n" "Add sender to abook"
+macro index,pager A "|abook --add-email\n" "Add sender to abook"
 
 bind editor <Tab> complete-query
 bind editor ^T complete
