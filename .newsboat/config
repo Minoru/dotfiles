@@ -25,6 +25,8 @@ highlight article "^Feed: .*$" white default
 highlight article "^Title: .*$" white default bold
 highlight article "^(Author|Link|Date):.*$" cyan default
 
+feedlist-format "%4i %S %n %11u %t"
+
 browser /usr/bin/firefox
 
 urls-source "local"
