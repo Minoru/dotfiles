@@ -1,0 +1,9 @@
+[Unit]
+Description=Hourly reload of feeds in Newsboat
+
+[Timer]
+OnCalendar=*-*-* *:08:00
+Unit=newsboat-reload.service
+
+[Install]
+WantedBy=timers.target

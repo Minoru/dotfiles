@@ -1,0 +1,14 @@
+[Unit]
+Description=Reload feeds in Newsboat
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/minoru/src/newsboat/newsboat -x reload
+
+WorkingDirectory=/home/minoru
+
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=6
