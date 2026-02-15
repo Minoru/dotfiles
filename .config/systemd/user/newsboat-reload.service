@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/minoru/src/newsboat/newsboat -x reload
+ExecStart=/home/minoru/.local/bin/newsboat -x reload
 
 WorkingDirectory=/home/minoru
 
