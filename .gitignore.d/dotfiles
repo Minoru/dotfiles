@@ -423,3 +423,4 @@
 /.yarn/
 /.config/kiorc
 /.config/obs-studio/
+/.config/session/
