@@ -424,3 +424,4 @@
 /.config/kiorc
 /.config/obs-studio/
 /.config/session/
+/.config/go/telemetry/
