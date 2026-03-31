@@ -425,3 +425,4 @@
 /.config/obs-studio/
 /.config/session/
 /.config/go/telemetry/
+/.nvidia-settings-rc
