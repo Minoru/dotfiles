@@ -1,0 +1,62 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "model": "llama/qwen3.5_27b_q4_0_64k",
+  "small_model": "llama/qwen3.5_0.8b_q8_64k",
+  "provider": {
+    "llama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama (local)",
+      "options": {
+        "baseURL": "http://172.28.0.1:8085/v1"
+      },
+      "models": {
+        "qwen3.5_35b_a3b_ud_q6_k_64k": {
+          "name": "Qwen3.5: 35B A3B (UD-Q6_K) (64k)"
+        },
+        "qwen3.5_35b_a3b_q3_k_s_64k": {
+          "name": "Qwen3.5: 35B A3B (Q3_K_S) (64k)"
+        },
+        "qwen3.5_0.8b_q8_64k": {
+          "name": "Qwen3.5: 0.8B (Q8) (64k)"
+        },
+        "qwen3.5_9b_q8_64k": {
+          "name": "Qwen3.5: 9B (Q8) (64k)"
+        },
+        "qwen3.5_27b_q4_0_64k": {
+          "name": "Qwen3.5: 27B (Q4_0) (64k)"
+        },
+        "qwen3.5_27b_q6_k_64k": {
+          "name": "Qwen3.5: 27B (Q6_K) (64k)"
+        },
+        "tesslate_omnicoder_9b_q4_m_64k": {
+          "name": "Tesslate Omnicoder: 9B (Q4_M) (64k)"
+        },
+        "tesslate_omnicoder_9b_q8_64k": {
+          "name": "Tesslate Omnicoder: 9B (Q8) (64k)"
+        },
+        "tesslate_omnicoder_9b_q4_m_128k": {
+          "name": "Tesslate Omnicoder: 9B (Q4_M) (128k)"
+        },
+
+        "qwen3_coder_30b_a3b_q4_k_m_64k": {
+            "name": "Qwen3 Coder: 30B A3B (Q4_K_M) (64k)"
+        },
+
+        "devstral_small_2_24b_q8_0_64k": {
+            "name": "Devstral Small 2: 24B (Q8_0) (64k)"
+        },
+        "devstral_small_2_24b_q5_k_m_64k": {
+            "name": "Devstral Small 2: 24B (Q5_K_M) (64k)"
+        },
+
+        "glm_4.7_flash_q4_k_m_64k": {
+            "name": "GLM 4.7 Flash (Q4_K_M) (64k)"
+        },
+        "glm_4.7_flash_q8_0_64k": {
+            "name": "GLM 4.7 Flash (Q8_0) (64k)"
+        }
+      }
+    }
+  }
+}
