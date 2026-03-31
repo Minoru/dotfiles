@@ -1,4 +1,4 @@
-auto-reload yes
+auto-reload no
 download-retries 5
 reload-threads 128
 goto-first-unread no
