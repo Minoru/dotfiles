@@ -426,3 +426,6 @@
 /.config/session/
 /.config/go/telemetry/
 /.nvidia-settings-rc
+/.config/VSCodium/
+/.vscode-oss/
+/.elan/
