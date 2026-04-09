@@ -3,75 +3,75 @@ models:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-35B-A3B-UD-Q6_K.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-35B-A3B-UD-Q6_K.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   qwen3.5_35b_a3b_q3_k_s_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-35B-A3B-Q3_K_S.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-35B-A3B-Q3_K_S.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   qwen3.5_0.8b_q8_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=1"
       - "LLAMA_ARG_CACHE_RAM=1024" # use 1G instead of the default 8G for the prompt cache -- we do not expect much re-use for a model that is used only to generate session titles in OpenCode
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-0.8B-Q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-0.8B-Q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   qwen3.5_9b_q8_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-9B-Q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-9B-Q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   qwen3.5_27b_q4_0_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-27B-Q4_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-27B-Q4_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   qwen3.5_27b_q6_k_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-27B-Q6_K.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-27B-Q6_K.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   tesslate_omnicoder_9b_q4_m_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q4_k_m.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q4_k_m.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   tesslate_omnicoder_9b_q4_m_128k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q4_k_m.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q4_k_m.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
   tesslate_omnicoder_9b_q8_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
 
   qwen3_coder_30b_a3b_q4_k_m_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3-Coder-30B-A3B-Instruct-Q4_K_M.gguf --jinja --temp 0.7 --min-p 0.0 --top-p 0.80 --top-k 20 --repeat-penalty 1.05 --ctx-size 65536
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3-Coder-30B-A3B-Instruct-Q4_K_M.gguf --jinja --temp 0.7 --min-p 0.0 --top-p 0.80 --top-k 20 --repeat-penalty 1.05 --ctx-size 65536 --parallel 1
 
   devstral_small_2_24b_q8_0_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Devstral-Small-2-24B-Instruct-2512-Q8_0.gguf --temp 0.15 --jinja --min-p 0.01 --ctx-size 65536 --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Devstral-Small-2-24B-Instruct-2512-Q8_0.gguf --temp 0.15 --jinja --min-p 0.01 --ctx-size 65536 --fit-target 0 --parallel 1
   devstral_small_2_24b_q5_k_m_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Devstral-Small-2-24B-Instruct-2512-Q5_K_M.gguf --temp 0.15 --jinja --min-p 0.01 --ctx-size 65536 --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Devstral-Small-2-24B-Instruct-2512-Q5_K_M.gguf --temp 0.15 --jinja --min-p 0.01 --ctx-size 65536 --fit-target 0 --parallel 1
 
   glm_4.7_flash_q4_k_m_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-GLM-4.7-Flash-Q4_K_M.gguf --temp 0.7 --top-p 1.0 --min-p 0.01 --repeat-penalty 1.0 --ctx-size 65536 --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-GLM-4.7-Flash-Q4_K_M.gguf --temp 0.7 --top-p 1.0 --min-p 0.01 --repeat-penalty 1.0 --ctx-size 65536 --fit-target 0 --parallel 1
   glm_4.7_flash_q8_0_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-GLM-4.7-Flash-Q8_0.gguf --temp 0.7 --top-p 1.0 --min-p 0.01 --repeat-penalty 1.0 --ctx-size 65536 --fit-target 0
+    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-GLM-4.7-Flash-Q8_0.gguf --temp 0.7 --top-p 1.0 --min-p 0.01 --repeat-penalty 1.0 --ctx-size 65536 --fit-target 0 --parallel 1
 
 groups:
   "lightweight":
