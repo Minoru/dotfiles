@@ -34,21 +34,48 @@ models:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
     cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.5-27B-Q6_K.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
-  tesslate_omnicoder_9b_q4_m_64k:
+  qwen3.6_35b_a3b_ud_q6_k_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q4_k_m.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
-  tesslate_omnicoder_9b_q4_m_128k:
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-35B-A3B-UD-Q6_K.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+  qwen3.6_35b_a3b_ud_q6_k_128k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q4_k_m.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
-  tesslate_omnicoder_9b_q8_64k:
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-35B-A3B-UD-Q6_K.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+  qwen3.6_35b_a3b_ud_q3_k_s_64k:
     env:
       - "CUDA_VISIBLE_DEVICES=0"
       - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
-    cmd: /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Tesslate-omnicoder-9b-q8_0.gguf --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.00 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --presence-penalty 1.5 --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-35B-A3B-UD-Q3_K_S.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+  qwen3.6_35b_a3b_ud_q3_k_s_128k:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+      - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-35B-A3B-UD-Q3_K_S.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+  qwen3.6_27b_q4_0_64k:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+      - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-27B-Q4_0.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 65536 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+  qwen3.6_27b_q4_0_128k:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+      - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-27B-Q4_0.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 131072 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
+  qwen3.6_27b_ud_q4_k_xl_100k:
+    env:
+      - "CUDA_VISIBLE_DEVICES=0"
+      - "LLAMA_ARG_CACHE_RAM=4096" # limit to 4G from the default 8G
+    cmd: |
+      /home/minoru/src/llama.cpp/build/bin/llama-server --port ${PORT} --model /home/minoru/misc/llms/Unsloth-Qwen3.6-27B-UD-Q4_K_XL.gguf --chat-template-kwargs '{"preserve_thinking": true}' --temp 0.6 --top-p 0.95 --top-k 20 --presence_penalty 0.0 --min-p 0.0 --cache-type-k bf16 --cache-type-v bf16 --ctx-size 100000 --swa-full --repeat-penalty 1.0 --fit on -fa on --no-mmproj --fit-target 0 --parallel 1
 
   qwen3_coder_30b_a3b_q4_k_m_64k:
     env:
@@ -90,15 +117,26 @@ groups:
     members:
       - "qwen3.5_35b_a3b_ud_q6_k_64k"
       - "qwen3.5_35b_a3b_q3_k_s_64k"
+
       - "qwen3.5_9b_q8_64k"
+
       - "qwen3.5_27b_q4_0_64k"
       - "qwen3.5_27b_q4_0_128k"
       - "qwen3.5_27b_q6_k_64k"
-      - "tesslate_omnicoder_9b_q4_m_64k"
-      - "tesslate_omnicoder_9b_q4_m_128k"
-      - "tesslate_omnicoder_9b_q8_64k"
+
+      - "qwen3.6_35b_a3b_ud_q6_k_64k"
+      - "qwen3.6_35b_a3b_ud_q6_k_128k"
+      - "qwen3.6_35b_a3b_ud_q3_k_s_64k"
+      - "qwen3.6_35b_a3b_ud_q3_k_s_128k"
+
+      - "qwen3.6_27b_q4_0_64k"
+      - "qwen3.6_27b_q4_0_128k"
+      - "qwen3.6_27b_ud_q4_k_xl_100k"
+
       - "qwen3_coder_30b_a3b_q4_k_m_64k"
+
       - "devstral_small_2_24b_q8_0_64k"
       - "devstral_small_2_24b_q5_k_m_64k"
+
       - "glm_4.7_flash_q4_k_m_64k"
       - "glm_4.7_flash_q8_0_64k"
