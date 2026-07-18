@@ -431,3 +431,4 @@
 /.elan/
 /.config/kactivitymanagerdrc
 /.vscode-oss-shared/
+/.stack/.stack-work/
