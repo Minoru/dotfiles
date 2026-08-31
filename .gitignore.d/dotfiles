@@ -432,3 +432,4 @@
 /.config/kactivitymanagerdrc
 /.vscode-oss-shared/
 /.stack/.stack-work/
+/.config/systemmonitorrc
