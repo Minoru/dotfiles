@@ -1,6 +1,5 @@
 auto-reload no
-download-retries 5
-reload-threads 8
+reload-threads 64
 goto-first-unread no
 text-width 72
 confirm-exit yes
