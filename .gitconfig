@@ -36,3 +36,7 @@
     gpgsign = true
 [rerere]
 	enabled = true
+
+# https://bsd.network/@stsp/117529028748940469
+[http "https://github.com/"]
+      pinnedpubkey = sha256//8gWWkWa8AfAz0khtRYRodss7ieQPpu8Sd7DppK94eVo=
